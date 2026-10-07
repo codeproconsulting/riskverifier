@@ -161,7 +161,6 @@ get_header();
     <section class="section section-subtle" id="services-catalog">
       <div class="container">
         <div class="section-header">
-          <div class="badge badge-blue">Comprehensive Screening Portfolio</div>
           <h2 class="section-title">Our Professional Verification Services</h2>
           <p class="section-subtitle">
             From pre-employment screening to high-stakes due diligence and geopolitical risk assessments, we deliver evidence-based insights to protect your organization.
@@ -183,41 +182,59 @@ get_header();
         <div class="services-grid" id="servicesGrid">
           
           <!-- 1. Criminal Records Check -->
-          <article class="service-card" data-category="legal">
+          <article class="service-card card-tint-green" data-category="legal">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/criminal-record-check.png'); ?>" alt="Criminal Records Check" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>24–72h</span>
+                </div>
               </div>
-              <span class="service-turnaround">24–72 Hours</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('criminal-records')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Criminal Records Check</h3>
             <p class="service-card-desc">
-              Conduct comprehensive criminal background checks across multiple jurisdictions to ensure safe hiring, employee compliance, and risk mitigation.
+              Comprehensive criminal background checks across multiple jurisdictions to ensure safe hiring, employee compliance, and proactive risk mitigation.
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Police & Court record searches
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Police & Court record searches</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Clearance certificate authentication
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Clearance certificate authentication</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('criminal-records')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Criminal & Legal</span>
+              <button class="service-action-pill" onclick="openServiceModal('criminal-records')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
           <!-- 2. Civil Records Search -->
-          <article class="service-card" data-category="legal">
+          <article class="service-card card-tint-blue" data-category="legal">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/civil-record-check.png'); ?>" alt="Civil Records Search" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>24–48h</span>
+                </div>
               </div>
-              <span class="service-turnaround">24–48 Hours</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('civil-records')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Civil Records Search</h3>
             <p class="service-card-desc">
@@ -225,57 +242,77 @@ get_header();
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Contract disputes & bankruptcy filings
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Contract disputes & bankruptcy filings</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Judgments and liens index search
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Judgments and liens index search</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('civil-records')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Civil Litigation</span>
+              <button class="service-action-pill" onclick="openServiceModal('civil-records')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
           <!-- 3. Credit & Finance Reports -->
-          <article class="service-card" data-category="financial">
+          <article class="service-card card-tint-purple" data-category="financial">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/credit-check.png'); ?>" alt="Credit & Finance Reports" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>24–48h</span>
+                </div>
               </div>
-              <span class="service-turnaround">24–48 Hours</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('credit-finance')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Credit & Finance Reports</h3>
             <p class="service-card-desc">
-              Gain deep insights into financial behavior with individual and business credit reporting to evaluate fiscal stability and fraud vulnerability.
+              Deep insights into financial behavior with individual and business credit reporting to evaluate fiscal stability and fraud vulnerability.
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Credit ratings & default histories
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Credit ratings & default histories</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Corporate debt & liquidity profiles
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Corporate debt & liquidity profiles</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('credit-finance')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Fiscal Stability</span>
+              <button class="service-action-pill" onclick="openServiceModal('credit-finance')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
           <!-- 4. Vital Records Verification -->
-          <article class="service-card" data-category="identity">
+          <article class="service-card card-tint-periwinkle" data-category="identity">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/vital-record-check.png'); ?>" alt="Vital Records Verification" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>2–5 Days</span>
+                </div>
               </div>
-              <span class="service-turnaround">2–5 Days</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('vital-records')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Vital Records Verification</h3>
             <p class="service-card-desc">
@@ -283,57 +320,77 @@ get_header();
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Official civil registry confirmation
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Official civil registry confirmation</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Apostille & authentic stamp checks
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Apostille & authentic stamp checks</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('vital-records')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Civil Registry</span>
+              <button class="service-action-pill" onclick="openServiceModal('vital-records')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
-          <!-- 5. Identity & Credentials Verification -->
-          <article class="service-card" data-category="identity">
+          <!-- 5. Identity & Credentials -->
+          <article class="service-card card-tint-peach" data-category="identity">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/id-check.png'); ?>" alt="Identity & Credentials" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>24–48h</span>
+                </div>
               </div>
-              <span class="service-turnaround">24–48 Hours</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('identity-credentials')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Identity & Credentials</h3>
             <p class="service-card-desc">
-              Authenticate national IDs, passports, academic degrees, and professional licenses directly with issuing bodies to eliminate fraud.
+              Authenticate national IDs, passports, academic degrees, and professional licenses directly with issuing regulatory bodies.
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Degree & university registry checks
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Degree & university registry checks</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Professional regulatory licenses
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Professional regulatory licenses</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('identity-credentials')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Credentials Auth</span>
+              <button class="service-action-pill" onclick="openServiceModal('identity-credentials')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
           <!-- 6. Property & Asset Searches -->
-          <article class="service-card" data-category="financial">
+          <article class="service-card card-tint-teal" data-category="financial">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/property-assets-check.png'); ?>" alt="Property & Asset Searches" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>2–4 Days</span>
+                </div>
               </div>
-              <span class="service-turnaround">2–4 Days</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('property-asset')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Property & Asset Searches</h3>
             <p class="service-card-desc">
@@ -341,191 +398,253 @@ get_header();
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Cadastral & land registry searches
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cadastral & land registry searches</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Encumbrance and mortgage verification
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Encumbrance & mortgage verification</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('property-asset')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Asset Due Diligence</span>
+              <button class="service-action-pill" onclick="openServiceModal('property-asset')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
-          <!-- 7. Driving & Motor Vehicle Records (MVR) -->
-          <article class="service-card" data-category="identity">
+          <!-- 7. Driving & Motor Vehicle Records -->
+          <article class="service-card card-tint-rose" data-category="identity">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/driving-record-check.png'); ?>" alt="Driving & MVR Records" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>24–48h</span>
+                </div>
               </div>
-              <span class="service-turnaround">24–48 Hours</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('driving-records')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Driving & MVR Records</h3>
             <p class="service-card-desc">
-              Verify driving history, license status, suspensions, and moving violations to maintain fleet safety and employee contractor compliance.
+              Verify driving history, license validity, suspensions, and moving violations to maintain fleet safety and employee contractor compliance.
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Official DMV license status pull
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Official DMV license status pull</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Violations, points & suspension history
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Violations, points & suspension history</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('driving-records')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Fleet Safety</span>
+              <button class="service-action-pill" onclick="openServiceModal('driving-records')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
           <!-- 8. Verifications & References -->
-          <article class="service-card" data-category="identity">
+          <article class="service-card card-tint-cyan" data-category="identity">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/employment-reference-check.png'); ?>" alt="Verifications & References" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>2–4 Days</span>
+                </div>
               </div>
-              <span class="service-turnaround">2–4 Days</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('verifications-references')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Verifications & References</h3>
             <p class="service-card-desc">
-              Structured verification of candidate employment tenure, job responsibilities, supervisor reference interviews, and rehire eligibility.
+              Structured validation of candidate employment tenure, job responsibilities, supervisor reference interviews, and rehire eligibility.
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Direct past employer HR validation
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Direct past employer HR validation</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Comprehensive supervisor interviews
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Comprehensive supervisor interviews</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('verifications-references')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">HR Validation</span>
+              <button class="service-action-pill" onclick="openServiceModal('verifications-references')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
           <!-- 9. Due Diligence -->
-          <article class="service-card" data-category="advisory">
+          <article class="service-card card-tint-amber" data-category="advisory">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/document-verification.png'); ?>" alt="Due Diligence" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>3–5 Days</span>
+                </div>
               </div>
-              <span class="service-turnaround">3–5 Days</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('due-diligence')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Due Diligence</h3>
             <p class="service-card-desc">
-              Comprehensive reputational risk analysis including international sanctions, Politically Exposed Persons (PEP) checks, and adverse intelligence.
+              Reputational risk intelligence including international sanctions, Politically Exposed Persons (PEP) screening, and adverse exposure.
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Global PEP & sanctions lists
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Global PEP & sanctions screening</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Ultimate Beneficial Ownership (UBO)
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Beneficial Ownership (UBO) discovery</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('due-diligence')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Compliance & PEP</span>
+              <button class="service-action-pill" onclick="openServiceModal('due-diligence')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
           <!-- 10. Media Analytics -->
-          <article class="service-card" data-category="advisory">
+          <article class="service-card card-tint-indigo" data-category="advisory">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/media-analytics.png'); ?>" alt="Media Analytics" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>2–4 Days</span>
+                </div>
               </div>
-              <span class="service-turnaround">2–4 Days</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('media-analytics')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Media Analytics</h3>
             <p class="service-card-desc">
-              Monitor, analyze, and understand media coverage across digital and traditional platforms to detect adverse publicity and protect brand equity.
+              Monitor, analyze, and map media coverage across digital and traditional platforms to detect adverse publicity and protect brand equity.
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Adverse press & digital sentiment
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Adverse press & digital sentiment</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Executive reputational exposure
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Executive reputational exposure tracking</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('media-analytics')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Media Sentiment</span>
+              <button class="service-action-pill" onclick="openServiceModal('media-analytics')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
           <!-- 11. Bespoke Research -->
-          <article class="service-card" data-category="advisory">
+          <article class="service-card card-tint-emerald" data-category="advisory">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/bespoke-research.png'); ?>" alt="Bespoke Research" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Tailored</span>
+                </div>
               </div>
-              <span class="service-turnaround">Tailored</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('bespoke-research')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Bespoke Research</h3>
             <p class="service-card-desc">
-              Tailored, high-depth investigative research crafted around specific cross-border transactions, competitive intelligence, and litigation support.
+              Tailored, high-depth investigative research crafted around complex cross-border transactions, market entry, and litigation support.
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Open-source intelligence (OSINT)
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Open-source intelligence (OSINT)</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Custom investigative deliverables
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom investigative deliverables</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('bespoke-research')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Custom OSINT</span>
+              <button class="service-action-pill" onclick="openServiceModal('bespoke-research')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>
 
           <!-- 12. Geopolitical Advisory -->
-          <article class="service-card" data-category="advisory">
+          <article class="service-card card-tint-violet" data-category="advisory">
             <div class="service-card-top">
-              <div class="service-icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <div class="service-badge-cluster">
+                <div class="service-icon-box">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/geopolitical-advisory.png'); ?>" alt="Geopolitical Advisory" class="service-icon-img" loading="lazy">
+                </div>
+                <div class="service-pill-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Continuous</span>
+                </div>
               </div>
-              <span class="service-turnaround">Continuous</span>
+              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('geopolitical-advisory')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
             </div>
             <h3 class="service-card-title">Geopolitical Advisory</h3>
             <p class="service-card-desc">
-              Understand and navigate complex international environments, sovereign risk, policy shifts, and political dynamics in emerging markets.
+              Understand and navigate complex sovereign environments, emerging market risks, macroeconomic shifts, and regional security dynamics.
             </p>
             <ul class="service-features-list">
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Sovereign and regulatory risk index
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Sovereign & regulatory risk index</span>
               </li>
               <li class="service-feature-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Cross-border operational insights
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cross-border operational insights</span>
               </li>
             </ul>
             <div class="service-card-footer">
-              <button class="service-link-btn" onclick="openServiceModal('geopolitical-advisory')">
-                View Full Details &rarr;
+              <span class="service-footer-tag">Global Advisory</span>
+              <button class="service-action-pill" onclick="openServiceModal('geopolitical-advisory')">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>
           </article>

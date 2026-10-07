@@ -716,7 +716,9 @@ button, input, textarea, select {
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 22px 45px -12px rgba(15, 23, 42, 0.12), 0 6px 16px rgba(15, 23, 42, 0.04);
+  background: linear-gradient(145deg, #083d77 0%, #052c56 100%) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 24px 48px -12px rgba(8, 61, 119, 0.45), 0 8px 24px rgba(8, 61, 119, 0.2);
 }
 
 /* Dynamic Pastel Tints matching reference style */
@@ -795,16 +797,16 @@ button, input, textarea, select {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   flex-shrink: 0;
 }
 
 .service-card:hover .service-icon-box,
 .service-icon-box:hover {
-  background: #ffffff;
-  border-color: rgba(8, 61, 119, 0.25);
+  background: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.95);
   transform: scale(1.08) rotate(-3deg);
-  box-shadow: 0 8px 22px rgba(8, 61, 119, 0.18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
 .service-icon-img {
@@ -815,13 +817,13 @@ button, input, textarea, select {
   object-fit: contain;
   display: block;
   filter: brightness(0) invert(1); /* Pure white icon on blue background */
-  transition: filter 0.3s ease;
+  transition: filter 0.35s ease;
 }
 
 .service-card:hover .service-icon-img,
 .service-icon-box:hover .service-icon-img {
   /* Crisp #083d77 blue icon when box turns white on hover */
-  filter: brightness(0) saturate(100%) invert(18%) sepia(68%) saturate(2462%) hue-rotate(195deg) brightness(96%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(18%) sepia(68%) saturate(2462%) hue-rotate(195deg) brightness(96%) contrast(98%) !important;
 }
 
 /* Companion Pill (turnaround or status) */
@@ -840,10 +842,23 @@ button, input, textarea, select {
   font-size: 0.75rem;
   font-weight: 700;
   color: #475569;
+  transition: all 0.35s ease;
 }
 
 .service-pill-badge svg {
   color: #083d77;
+  transition: color 0.35s ease;
+}
+
+.service-card:hover .service-pill-badge {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover .service-pill-badge svg {
+  color: #ffffff;
 }
 
 /* Top Right Action / Pin Icon Button */
@@ -858,15 +873,21 @@ button, input, textarea, select {
   justify-content: center;
   color: #94a3b8;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
   padding: 0;
 }
 
 .service-card:hover .service-top-action {
-  color: #083d77;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.08);
+}
+
+.service-card:hover .service-top-action:hover {
   background: #ffffff;
-  transform: scale(1.06);
+  color: #083d77;
 }
 
 /* Typography */
@@ -877,6 +898,11 @@ button, input, textarea, select {
   margin-bottom: 10px;
   line-height: 1.3;
   letter-spacing: -0.015em;
+  transition: color 0.35s ease;
+}
+
+.service-card:hover .service-card-title {
+  color: #ffffff;
 }
 
 .service-card-desc {
@@ -885,6 +911,11 @@ button, input, textarea, select {
   line-height: 1.6;
   margin-bottom: 18px;
   flex-grow: 1;
+  transition: color 0.35s ease;
+}
+
+.service-card:hover .service-card-desc {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 /* Feature bullets */
@@ -896,6 +927,11 @@ button, input, textarea, select {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  transition: border-color 0.35s ease;
+}
+
+.service-card:hover .service-features-list {
+  border-top: 1px dashed rgba(255, 255, 255, 0.18);
 }
 
 .service-feature-item {
@@ -905,20 +941,35 @@ button, input, textarea, select {
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: color 0.35s ease;
 }
 
 .service-feature-item svg {
   color: #083d77;
   flex-shrink: 0;
+  transition: color 0.35s ease;
 }
 
-/* Card Footer with Dark Pill Button matching reference */
+.service-card:hover .service-feature-item {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.service-card:hover .service-feature-item svg {
+  color: #60a5fa; /* Crisp Sky Blue checkmark on dark blue background */
+}
+
+/* Card Footer with Pill Button */
 .service-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 16px;
   border-top: 1px solid rgba(15, 23, 42, 0.06);
+  transition: border-color 0.35s ease;
+}
+
+.service-card:hover .service-card-footer {
+  border-top-color: rgba(255, 255, 255, 0.18);
 }
 
 .service-footer-tag {
@@ -927,6 +978,11 @@ button, input, textarea, select {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: #64748b;
+  transition: color 0.35s ease;
+}
+
+.service-card:hover .service-footer-tag {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .service-action-pill {
@@ -942,18 +998,31 @@ button, input, textarea, select {
   border: none;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.16);
-  transition: all 0.25s ease;
-}
-
-.service-card:hover .service-action-pill,
-.service-action-pill:hover {
-  background: #083d77;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(8, 61, 119, 0.3);
+  transition: all 0.3s ease;
 }
 
 .service-action-pill svg {
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Hover on card flips button to White with Blue text */
+.service-card:hover .service-action-pill {
+  background: #ffffff !important;
+  color: #083d77 !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  font-weight: 800;
+}
+
+.service-card:hover .service-action-pill svg {
+  color: #083d77 !important;
+}
+
+.service-action-pill:hover,
+.service-card:hover .service-action-pill:hover {
+  background: #f0f7ff !important;
+  color: #052c56 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .service-action-pill:hover svg {

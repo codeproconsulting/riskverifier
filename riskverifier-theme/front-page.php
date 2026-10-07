@@ -891,10 +891,31 @@ get_header();
     </section>
 
     <!-- Why Choose Risk Verifier -->
-    <section class="section section-subtle">
-      <div class="container">
+    <section class="section section-why-dark">
+      <!-- Circuit Cyber Glow Watermark at Corners -->
+      <div class="circuit-decoration circuit-left" aria-hidden="true">
+        <svg width="320" height="180" viewBox="0 0 320 180" fill="none">
+          <path d="M0 150 H100 L140 110 H220 L240 90 H300" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="4 4"/>
+          <path d="M0 170 H130 L160 140 H250 L270 120 H320" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.25"/>
+          <path d="M40 180 L80 140 H130" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.2"/>
+          <circle cx="300" cy="90" r="4" fill="#06b6d4" fill-opacity="0.5"/>
+          <circle cx="220" cy="110" r="3" fill="#38bdf8" fill-opacity="0.5"/>
+          <circle cx="270" cy="120" r="3" fill="#06b6d4" fill-opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="circuit-decoration circuit-right" aria-hidden="true">
+        <svg width="320" height="180" viewBox="0 0 320 180" fill="none">
+          <path d="M320 150 H220 L180 110 H100 L80 90 H20" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="4 4"/>
+          <path d="M320 170 H190 L160 140 H70 L50 120 H0" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.25"/>
+          <path d="M280 180 L240 140 H190" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.2"/>
+          <circle cx="20" cy="90" r="4" fill="#06b6d4" fill-opacity="0.5"/>
+          <circle cx="100" cy="110" r="3" fill="#38bdf8" fill-opacity="0.5"/>
+          <circle cx="50" cy="120" r="3" fill="#06b6d4" fill-opacity="0.4"/>
+        </svg>
+      </div>
+
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header">
-          <div class="badge badge-blue">The Risk Verifier Advantage</div>
           <h2 class="section-title">Why Global Organizations Choose Us</h2>
           <p class="section-subtitle">
             Every business relationship and hiring decision carries risk. We make that risk transparent, manageable, and measurable.
@@ -904,7 +925,7 @@ get_header();
         <div class="why-grid">
           <div class="why-card">
             <div class="why-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </div>
             <h4>Reliable Verification</h4>
             <p>We source information directly from government registers, verified police bureaus, and authorized court systems to ensure utmost accuracy.</p>
@@ -912,7 +933,7 @@ get_header();
 
           <div class="why-card">
             <div class="why-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 15l2 2 4-4"></path></svg>
             </div>
             <h4>Comprehensive Screening</h4>
             <p>Bring 12 different risk screening dimensions into a single unified dashboard, eliminating the need to coordinate multiple vendors.</p>
@@ -920,7 +941,7 @@ get_header();
 
           <div class="why-card">
             <div class="why-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
             </div>
             <h4>Practical Insights</h4>
             <p>We don't just dump raw data. We deliver clear, risk-weighted executive summaries that enable immediate executive and HR decisions.</p>
@@ -928,7 +949,7 @@ get_header();
 
           <div class="why-card">
             <div class="why-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
             </div>
             <h4>Strict Confidentiality</h4>
             <p>Subject and client data is protected with bank-grade security and treated with discrete protocols conforming to GDPR and regional privacy laws.</p>
@@ -936,7 +957,7 @@ get_header();
 
           <div class="why-card">
             <div class="why-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
             <h4>100+ Countries Coverage</h4>
             <p>Whether you need a criminal check in North America, credential validation in Asia, or due diligence in Europe, we have on-ground capability.</p>
@@ -944,7 +965,7 @@ get_header();
 
           <div class="why-card">
             <div class="why-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
             <h4>Speed & Dedication</h4>
             <p>Fast turnaround times with dedicated account managers and direct WhatsApp lines for urgent, time-sensitive executive vetting.</p>

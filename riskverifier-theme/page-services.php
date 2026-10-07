@@ -11,7 +11,6 @@ get_header();
     <!-- Page Header -->
     <section class="section section-blue-tint" style="padding: 60px 0;">
       <div class="container text-center" style="text-align: center;">
-        <div class="badge badge-blue">Comprehensive 12-Service Suite</div>
         <h1 class="section-title">Professional Verification & Risk Solutions</h1>
         <p class="section-subtitle" style="max-width: 750px; margin: 0 auto;">
           Whether onboarding key executives, verifying offshore suppliers, or mitigating fraud, our verified intelligence empowers confident, legally compliant decisions.
@@ -19,491 +18,1255 @@ get_header();
       </div>
     </section>
 
-    <!-- Detailed Services List -->
-    <section class="section section-white">
+    <!-- Services Hub Section (Favif Digital Console Layout) -->
+    <section class="section section-white" id="services-hub">
       <div class="container">
-        <!-- Filter Tabs -->
-        <div class="service-tabs-wrapper">
-          <div class="service-tabs">
-            <button class="service-tab-btn active" data-filter="all">All 12 Services</button>
-            <button class="service-tab-btn" data-filter="legal">Criminal & Legal</button>
-            <button class="service-tab-btn" data-filter="financial">Financial & Property</button>
-            <button class="service-tab-btn" data-filter="identity">Identity & Credentials</button>
-            <button class="service-tab-btn" data-filter="advisory">Due Diligence & Advisory</button>
+        <!-- Section Header -->
+        <div class="svc-header-container">
+          <h2 class="svc-main-title">
+            <span class="svc-title-light">OUR</span> CAPABILITIES
+          </h2>
+          <div class="svc-title-underline"></div>
+          <p class="svc-header-desc">
+            Evidence-based background screening, corporate due diligence, and risk intelligence across 100+ countries. Direct-source verified, legally compliant, and auditable.
+          </p>
+        </div>
+
+        <!-- Interactive Console Layout -->
+        <div class="services-console-layout">
+          <!-- Left Sidebar Tabs -->
+          <div class="services-console-sidebar" id="servicesConsoleSidebar">
+            <button class="services-sidebar-tab active" data-target="criminal-records">
+              <span class="tab-num">01</span>
+              <div class="tab-text">
+                <span class="tab-category">Legal Screening</span>
+                <span class="tab-title">Criminal Records Check</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="civil-records">
+              <span class="tab-num">02</span>
+              <div class="tab-text">
+                <span class="tab-category">Legal Screening</span>
+                <span class="tab-title">Civil Records Search</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="credit-finance">
+              <span class="tab-num">03</span>
+              <div class="tab-text">
+                <span class="tab-category">Financial Risk</span>
+                <span class="tab-title">Credit & Finance Reports</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="vital-records">
+              <span class="tab-num">04</span>
+              <div class="tab-text">
+                <span class="tab-category">Identity Records</span>
+                <span class="tab-title">Vital Records Verification</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="identity-credentials">
+              <span class="tab-num">05</span>
+              <div class="tab-text">
+                <span class="tab-category">Identity & Credentials</span>
+                <span class="tab-title">Identity & Credentials Verification</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="property-asset">
+              <span class="tab-num">06</span>
+              <div class="tab-text">
+                <span class="tab-category">Asset Intelligence</span>
+                <span class="tab-title">Property & Asset Searches</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="driving-records">
+              <span class="tab-num">07</span>
+              <div class="tab-text">
+                <span class="tab-category">Motor Vehicle Records</span>
+                <span class="tab-title">Driving & Motor Vehicle Records (MVR)</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="verifications-references">
+              <span class="tab-num">08</span>
+              <div class="tab-text">
+                <span class="tab-category">HR & Employment</span>
+                <span class="tab-title">Verifications & References</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="due-diligence">
+              <span class="tab-num">09</span>
+              <div class="tab-text">
+                <span class="tab-category">Corporate Intelligence</span>
+                <span class="tab-title">Due Diligence & Sanctions Screening</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="media-analytics">
+              <span class="tab-num">10</span>
+              <div class="tab-text">
+                <span class="tab-category">Risk Intelligence</span>
+                <span class="tab-title">Media Analytics</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="bespoke-research">
+              <span class="tab-num">11</span>
+              <div class="tab-text">
+                <span class="tab-category">Custom Intelligence</span>
+                <span class="tab-title">Bespoke Research</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+            <button class="services-sidebar-tab " data-target="geopolitical-advisory">
+              <span class="tab-num">12</span>
+              <div class="tab-text">
+                <span class="tab-category">Strategic Advisory</span>
+                <span class="tab-title">Geopolitical Advisory</span>
+              </div>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" class="tab-arrow" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Right Showcase Panes -->
+          <div class="services-console-showcase" id="servicesConsoleShowcase">
+          <!-- Showcase Pane: Criminal Records Check -->
+          <div class="service-showcase-pane" id="showcase-criminal-records" style="display: block;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt="Criminal Records Check">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Legal Screening</span>
+                <h2 class="showcase-title">Criminal Records Check</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 24–72 Hours</span>
+            </div>
+
+            <p class="showcase-desc">Conduct comprehensive criminal background checks across multiple jurisdictions to ensure safe hiring, regulatory compliance, and risk mitigation.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Police Archives</span><span class="showcase-tag-pill">Court Registries</span><span class="showcase-tag-pill">FCRA Compliant</span><span class="showcase-tag-pill">GDPR Ready</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt="Police Clearance Records" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Police Clearance Records</h4>
+                    <p class="sub-card-desc">Searches across municipal, state, and federal law enforcement databases for arrests and dispositions.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Court Docket Searches" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Court Docket Searches</h4>
+                    <p class="sub-card-desc">Direct verification of felony, misdemeanor, and active warrant court dockets across authorized registries.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="National & Global Registries" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">National & Global Registries</h4>
+                    <p class="sub-card-desc">Cross-referencing national criminal indexes and international police cooperation archives.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Certificate Authentication" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Certificate Authentication</h4>
+                    <p class="sub-card-desc">Validation of government-issued police character certificates and apostille seals against issuing authorities.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Evidentiary summary with official court case docket numbers</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Verification timestamps directly recorded from police bureaus</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Objective risk severity index (Clear / Record Found)</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Strict adherence to FCRA adverse-action guidance and GDPR protocols</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('criminal-records')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Criminal Records Check" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Civil Records Search -->
+          <div class="service-showcase-pane" id="showcase-civil-records" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Civil Records Search">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Legal Screening</span>
+                <h2 class="showcase-title">Civil Records Search</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 24–48 Hours</span>
+            </div>
+
+            <p class="showcase-desc">Access civil litigation records, court filings, bankruptcies, and commercial legal disputes to uncover hidden liabilities associated with individuals or firms.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Superior Courts</span><span class="showcase-tag-pill">Commercial Disputes</span><span class="showcase-tag-pill">Bankruptcies</span><span class="showcase-tag-pill">Contractual Claims</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Commercial Litigation" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Commercial Litigation</h4>
+                    <p class="sub-card-desc">Identification of active and historical contract disputes, breach of fiduciary duty, and corporate litigation.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Judgments & Liens" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Judgments & Liens</h4>
+                    <p class="sub-card-desc">Cross-referencing tax liens, monetary judgments, foreclosures, and enforceable legal debts.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Bankruptcy Records" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Bankruptcy Records</h4>
+                    <p class="sub-card-desc">Comprehensive insolvency court record checks across regional and national bankruptcy registries.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Dispute Resolution History" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Dispute Resolution History</h4>
+                    <p class="sub-card-desc">Tracking arbitration awards, settlement records, and tribunal determinations across jurisdictions.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Plaintiff / defendant cross-party litigation search report</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Docket filings, claim amounts, and ultimate judgment dispositions</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Analysis of commercial reliability and dispute risk rating</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Complete jurisdiction indexing across superior and appellate courts</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('civil-records')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Civil Records Search" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Credit & Finance Reports -->
+          <div class="service-showcase-pane" id="showcase-credit-finance" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Credit & Finance Reports">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Financial Risk</span>
+                <h2 class="showcase-title">Credit & Finance Reports</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 24–48 Hours</span>
+            </div>
+
+            <p class="showcase-desc">Gain deep insights into financial behavior with individual and corporate credit reports to evaluate fiscal stability and fraud exposure.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Credit Bureau</span><span class="showcase-tag-pill">Solvency Rating</span><span class="showcase-tag-pill">Debt Obligations</span><span class="showcase-tag-pill">Corporate Solvency</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Credit Bureau Profile" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Credit Bureau Profile</h4>
+                    <p class="sub-card-desc">Authorized retrieval of official credit bureau scores, payment histories, and historical delinquent accounts.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Corporate Financial Health" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Corporate Financial Health</h4>
+                    <p class="sub-card-desc">Assessment of balance sheet filings, solvency ratings, debt ratios, and company creditworthiness.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Public Financial Records" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Public Financial Records</h4>
+                    <p class="sub-card-desc">Tracking unsatisfied judgments, tax collection notices, and public commercial default filings.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Financial Authority Inquiries" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Financial Authority Inquiries</h4>
+                    <p class="sub-card-desc">Verification with central banks, securities commissions, and financial conduct authorities.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Official credit bureau score breakdown and risk grade</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>36-month repayment track record and debt utilization ratio</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Independent assessment of fiscal stability and fraud vulnerability</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Compliant with local credit reporting authorization laws</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('credit-finance')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Credit & Finance Reports" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Vital Records Verification -->
+          <div class="service-showcase-pane" id="showcase-vital-records" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt="Vital Records Verification">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Identity Records</span>
+                <h2 class="showcase-title">Vital Records Verification</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 2–5 Business Days</span>
+            </div>
+
+            <p class="showcase-desc">Verify essential registry records including birth certificates, marital status, and government death records for conclusive identity confirmation.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Civil Registry</span><span class="showcase-tag-pill">Birth Certificates</span><span class="showcase-tag-pill">Marital Records</span><span class="showcase-tag-pill">Apostille Authentication</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt="Birth Registry Inquiries" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Birth Registry Inquiries</h4>
+                    <p class="sub-card-desc">Direct validation against municipal and national civil status registries to verify origin records.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Marital Status Validation" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Marital Status Validation</h4>
+                    <p class="sub-card-desc">Verification of marriage registrations, civil partnership records, and legal dissolutions.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Official Death Master Files" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Official Death Master Files</h4>
+                    <p class="sub-card-desc">Cross-referencing government vital status archives to protect against deceased identity theft.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Consular & Apostille Checks" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Consular & Apostille Checks</h4>
+                    <p class="sub-card-desc">Verification of consular legalizations, apostille certificates, and international diplomatic seals.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Certified confirmation from primary government civil registry</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Verification of official serial numbers, watermarks, and security seals</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Definitive identity lineage and vital status confirmation</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>International multi-language translation and evidentiary support</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('vital-records')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Vital Records Verification" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Identity & Credentials Verification -->
+          <div class="service-showcase-pane" id="showcase-identity-credentials" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Identity & Credentials Verification">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Identity & Credentials</span>
+                <h2 class="showcase-title">Identity & Credentials Verification</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 24–48 Hours</span>
+            </div>
+
+            <p class="showcase-desc">Authenticate government-issued IDs, academic degrees, and professional licensing to eliminate resume fraud and identity theft.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Passport MRZ</span><span class="showcase-tag-pill">Registrar Degree Check</span><span class="showcase-tag-pill">Professional Licenses</span><span class="showcase-tag-pill">Biometric Validation</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Government ID Verification" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Government ID Verification</h4>
+                    <p class="sub-card-desc">Verification of passports, National ID cards, and work permits via official issuing database registries.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Academic Degree Authentication" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Academic Degree Authentication</h4>
+                    <p class="sub-card-desc">Direct contact with university registrar offices to verify degree title, major, honors, and graduation date.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Professional License Status" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Professional License Status</h4>
+                    <p class="sub-card-desc">Querying bar associations, medical councils, accounting institutes, and engineering boards.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Tamper & Forgery Detection" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Tamper & Forgery Detection</h4>
+                    <p class="sub-card-desc">Forensic inspection of micro-printing, MRZ optical barcodes, security fibers, and holograms.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Direct registrar verification letters with institution seals</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Comprehensive credential validation matching resume representations</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Biometric document liveness and validity confirmation</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Zero tolerance detection of diploma mills and fraudulent credentials</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('identity-credentials')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Identity & Credentials Verification" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Property & Asset Searches -->
+          <div class="service-showcase-pane" id="showcase-property-asset" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Property & Asset Searches">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Asset Intelligence</span>
+                <h2 class="showcase-title">Property & Asset Searches</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 2–4 Business Days</span>
+            </div>
+
+            <p class="showcase-desc">Identify real estate deeds, corporate asset registrations, and vehicle ownership to evaluate financial strength and uncover hidden assets.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Cadastral Registries</span><span class="showcase-tag-pill">Commercial Assets</span><span class="showcase-tag-pill">Encumbrances</span><span class="showcase-tag-pill">Beneficial Ownership</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Land & Real Estate Title" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Land & Real Estate Title</h4>
+                    <p class="sub-card-desc">Querying cadastral registries and county deed offices for residential and commercial parcels.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Corporate Asset Holdings" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Corporate Asset Holdings</h4>
+                    <p class="sub-card-desc">Investigation of plant, machinery, heavy equipment, and commercial vehicle fleet ownership.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Encumbrance & Mortgage Search" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Encumbrance & Mortgage Search</h4>
+                    <p class="sub-card-desc">Mapping outstanding mortgages, secondary liens, and municipal tax encumbrances on assets.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Beneficial Asset Mapping" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Beneficial Asset Mapping</h4>
+                    <p class="sub-card-desc">Unraveling holding companies, family trusts, and offshore entities concealing asset ownership.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Cadastral property parcel ownership deeds and transaction valuations</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Comprehensive lien and mortgage liability breakdown</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Asset trace profile across multiple domestic and offshore jurisdictions</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Independent verification of collateral for commercial transactions</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('property-asset')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Property & Asset Searches" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Driving & Motor Vehicle Records (MVR) -->
+          <div class="service-showcase-pane" id="showcase-driving-records" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/driving-record-check.png" alt="Driving & Motor Vehicle Records (MVR)">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Motor Vehicle Records</span>
+                <h2 class="showcase-title">Driving & Motor Vehicle Records (MVR)</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 24–48 Hours</span>
+            </div>
+
+            <p class="showcase-desc">Verify driver history, license validity, suspension orders, and moving violations to protect fleet operations and workplace safety.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">DMV Records</span><span class="showcase-tag-pill">CDL Endorsements</span><span class="showcase-tag-pill">Traffic Violations</span><span class="showcase-tag-pill">Fleet Compliance</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/driving-record-check.png" alt="Driver License Status" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Driver License Status</h4>
+                    <p class="sub-card-desc">Real-time verification of driver license validity, expiration, class, and jurisdictional jurisdiction.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Violation & Infraction Record" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Violation & Infraction Record</h4>
+                    <p class="sub-card-desc">Extracting moving violations, speeding citations, points balance, and reckless driving citations.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt="Suspension & Revocation History" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Suspension & Revocation History</h4>
+                    <p class="sub-card-desc">Identification of past or active DUI / DWI offenses, mandatory court suspensions, and revocations.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Commercial CDL Endorsements" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Commercial CDL Endorsements</h4>
+                    <p class="sub-card-desc">Verification of hazmat, passenger, tanker, and double-trailer commercial endorsements.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Official DMV motor vehicle record printout and status code</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>3-to-7 year traffic violation history and penalty points balance</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fleet insurance eligibility and liability risk classification</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Automated annual re-screening schedule for enterprise fleets</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('driving-records')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Driving & Motor Vehicle Records (MVR)" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Verifications & References -->
+          <div class="service-showcase-pane" id="showcase-verifications-references" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Verifications & References">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">HR & Employment</span>
+                <h2 class="showcase-title">Verifications & References</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 2–4 Business Days</span>
+            </div>
+
+            <p class="showcase-desc">Structured verification of past employment history, job titles, responsibilities, tenure, and professional supervisor references.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Employment Dates</span><span class="showcase-tag-pill">Title Authentication</span><span class="showcase-tag-pill">Rehire Eligibility</span><span class="showcase-tag-pill">Supervisor Interviews</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Employment Tenure Verification" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Employment Tenure Verification</h4>
+                    <p class="sub-card-desc">Direct HR registry contact to verify start/end dates, full-time/part-time status, and job titles.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Separation Reason & Rehire" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Separation Reason & Rehire</h4>
+                    <p class="sub-card-desc">Confirmation of voluntary/involuntary termination and formal eligibility for rehire status.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="In-Depth Supervisor Interviews" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">In-Depth Supervisor Interviews</h4>
+                    <p class="sub-card-desc">Structured telephone interviews with direct line managers evaluating work performance and integrity.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Peer & Competency Reviews" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Peer & Competency Reviews</h4>
+                    <p class="sub-card-desc">360-degree professional peer evaluations assessing leadership, technical skills, and ethics.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Detailed corporate HR verification records with corporate stamps</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Transcribed supervisor reference interview notes and performance scoring</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Discrepancy flag analysis comparing candidate resumes with official records</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Standardized objective evaluation report conforming to privacy statutes</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('verifications-references')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Verifications & References" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Due Diligence & Sanctions Screening -->
+          <div class="service-showcase-pane" id="showcase-due-diligence" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Due Diligence & Sanctions Screening">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Corporate Intelligence</span>
+                <h2 class="showcase-title">Due Diligence & Sanctions Screening</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 3–5 Business Days</span>
+            </div>
+
+            <p class="showcase-desc">Analyze executive and corporate profiles against international sanctions, PEP lists, watchlists, and adverse intelligence.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">OFAC Sanctions</span><span class="showcase-tag-pill">PEP Screening</span><span class="showcase-tag-pill">Adverse Media</span><span class="showcase-tag-pill">UBO Identification</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Global Sanctions Watchlists" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Global Sanctions Watchlists</h4>
+                    <p class="sub-card-desc">Screening across OFAC, UN Security Council, EU Consolidated, UK HMT, and Interpol lists.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Politically Exposed Persons (PEP)" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Politically Exposed Persons (PEP)</h4>
+                    <p class="sub-card-desc">Identification of senior political figures, military officers, state enterprise executives, and associates.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Ultimate Beneficial Ownership (UBO)" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Ultimate Beneficial Ownership (UBO)</h4>
+                    <p class="sub-card-desc">Piercing complex multi-tier offshore holding structures to identify true individual owners.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Bribery & FCPA Compliance" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Bribery & FCPA Compliance</h4>
+                    <p class="sub-card-desc">Reviewing regulatory disciplinary enforcement, anti-money laundering (AML) alerts, and fraud databases.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Comprehensive sanctions and PEP match matrix with false-positive elimination</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Multi-tiered corporate ownership diagram and shareholder hierarchy</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Adverse regulatory, compliance, and international law enforcement profile</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Risk rating advisory summary for executive investment committees</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('due-diligence')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Due Diligence & Sanctions Screening" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Media Analytics -->
+          <div class="service-showcase-pane" id="showcase-media-analytics" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt="Media Analytics">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Risk Intelligence</span>
+                <h2 class="showcase-title">Media Analytics</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: 2–4 Business Days</span>
+            </div>
+
+            <p class="showcase-desc">Monitor, scrape, and analyze digital news, regulatory alerts, social channels, and media exposure to safeguard brand reputation.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Adverse Press</span><span class="showcase-tag-pill">Sentiment Scoring</span><span class="showcase-tag-pill">Regulatory Bulletins</span><span class="showcase-tag-pill">Reputational Risk</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt="Global News Archive Scrapes" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Global News Archive Scrapes</h4>
+                    <p class="sub-card-desc">Searching across 10,000+ local, national, and international newspapers and financial journals.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Regulatory Gazette Tracking" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Regulatory Gazette Tracking</h4>
+                    <p class="sub-card-desc">Monitoring gazette notices, trade commission alerts, and regulatory disciplinary proceedings.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Digital Footprint & Social Risk" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Digital Footprint & Social Risk</h4>
+                    <p class="sub-card-desc">Auditing public social media profiles, domain ownership, and online controversy signals.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Reputational Sentiment Analysis" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Reputational Sentiment Analysis</h4>
+                    <p class="sub-card-desc">AI-assisted sentiment evaluation calculating negative exposure ratios and trend vectors.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Chronological media exposure dossier highlighting adverse stories</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Direct citations and archived copies of deleted or paywalled news articles</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Reputational risk index and stakeholder perception assessment</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Continuous automated monitoring options for high-profile personnel</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('media-analytics')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Media Analytics" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Bespoke Research -->
+          <div class="service-showcase-pane" id="showcase-bespoke-research" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/bespoke-research.png" alt="Bespoke Research">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Custom Intelligence</span>
+                <h2 class="showcase-title">Bespoke Research</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: Tailored Scope</span>
+            </div>
+
+            <p class="showcase-desc">Tailored, customized intelligence reports designed around specific corporate M&A transactions, executive vetting, and unique needs.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Cross-Border M&A</span><span class="showcase-tag-pill">OSINT Investigation</span><span class="showcase-tag-pill">Counterparty Profile</span><span class="showcase-tag-pill">Senior Executive Vetting</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/bespoke-research.png" alt="Cross-Border M&A Due Diligence" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Cross-Border M&A Due Diligence</h4>
+                    <p class="sub-card-desc">Bespoke investigation of acquisition targets, joint-venture partners, and local representatives.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Deep-Web OSINT Intelligence" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Deep-Web OSINT Intelligence</h4>
+                    <p class="sub-card-desc">Advanced open-source intelligence gathering across unindexed databases and public repositories.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Counterparty Integrity Profiling" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Counterparty Integrity Profiling</h4>
+                    <p class="sub-card-desc">Discrete assessment of counterparty integrity, commercial track record, and operational reality.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="High-Stakes Executive Vetting" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">High-Stakes Executive Vetting</h4>
+                    <p class="sub-card-desc">Comprehensive 360-degree investigation of prospective C-suite officers and board members.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fully customized investigative brief prepared by senior forensic intelligence analysts</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Primary evidentiary exhibits, registered documents, and verified factual corroborations</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Unbiased, objective risk analysis highlighting deal-breaking red flags</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Executive briefing presentation ready for board and audit committee review</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('bespoke-research')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Bespoke Research" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <!-- Showcase Pane: Geopolitical Advisory -->
+          <div class="service-showcase-pane" id="showcase-geopolitical-advisory" style="display: none;">
+            <div class="showcase-header-row">
+              <div class="showcase-icon-badge">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Geopolitical Advisory">
+              </div>
+              <div class="showcase-title-area">
+                <span class="showcase-category-pill">Strategic Advisory</span>
+                <h2 class="showcase-title">Geopolitical Advisory</h2>
+              </div>
+              <span class="showcase-turnaround-badge">⚡ SLA: Continuous / Scoped</span>
+            </div>
+
+            <p class="showcase-desc">Actionable analysis on cross-border political stability, sovereign risk, regulatory shifts, and emerging operational threats.</p>
+
+            <div class="showcase-tags-cloud">
+              <span class="showcase-tag-pill">Sovereign Risk</span><span class="showcase-tag-pill">Regulatory Shifts</span><span class="showcase-tag-pill">Supply Chain Security</span><span class="showcase-tag-pill">Executive Travel Security</span>
+            </div>
+
+            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
+            <div class="showcase-subservices-grid">
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Country & Sovereign Risk" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Country & Sovereign Risk</h4>
+                    <p class="sub-card-desc">Evaluating political stability, expropriation risks, currency controls, and sovereign default indicators.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Regulatory & Policy Shifts" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Regulatory & Policy Shifts</h4>
+                    <p class="sub-card-desc">Forecasting imminent statutory changes, foreign ownership restrictions, and sanction regimes.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Supply Chain Fragility Analysis" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Supply Chain Fragility Analysis</h4>
+                    <p class="sub-card-desc">Assessing geopolitical vulnerabilities across maritime chokepoints and border logistics corridors.</p>
+                  </div>
+                </div>
+                <div class="showcase-sub-card">
+                  <div class="sub-card-icon-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Executive Travel Security Briefs" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
+                  </div>
+                  <div class="sub-card-text">
+                    <h4 class="sub-card-title">Executive Travel Security Briefs</h4>
+                    <p class="sub-card-desc">Real-time threat assessments, civil unrest alerts, and localized security advisories for travelling teams.</p>
+                  </div>
+                </div>
+            </div>
+
+            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
+            <ul class="showcase-features-list">
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Tailored country risk intelligence bulletins and sovereign vulnerability ratings</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Predictive regulatory forecast matrix highlighting emerging compliance risks</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Executive threat briefing and localized security protocols</span>
+                </li>
+                <li class="showcase-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Direct advisory access to regional subject-matter specialists</span>
+                </li>
+            </ul>
+
+            <div class="showcase-actions">
+              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+                Request This Verification Check
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary btn-md" onclick="openServiceModal('geopolitical-advisory')">
+                Quick Summary &amp; Scope
+              </button>
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Geopolitical Advisory" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+                Direct WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
           </div>
         </div>
 
-        <div class="services-grid" id="servicesGrid">
-          
-          <!-- 1. Criminal Records Check -->
-          <article class="service-card card-tint-green" data-category="legal">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/criminal-record-check.png'); ?>" alt="Criminal Records Check" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>24–72h</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('criminal-records')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Criminal Records Check</h3>
-            <p class="service-card-desc">
-              Comprehensive criminal background checks across multiple jurisdictions to ensure safe hiring, employee compliance, and proactive risk mitigation.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Police & Court record searches</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Clearance certificate authentication</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Criminal & Legal</span>
-              <button class="service-action-pill" onclick="openServiceModal('criminal-records')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 2. Civil Records Search -->
-          <article class="service-card card-tint-blue" data-category="legal">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/civil-record-check.png'); ?>" alt="Civil Records Search" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>24–48h</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('civil-records')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Civil Records Search</h3>
-            <p class="service-card-desc">
-              Access civil litigation records, court filings, and commercial legal disputes to identify liabilities associated with individuals or firms.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Contract disputes & bankruptcy filings</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Judgments and liens index search</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Civil Litigation</span>
-              <button class="service-action-pill" onclick="openServiceModal('civil-records')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 3. Credit & Finance Reports -->
-          <article class="service-card card-tint-purple" data-category="financial">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/credit-check.png'); ?>" alt="Credit & Finance Reports" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>24–48h</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('credit-finance')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Credit & Finance Reports</h3>
-            <p class="service-card-desc">
-              Deep insights into financial behavior with individual and business credit reporting to evaluate fiscal stability and fraud vulnerability.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Credit ratings & default histories</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Corporate debt & liquidity profiles</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Fiscal Stability</span>
-              <button class="service-action-pill" onclick="openServiceModal('credit-finance')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 4. Vital Records Verification -->
-          <article class="service-card card-tint-periwinkle" data-category="identity">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/vital-record-check.png'); ?>" alt="Vital Records Verification" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>2–5 Days</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('vital-records')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Vital Records Verification</h3>
-            <p class="service-card-desc">
-              Verify essential registry documents such as birth, marital status, and death records for identity confirmation and legal compliance.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Official civil registry confirmation</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Apostille & authentic stamp checks</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Civil Registry</span>
-              <button class="service-action-pill" onclick="openServiceModal('vital-records')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 5. Identity & Credentials -->
-          <article class="service-card card-tint-peach" data-category="identity">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/id-check.png'); ?>" alt="Identity & Credentials" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>24–48h</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('identity-credentials')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Identity & Credentials</h3>
-            <p class="service-card-desc">
-              Authenticate national IDs, passports, academic degrees, and professional licenses directly with issuing regulatory bodies.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Degree & university registry checks</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Professional regulatory licenses</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Credentials Auth</span>
-              <button class="service-action-pill" onclick="openServiceModal('identity-credentials')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 6. Property & Asset Searches -->
-          <article class="service-card card-tint-teal" data-category="financial">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/property-assets-check.png'); ?>" alt="Property & Asset Searches" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>2–4 Days</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('property-asset')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Property & Asset Searches</h3>
-            <p class="service-card-desc">
-              Identify real estate ownership, corporate assets, and deeds to assess financial capability, recovery options, and hidden liabilities.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Cadastral & land registry searches</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Encumbrance & mortgage verification</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Asset Due Diligence</span>
-              <button class="service-action-pill" onclick="openServiceModal('property-asset')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 7. Driving & Motor Vehicle Records -->
-          <article class="service-card card-tint-rose" data-category="identity">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/driving-record-check.png'); ?>" alt="Driving & MVR Records" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>24–48h</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('driving-records')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Driving & MVR Records</h3>
-            <p class="service-card-desc">
-              Verify driving history, license validity, suspensions, and moving violations to maintain fleet safety and employee contractor compliance.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Official DMV license status pull</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Violations, points & suspension history</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Fleet Safety</span>
-              <button class="service-action-pill" onclick="openServiceModal('driving-records')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 8. Verifications & References -->
-          <article class="service-card card-tint-cyan" data-category="identity">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/employment-reference-check.png'); ?>" alt="Verifications & References" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>2–4 Days</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('verifications-references')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Verifications & References</h3>
-            <p class="service-card-desc">
-              Structured validation of candidate employment tenure, job responsibilities, supervisor reference interviews, and rehire eligibility.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Direct past employer HR validation</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Comprehensive supervisor interviews</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">HR Validation</span>
-              <button class="service-action-pill" onclick="openServiceModal('verifications-references')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 9. Due Diligence -->
-          <article class="service-card card-tint-amber" data-category="advisory">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/document-verification.png'); ?>" alt="Due Diligence" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>3–5 Days</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('due-diligence')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Due Diligence</h3>
-            <p class="service-card-desc">
-              Reputational risk intelligence including international sanctions, Politically Exposed Persons (PEP) screening, and adverse exposure.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Global PEP & sanctions screening</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Beneficial Ownership (UBO) discovery</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Compliance & PEP</span>
-              <button class="service-action-pill" onclick="openServiceModal('due-diligence')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 10. Media Analytics -->
-          <article class="service-card card-tint-indigo" data-category="advisory">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/media-analytics.png'); ?>" alt="Media Analytics" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>2–4 Days</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('media-analytics')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Media Analytics</h3>
-            <p class="service-card-desc">
-              Monitor, analyze, and map media coverage across digital and traditional platforms to detect adverse publicity and protect brand equity.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Adverse press & digital sentiment</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Executive reputational exposure tracking</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Media Sentiment</span>
-              <button class="service-action-pill" onclick="openServiceModal('media-analytics')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 11. Bespoke Research -->
-          <article class="service-card card-tint-emerald" data-category="advisory">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/bespoke-research.png'); ?>" alt="Bespoke Research" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>Tailored</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('bespoke-research')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Bespoke Research</h3>
-            <p class="service-card-desc">
-              Tailored, high-depth investigative research crafted around complex cross-border transactions, market entry, and litigation support.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Open-source intelligence (OSINT)</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Custom investigative deliverables</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Custom OSINT</span>
-              <button class="service-action-pill" onclick="openServiceModal('bespoke-research')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- 12. Geopolitical Advisory -->
-          <article class="service-card card-tint-violet" data-category="advisory">
-            <div class="service-card-top">
-              <div class="service-badge-cluster">
-                <div class="service-icon-box">
-                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/geopolitical-advisory.png'); ?>" alt="Geopolitical Advisory" class="service-icon-img" loading="lazy">
-                </div>
-                <div class="service-pill-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span>Continuous</span>
-                </div>
-              </div>
-              <button class="service-top-action" aria-label="Bookmark service" onclick="openServiceModal('geopolitical-advisory')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-            </div>
-            <h3 class="service-card-title">Geopolitical Advisory</h3>
-            <p class="service-card-desc">
-              Understand and navigate complex sovereign environments, emerging market risks, macroeconomic shifts, and regional security dynamics.
-            </p>
-            <ul class="service-features-list">
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Sovereign & regulatory risk index</span>
-              </li>
-              <li class="service-feature-item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Cross-border operational insights</span>
-              </li>
-            </ul>
-            <div class="service-card-footer">
-              <span class="service-footer-tag">Global Advisory</span>
-              <button class="service-action-pill" onclick="openServiceModal('geopolitical-advisory')">
-                <span>View Details</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </article>
-
-        </div>
       </div>
     </section>
 
@@ -511,7 +1274,6 @@ get_header();
     <section class="section section-white" id="how-it-works">
       <div class="container">
         <div class="section-header">
-          <div class="badge badge-blue">Proven Methodology</div>
           <h2 class="section-title">How Risk Verification Works</h2>
           <p class="section-subtitle">
             A secure, streamlined 5-step process delivering accurate findings while maintaining strict compliance and confidentiality.
@@ -783,7 +1545,6 @@ get_header();
             
             <!-- Left: Checkbox Selector & Form -->
             <div class="quote-left">
-              <div class="badge badge-blue">Instant Inquiry</div>
               <h3>Request a Verification Package</h3>
               <p>Select the checks you need for your candidates or partners and submit your details for an immediate proposal and SLA schedule.</p>
               
@@ -926,7 +1687,6 @@ get_header();
     <section class="section section-white" id="offices">
       <div class="container">
         <div class="section-header">
-          <div class="badge badge-blue">Global Presence</div>
           <h2 class="section-title">Our Regional Offices</h2>
           <p class="section-subtitle">
             Local knowledge with global capability. Reach out directly to our dedicated regional teams across North America, Europe, and Asia.
@@ -1037,7 +1797,6 @@ get_header();
     <section class="section section-subtle">
       <div class="container" style="max-width: 860px;">
         <div class="section-header">
-          <div class="badge badge-blue">Frequently Asked Questions</div>
           <h2 class="section-title">Common Questions & Compliance</h2>
           <p class="section-subtitle">Everything you need to know about our international screening protocols.</p>
         </div>

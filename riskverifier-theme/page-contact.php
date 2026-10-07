@@ -10,7 +10,6 @@ get_header();
   <main>
     <section class="section section-blue-tint" style="padding: 60px 0;">
       <div class="container text-center" style="text-align: center;">
-        <div class="badge badge-blue">Global Communication Channels</div>
         <h1 class="section-title">Connect with Risk Verifier</h1>
         <p class="section-subtitle" style="max-width: 700px; margin: 0 auto;">
           If you have any inquiries regarding our services, please contact us through this form or reach out directly to our regional desks.

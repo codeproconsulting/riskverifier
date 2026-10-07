@@ -160,9 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Service Tabs Filtering
-  const tabButtons = document.querySelectorAll('.service-tab-btn');
-  const serviceCards = document.querySelectorAll('.service-card');
+  // Service Tabs Filtering (Favif Bento and standard)
+  const tabButtons = document.querySelectorAll('.service-tab-btn, .favif-filter-btn');
+  const serviceCards = document.querySelectorAll('.service-card, .svc-compact-card, .favif-bento-card');
+  const timelineRows = document.querySelectorAll('.svc-timeline-row');
 
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -170,6 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
+      
+      // Filter cards
       serviceCards.forEach(card => {
         const cat = card.getAttribute('data-category');
         if (filter === 'all' || cat === filter) {
@@ -178,6 +181,53 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.display = 'none';
         }
       });
+
+      // Filter timeline rows (if present)
+      timelineRows.forEach(row => {
+        const cat = row.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Services Console Sidebar Tabs Switcher (services.html)
+  const consoleTabs = document.querySelectorAll('.services-sidebar-tab');
+  const showcasePanes = document.querySelectorAll('.service-showcase-pane');
+  if (consoleTabs.length && showcasePanes.length) {
+    consoleTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        consoleTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const targetId = tab.getAttribute('data-target');
+        showcasePanes.forEach(pane => {
+          if (pane.id === `showcase-${targetId}`) {
+            pane.style.display = 'block';
+            pane.style.opacity = '0';
+            setTimeout(() => {
+              pane.style.transition = 'opacity 0.25s ease';
+              pane.style.opacity = '1';
+            }, 10);
+          } else {
+            pane.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // FAQ Capsule Accordion (Interactive Expand / Collapse)
+  const faqCapsules = document.querySelectorAll('.faq-capsule-card');
+  faqCapsules.forEach(card => {
+    card.addEventListener('click', () => {
+      const isAlreadyActive = card.classList.contains('active');
+      faqCapsules.forEach(c => c.classList.remove('active'));
+      if (!isAlreadyActive) {
+        card.classList.add('active');
+      }
     });
   });
 
@@ -347,15 +397,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-                Direct WhatsApp Follow-up (${office})
-              </a>
-            </div>
-          </div>
-        `;
-        formContainer.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  }
 
   // Hero Simulator Interactive Check
   const simBtn = document.getElementById('simRunBtn');
@@ -424,79 +465,72 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------
-  // Framer Motion Animations for 5-Step Infographic Process
+  // Framer Motion Animations for How It Works & FAQ Timelines
   // -------------------------------------------------------------
-  const processSection = document.getElementById('how-it-works');
-  const timelineProgress = document.querySelector('.process-timeline-progress');
-  const pillCards = document.querySelectorAll('.process-pill-card');
-
-  if (processSection && window.Motion) {
+  const hiwPortalSection = document.getElementById('how-it-works');
+  if (hiwPortalSection && window.Motion) {
     const { animate, inView, stagger } = window.Motion;
+    const portalNodes = hiwPortalSection.querySelectorAll('.svc-portal-node');
+    const portalRows = hiwPortalSection.querySelectorAll('.svc-timeline-row');
+    const portalTrack = hiwPortalSection.querySelector('.svc-timeline-track');
+    
+    portalNodes.forEach(node => { node.style.opacity = '0'; node.style.transform = 'scale(0.5)'; });
+    portalRows.forEach(row => { row.style.opacity = '0'; });
 
-    // Set initial states for smooth entrance
-    pillCards.forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateX(45px)';
-    });
-    const nodes = document.querySelectorAll('.timeline-node');
-    nodes.forEach(node => {
-      node.style.opacity = '0';
-      node.style.transform = 'scale(0)';
-    });
-
-    inView(processSection, () => {
-      // 1. Animate vertical timeline progress line
-      if (timelineProgress) {
-        animate(timelineProgress, { height: ['0%', '100%'] }, { duration: 1.2, easing: [0.16, 1, 0.3, 1] });
-      }
-
-      // 2. Animate timeline nodes pop-in
-      animate('.timeline-node', {
-        opacity: [0, 1],
-        scale: [0, 1.25, 1]
-      }, {
-        delay: stagger(0.16),
+    inView(hiwPortalSection, () => {
+      animate(portalRows, { opacity: [0, 1], transform: ['translateY(30px)', 'translateY(0px)'] }, {
+        delay: stagger(0.12),
+        duration: 0.6,
+        easing: [0.16, 1, 0.3, 1]
+      });
+      animate(portalNodes, { opacity: [0, 1], scale: [0.5, 1.15, 1] }, {
+        delay: stagger(0.12, { start: 0.08 }),
         duration: 0.55,
         easing: [0.34, 1.56, 0.64, 1]
       });
+    }, { margin: '-10% 0px -10% 0px' });
+  }
 
-      // 3. Animate pill cards sliding in
-      animate('.process-pill-card', {
-        opacity: [0, 1],
-        transform: ['translateX(45px)', 'translateX(0px)']
-      }, {
-        delay: stagger(0.16, { start: 0.1 }),
-        duration: 0.7,
-        easing: [0.16, 1, 0.3, 1]
-      });
+  // FAQ Capsule Timeline Animation
+  const faqSection = document.getElementById('faq');
+  if (faqSection && window.Motion) {
+    const { animate, inView, stagger } = window.Motion;
+    const faqCards = faqSection.querySelectorAll('.faq-capsule-card');
+    const faqNodes = faqSection.querySelectorAll('.faq-timeline-node');
+    const faqProgress = faqSection.querySelector('.faq-timeline-progress');
 
-      // 4. Animate number rings with spring bounce
-      animate('.pill-number-ring', {
-        scale: [0.6, 1.15, 1],
-        opacity: [0, 1]
-      }, {
-        delay: stagger(0.16, { start: 0.15 }),
-        duration: 0.65,
+    faqCards.forEach(c => { c.style.opacity = '0'; c.style.transform = 'translateX(35px)'; });
+    faqNodes.forEach(n => { n.style.opacity = '0'; n.style.transform = 'scale(0)'; });
+
+    inView(faqSection, () => {
+      if (faqProgress) {
+        animate(faqProgress, { height: ['0%', '100%'] }, { duration: 1.1, easing: [0.16, 1, 0.3, 1] });
+      }
+      animate(faqNodes, { opacity: [0, 1], scale: [0, 1.25, 1] }, {
+        delay: stagger(0.12),
+        duration: 0.5,
         easing: [0.34, 1.56, 0.64, 1]
       });
-
-      // 5. Animate icon badges
-      animate('.pill-icon-wrap', {
-        scale: [0.7, 1.1, 1],
-        rotate: [-12, 0]
-      }, {
-        delay: stagger(0.16, { start: 0.2 }),
-        duration: 0.65,
+      animate(faqCards, { opacity: [0, 1], transform: ['translateX(35px)', 'translateX(0px)'] }, {
+        delay: stagger(0.12, { start: 0.08 }),
+        duration: 0.6,
         easing: [0.16, 1, 0.3, 1]
       });
     }, { margin: '-10% 0px -10% 0px' });
-  } else if (processSection) {
-    // Graceful fallback
-    pillCards.forEach(card => {
-      card.style.opacity = '1';
-      card.style.transform = 'none';
-    });
-    if (timelineProgress) timelineProgress.style.height = '100%';
+  }
+  // -------------------------------------------------------------
+  // What We Do: entrance animation
+  // -------------------------------------------------------------
+  const wwdLayout = document.querySelector('.wwd-layout');
+  if (wwdLayout && window.Motion && window.Motion.animate && window.Motion.inView) {
+    const { animate, inView, stagger } = window.Motion;
+    const head = wwdLayout.querySelector('.wwd-head');
+    const items = wwdLayout.querySelectorAll('.wwd-item');
+    head.style.opacity = '0';
+    items.forEach(it => { it.style.opacity = '0'; });
+    inView(wwdLayout, () => {
+      animate(head, { opacity: [0, 1], transform: ['translateX(-24px)', 'translateX(0px)'] }, { duration: 0.7, easing: [0.16, 1, 0.3, 1] });
+      animate(items, { opacity: [0, 1], transform: ['translateY(22px)', 'translateY(0px)'] }, { delay: stagger(0.09, { start: 0.15 }), duration: 0.65, easing: [0.16, 1, 0.3, 1] });
+    }, { margin: '-10% 0px -10% 0px' });
   }
 });
-

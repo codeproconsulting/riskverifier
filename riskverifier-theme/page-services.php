@@ -303,7 +303,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('criminal-records')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Criminal Records Check" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Criminal Records Check" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -395,7 +395,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('civil-records')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Civil Records Search" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Civil Records Search" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -487,7 +487,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('credit-finance')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Credit & Finance Reports" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Credit & Finance Reports" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -579,7 +579,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('vital-records')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Vital Records Verification" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Vital Records Verification" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -671,7 +671,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('identity-credentials')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Identity & Credentials Verification" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Identity & Credentials Verification" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -763,7 +763,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('property-asset')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Property & Asset Searches" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Property & Asset Searches" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -855,7 +855,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('driving-records')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Driving & Motor Vehicle Records (MVR)" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Driving & Motor Vehicle Records (MVR)" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -947,7 +947,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('verifications-references')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Verifications & References" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Verifications & References" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -1039,7 +1039,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('due-diligence')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Due Diligence & Sanctions Screening" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Due Diligence & Sanctions Screening" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -1131,7 +1131,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('media-analytics')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Media Analytics" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Media Analytics" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -1223,7 +1223,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('bespoke-research')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Bespoke Research" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Bespoke Research" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>
@@ -1315,7 +1315,7 @@ get_header();
               <button class="btn btn-secondary btn-md" onclick="openServiceModal('geopolitical-advisory')">
                 Quick Summary &amp; Scope
               </button>
-              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Geopolitical Advisory" target="_blank" class="btn btn-outline btn-md" style="border-color:#083d77; color:#083d77;">
+              <a href="https://wa.me/13862431035?text=Hello%20Risk%20Verifier%2C%20I%20would%20like%20to%20inquire%20about%20Geopolitical Advisory" target="_blank" class="btn btn-outline btn-md">
                 Direct WhatsApp Inquiry
               </a>
             </div>

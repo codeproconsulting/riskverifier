@@ -74,34 +74,64 @@ get_header();
       </div>
     </section>
 
-    <!-- Top 2 Pillar Cards (Interactive Hover States) -->
-    <section class="about-pillars-section">
+    <!-- Our Mission & Vision Section (Matching Reference Design) -->
+    <section class="about-mission-vision-section">
       <div class="container">
-        <div class="about-pillars-grid">
-          <!-- Left Card: Default Blue, Hover White -->
-          <div class="about-pillar-card pillar-left">
-            <h3 class="about-pillar-title">Deliver accurate information, reduce risk, and build trust.</h3>
-            <p class="about-pillar-desc">
-              At Risk Verifier, we assist organizations make confident decisions by providing reliable background screening, due diligence, verification, and risk management services. We are committed to delivering accurate, relevant, and practical information that helps businesses reduce uncertainty, protect their interests, and build trusted relationships.
-            </p>
-            <svg class="about-pillar-watermark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              <polyline points="9 12 11 14 15 10"></polyline>
-            </svg>
+        <div class="mv-grid-layout">
+          
+          <!-- Top Row: Title on Left, Mission Card on Right -->
+          <div class="mv-top-row">
+            <!-- Left: Title Block -->
+            <div class="mv-title-block">
+              <h2 class="mv-heading">Our Mission<br>&amp; Vision</h2>
+              <div class="mv-accent-bars">
+                <span class="mv-bar-navy"></span>
+                <span class="mv-bar-green"></span>
+              </div>
+            </div>
+
+            <!-- Right: Mission Card (Circle on Left, Text on Right) -->
+            <div class="mv-card mv-card-mission">
+              <div class="mv-circle-wrap">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/mission-circle.jpg" alt="Our Mission" class="mv-circle-img">
+                <div class="mv-circle-icon-badge" title="Mission">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+              </div>
+              <div class="mv-card-body">
+                <h3 class="mv-card-title">Mission</h3>
+                <p class="mv-card-desc">
+                  Our mission is to assist organizations make confident decisions by providing reliable background screening, due diligence, verification, and risk management services. We are committed to delivering accurate, relevant, and practical information that helps businesses reduce uncertainty, protect their interests, and build trusted relationships.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <!-- Right Card: Default White, Hover Blue -->
-          <div class="about-pillar-card pillar-right">
-            <h3 class="about-pillar-title">The trusted global partner for risk intelligence.</h3>
-            <p class="about-pillar-desc">
-              To become a trusted global partner for organizations seeking to understand and manage risk. We aim to set a high standard for professional screening, verification, and due diligence by combining thorough research, responsible practices, and practical risk solutions that support safer hiring and stronger business decisions.
-            </p>
-            <svg class="about-pillar-watermark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
+          <!-- Bottom Row: Vision Card (Text on Left, Circle on Right) -->
+          <div class="mv-bottom-row">
+            <div class="mv-card mv-card-vision">
+              <div class="mv-card-body">
+                <h3 class="mv-card-title">Vision</h3>
+                <p class="mv-card-desc">
+                  Our vision is to become a trusted global partner for organizations seeking to understand and manage risk. We aim to set a high standard for professional screening, verification, and due diligence by combining thorough research, responsible practices, and practical risk solutions that support safer hiring and stronger business decisions.
+                </p>
+              </div>
+              <div class="mv-circle-wrap">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/vision-circle.jpg" alt="Our Vision" class="mv-circle-img">
+                <div class="mv-circle-icon-badge badge-green" title="Vision">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>

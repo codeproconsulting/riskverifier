@@ -533,4 +533,109 @@ document.addEventListener('DOMContentLoaded', () => {
       animate(items, { opacity: [0, 1], transform: ['translateY(22px)', 'translateY(0px)'] }, { delay: stagger(0.09, { start: 0.15 }), duration: 0.65, easing: [0.16, 1, 0.3, 1] });
     }, { margin: '-10% 0px -10% 0px' });
   }
+
+  // -------------------------------------------------------------
+  // About Page: Interactive Hero Panel & Horizontal Carousel (Mouse Drag & Navigation)
+  // -------------------------------------------------------------
+  const principlesViewport = document.getElementById('principlesViewport');
+  const principlesProgressThumb = document.getElementById('principlesProgressThumb');
+  const principlesPrevBtn = document.getElementById('principlesPrevBtn');
+  const principlesNextBtn = document.getElementById('principlesNextBtn');
+
+  if (principlesViewport) {
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let hasDragged = false;
+
+    const updateProgress = () => {
+      const maxScroll = principlesViewport.scrollWidth - principlesViewport.clientWidth;
+      if (maxScroll <= 0) {
+        if (principlesProgressThumb) {
+          principlesProgressThumb.style.width = '100%';
+          principlesProgressThumb.style.left = '0%';
+        }
+        return;
+      }
+      const scrollRatio = principlesViewport.scrollLeft / maxScroll;
+      const thumbWidthPercent = Math.max(18, Math.min(42, (principlesViewport.clientWidth / principlesViewport.scrollWidth) * 100));
+      const availableTrack = 100 - thumbWidthPercent;
+      const leftPos = scrollRatio * availableTrack;
+
+      if (principlesProgressThumb) {
+        principlesProgressThumb.style.width = thumbWidthPercent + '%';
+        principlesProgressThumb.style.left = Math.max(0, Math.min(availableTrack, leftPos)) + '%';
+      }
+    };
+
+    // Mouse Drag events
+    principlesViewport.addEventListener('mousedown', (e) => {
+      isDown = true;
+      hasDragged = false;
+      principlesViewport.classList.add('is-dragging');
+      startX = e.pageX - principlesViewport.offsetLeft;
+      scrollLeft = principlesViewport.scrollLeft;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isDown) {
+        isDown = false;
+        principlesViewport.classList.remove('is-dragging');
+      }
+    });
+
+    principlesViewport.addEventListener('mouseleave', () => {
+      if (isDown) {
+        isDown = false;
+        principlesViewport.classList.remove('is-dragging');
+      }
+    });
+
+    principlesViewport.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - principlesViewport.offsetLeft;
+      const walk = (x - startX) * 1.6;
+      if (Math.abs(walk) > 4) hasDragged = true;
+      principlesViewport.scrollLeft = scrollLeft - walk;
+      updateProgress();
+    });
+
+    // Touch events
+    principlesViewport.addEventListener('scroll', updateProgress, { passive: true });
+
+    // Prevent accidental link / card click when dragging
+    principlesViewport.addEventListener('click', (e) => {
+      if (hasDragged) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    });
+
+    // Prev / Next button controls
+    if (principlesPrevBtn) {
+      principlesPrevBtn.addEventListener('click', () => {
+        principlesViewport.scrollBy({ left: -310, behavior: 'smooth' });
+      });
+    }
+
+    if (principlesNextBtn) {
+      principlesNextBtn.addEventListener('click', () => {
+        principlesViewport.scrollBy({ left: 310, behavior: 'smooth' });
+      });
+    }
+
+    // Keyboard arrow keys accessibility
+    principlesViewport.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        principlesViewport.scrollBy({ left: -310, behavior: 'smooth' });
+      } else if (e.key === 'ArrowRight') {
+        principlesViewport.scrollBy({ left: 310, behavior: 'smooth' });
+      }
+    });
+
+    // Initial update
+    updateProgress();
+    window.addEventListener('resize', updateProgress);
+  }
 });

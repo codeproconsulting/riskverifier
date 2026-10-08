@@ -1885,7 +1885,4 @@ get_header();
   </main>
 
 <?php
-get_footer();
-</div>
-      </div>
-    </section>undefined
+get_footer();

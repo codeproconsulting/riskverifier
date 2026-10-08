@@ -3305,6 +3305,126 @@ button, input, textarea, select {
 }
 
 /* ==========================================================================
+   EXECUTIVE GEOMETRIC VECTOR HEADER BANNER (ALL INNER PAGES)
+   ========================================================================== */
+.vector-header-banner {
+  position: relative;
+  background: #ffffff;
+  min-height: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 34px 20px 36px;
+  border-bottom: 1.5px solid rgba(8, 61, 119, 0.1);
+  box-shadow: 0 4px 18px rgba(8, 61, 119, 0.04);
+}
+
+.banner-vector-left,
+.banner-vector-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(140px, 24vw, 360px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.banner-vector-left {
+  left: 0;
+}
+
+.banner-vector-right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.banner-vector-left svg,
+.banner-vector-right svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.banner-content-box {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 640px;
+  padding: 0 16px;
+}
+
+.banner-tagline {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #0284c7;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.banner-title {
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 800;
+  color: #083d77;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  font-family: 'Plus Jakarta Sans', var(--font-main), sans-serif;
+}
+
+.banner-breadcrumb {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(8, 61, 119, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.banner-breadcrumb a {
+  color: rgba(8, 61, 119, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.banner-breadcrumb a:hover {
+  color: #083d77;
+  text-decoration: underline;
+}
+
+.banner-breadcrumb .sep {
+  opacity: 0.45;
+}
+
+.banner-breadcrumb .current {
+  color: #083d77;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .vector-header-banner {
+    min-height: 145px;
+    padding: 28px 16px;
+  }
+  .banner-vector-left,
+  .banner-vector-right {
+    width: clamp(90px, 18vw, 150px);
+    opacity: 0.85;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-vector-left,
+  .banner-vector-right {
+    width: 75px;
+    opacity: 0.6;
+  }
+}
+
+/* ==========================================================================
    LOGIN & SIGNUP PORTAL STYLING
    ========================================================================== */
 .portal-page-banner {

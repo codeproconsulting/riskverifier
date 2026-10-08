@@ -55,7 +55,12 @@ get_header();
                 <div class="svc-portal-outer-ring"></div>
                 <div class="svc-portal-mid-ring"></div>
                 <div class="svc-portal-circle">
-                  <span style="font-size:1.3rem; font-weight:800; color:#ffffff;">01</span>
+                  <svg class="svc-portal-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="12" y1="18" x2="12" y2="12"></line>
+                    <polyline points="9 15 12 12 15 15"></polyline>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -67,6 +72,29 @@ get_header();
 
           <!-- Step 02: Verification Scope & Selection (Even: Ghost Num Left, Center Node, Content Right) -->
           <div class="svc-timeline-row row-even svc-side-right">
+            <div class="svc-timeline-number">
+              <span class="svc-ghost-num">02</span>
+            </div>
+
+            <div class="svc-timeline-center">
+              <div class="svc-connector-line"></div>
+              <div class="svc-portal-node">
+                <div class="svc-portal-glow"></div>
+                <div class="svc-portal-outer-ring"></div>
+                <div class="svc-portal-mid-ring"></div>
+                <div class="svc-portal-circle">
+                  <svg class="svc-portal-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 6h11"></path>
+                    <path d="M9 12h11"></path>
+                    <path d="M9 18h11"></path>
+                    <polyline points="4 6 5.5 7.5 8 5"></polyline>
+                    <polyline points="4 12 5.5 13.5 8 11"></polyline>
+                    <polyline points="4 18 5.5 19.5 8 17"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
             <div class="svc-timeline-content">
               <span class="svc-turnaround-badge">Step 02 • Scope</span>
               <h3 class="svc-content-title">SELECT VERIFICATION SERVICES</h3>
@@ -77,22 +105,6 @@ get_header();
                 <span class="showcase-tag-pill">12 Specialized Vectors</span>
                 <span class="showcase-tag-pill">Custom Risk Profiling</span>
               </div>
-            </div>
-
-            <div class="svc-timeline-center">
-              <div class="svc-connector-line"></div>
-              <div class="svc-portal-node">
-                <div class="svc-portal-glow"></div>
-                <div class="svc-portal-outer-ring"></div>
-                <div class="svc-portal-mid-ring"></div>
-                <div class="svc-portal-circle">
-                  <span style="font-size:1.3rem; font-weight:800; color:#ffffff;">02</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="svc-timeline-number">
-              <span class="svc-ghost-num">02</span>
             </div>
           </div>
 
@@ -117,7 +129,11 @@ get_header();
                 <div class="svc-portal-outer-ring"></div>
                 <div class="svc-portal-mid-ring"></div>
                 <div class="svc-portal-circle">
-                  <span style="font-size:1.3rem; font-weight:800; color:#ffffff;">03</span>
+                  <svg class="svc-portal-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <polyline points="8 11 10.5 13.5 14.5 9.5"></polyline>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -129,6 +145,26 @@ get_header();
 
           <!-- Step 04: Consolidated Intelligence Report (Even) -->
           <div class="svc-timeline-row row-even svc-side-right">
+            <div class="svc-timeline-number">
+              <span class="svc-ghost-num">04</span>
+            </div>
+
+            <div class="svc-timeline-center">
+              <div class="svc-connector-line"></div>
+              <div class="svc-portal-node">
+                <div class="svc-portal-glow"></div>
+                <div class="svc-portal-outer-ring"></div>
+                <div class="svc-portal-mid-ring"></div>
+                <div class="svc-portal-circle">
+                  <svg class="svc-portal-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    <path d="M9 14l2 2 4-4"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
             <div class="svc-timeline-content">
               <span class="svc-turnaround-badge">Step 04 • Reporting</span>
               <h3 class="svc-content-title">RECEIVE CONSOLIDATED REPORT</h3>
@@ -139,22 +175,6 @@ get_header();
                 <span class="showcase-tag-pill">Evidentiary Documentation</span>
                 <span class="showcase-tag-pill">Executive Risk Index</span>
               </div>
-            </div>
-
-            <div class="svc-timeline-center">
-              <div class="svc-connector-line"></div>
-              <div class="svc-portal-node">
-                <div class="svc-portal-glow"></div>
-                <div class="svc-portal-outer-ring"></div>
-                <div class="svc-portal-mid-ring"></div>
-                <div class="svc-portal-circle">
-                  <span style="font-size:1.3rem; font-weight:800; color:#ffffff;">04</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="svc-timeline-number">
-              <span class="svc-ghost-num">04</span>
             </div>
           </div>
 
@@ -179,7 +199,10 @@ get_header();
                 <div class="svc-portal-outer-ring"></div>
                 <div class="svc-portal-mid-ring"></div>
                 <div class="svc-portal-circle">
-                  <span style="font-size:1.3rem; font-weight:800; color:#ffffff;">05</span>
+                  <svg class="svc-portal-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
                 </div>
               </div>
             </div>

@@ -3,19 +3,38 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Nav Toggle
+  // Mobile Nav Toggle & Mega Dropdown
   const mobileToggle = document.getElementById('mobileNavToggle');
   const navMenu = document.getElementById('navMenu');
+  const megaParents = document.querySelectorAll('.mega-dropdown-parent');
+
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
       navMenu.classList.toggle('active');
     });
 
-    // Close menu when clicking any nav link
-    navMenu.querySelectorAll('.nav-link').forEach(link => {
+    // Handle dropdown toggles on mobile
+    megaParents.forEach(parent => {
+      const toggle = parent.querySelector('.nav-link-dropdown-toggle, .dropdown-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', (e) => {
+          if (window.innerWidth <= 991) {
+            e.preventDefault();
+            e.stopPropagation();
+            parent.classList.toggle('mobile-open');
+            const isExpanded = parent.classList.contains('mobile-open');
+            toggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+          }
+        });
+      }
+    });
+
+    // Close menu when clicking nav links that are NOT dropdown toggles
+    navMenu.querySelectorAll('.nav-link:not(.nav-link-dropdown-toggle), .mega-service-card, .mega-view-all-card').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        megaParents.forEach(p => p.classList.remove('mobile-open'));
       });
     });
 
@@ -23,6 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
         navMenu.classList.remove('active');
+        megaParents.forEach(p => {
+          p.classList.remove('mobile-open');
+          p.classList.remove('is-open');
+        });
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        navMenu.classList.remove('active');
+        megaParents.forEach(p => {
+          p.classList.remove('mobile-open');
+          p.classList.remove('is-open');
+        });
       }
     });
   }
@@ -232,6 +266,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
+
+    // Auto-activate tab from URL hash (e.g., #criminal-records)
+    const activateTabFromHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const targetTab = document.querySelector(`.services-sidebar-tab[data-target="${hash}"]`);
+        if (targetTab) {
+          targetTab.click();
+          const hub = document.getElementById('services-hub');
+          if (hub) {
+            hub.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
+    };
+    activateTabFromHash();
+    window.addEventListener('hashchange', activateTabFromHash);
   }
 
   // FAQ Capsule Accordion (Interactive Expand / Collapse)

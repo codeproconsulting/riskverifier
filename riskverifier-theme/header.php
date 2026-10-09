@@ -56,11 +56,17 @@
         ?>
         <ul class="nav-menu" id="navMenu">
           <li><a href="<?php echo esc_url(home_url('/')); ?>" class="nav-link <?php if (is_front_page()) echo 'active'; ?>">Home</a></li>
-          <li><a href="<?php echo esc_url(home_url('/services/')); ?>" class="nav-link">Services</a></li>
-          <li><a href="<?php echo esc_url(home_url('/how-it-works/')); ?>" class="nav-link">How It Works</a></li>
-          <li><a href="<?php echo esc_url(home_url('/about-us/')); ?>" class="nav-link">About Us</a></li>
+          <li class="has-dropdown mega-dropdown-parent">
+            <a href="<?php echo esc_url(home_url('/services/')); ?>" class="nav-link nav-link-dropdown-toggle <?php if (is_page('services') || is_page_template('page-services.php')) echo 'active'; ?>" id="servicesDropdownToggle" aria-expanded="false" aria-haspopup="true">
+              Services
+              <svg class="nav-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <?php echo riskverifier_get_services_mega_menu_html(); ?>
+          </li>
+          <li><a href="<?php echo esc_url(home_url('/how-it-works/')); ?>" class="nav-link <?php if (is_page('how-it-works') || is_page_template('page-how-it-works.php')) echo 'active'; ?>">How It Works</a></li>
+          <li><a href="<?php echo esc_url(home_url('/about-us/')); ?>" class="nav-link <?php if (is_page('about-us') || is_page('about') || is_page_template('page-about.php')) echo 'active'; ?>">About Us</a></li>
           <li><a href="<?php echo esc_url(home_url('/#offices')); ?>" class="nav-link">Regional Offices</a></li>
-          <li><a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="nav-link">Contact</a></li>
+          <li><a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="nav-link <?php if (is_page('contact-us') || is_page('contact') || is_page_template('page-contact.php')) echo 'active'; ?>">Contact</a></li>
         </ul>
         <?php } ?>
       </nav>

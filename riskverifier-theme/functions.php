@@ -44,8 +44,64 @@ function riskverifier_theme_setup() {
         'flex-height' => true,
         'flex-width'  => true,
     ));
+
+    // === Elementor & Page Builder Compatibility ===
+    // Enables Elementor's full-width and canvas page layouts
+    add_theme_support('align-wide');
+
+    // Custom header support (used by Elementor Header & Footer Builder)
+    add_theme_support('custom-header');
+
+    // Editor color palette — keeps brand colours available in Gutenberg & Elementor
+    add_theme_support('editor-color-palette', array(
+        array(
+            'name'  => __('Brand Blue', 'riskverifier'),
+            'slug'  => 'brand-blue',
+            'color' => '#083d77',
+        ),
+        array(
+            'name'  => __('Deep Navy', 'riskverifier'),
+            'slug'  => 'deep-navy',
+            'color' => '#071d3e',
+        ),
+        array(
+            'name'  => __('Accent Blue', 'riskverifier'),
+            'slug'  => 'accent-blue',
+            'color' => '#2563eb',
+        ),
+    ));
+
+    // Responsive embeds support
+    add_theme_support('responsive-embeds');
 }
 add_action('after_setup_theme', 'riskverifier_theme_setup');
+
+/**
+ * Set Elementor-compatible content width
+ */
+if (!isset($content_width)) {
+    $content_width = 1280;
+}
+
+/**
+ * Elementor Compatibility
+ * - Removes default content padding so Elementor sections render edge-to-edge.
+ * - Registers the theme as Elementor-ready.
+ */
+add_action('elementor/theme/register_conditions', function($manager) {
+    // Allow Elementor to control which pages use its templates
+}, 10, 1);
+
+/**
+ * Add Elementor body classes so CSS overrides work correctly
+ */
+add_filter('body_class', function($classes) {
+    if (defined('ELEMENTOR_VERSION')) {
+        $classes[] = 'riskverifier-elementor-active';
+    }
+    return $classes;
+});
+
 
 /**
  * Enqueue scripts and styles
@@ -286,4 +342,179 @@ add_filter('walker_nav_menu_start_el', function ($item_output, $item, $depth, $a
     }
     return $item_output;
 }, 10, 4);
+
+/**
+ * =========================================================================
+ * Automatic Core Pages Setup & Permalinks Management
+ * =========================================================================
+ * Ensures that on theme activation/loading, essential pages ('services',
+ * 'about-us', 'how-it-works', 'contact-us', 'login', 'signup') are
+ * automatically created as real WordPress Pages in the database with their
+ * templates assigned and permalinks set to /%postname%/.
+ */
+function riskverifier_ensure_theme_pages() {
+    $initialized = get_option('riskverifier_pages_v3_ready');
+
+    $pages = array(
+        'services' => array(
+            'title'    => 'Services',
+            'template' => 'page-services.php',
+        ),
+        'about-us' => array(
+            'title'    => 'About Us',
+            'template' => 'page-about.php',
+            'alt_slug' => 'about',
+        ),
+        'how-it-works' => array(
+            'title'    => 'How It Works',
+            'template' => 'page-how-it-works.php',
+        ),
+        'contact-us' => array(
+            'title'    => 'Contact Us',
+            'template' => 'page-contact.php',
+            'alt_slug' => 'contact',
+        ),
+        'login' => array(
+            'title'    => 'Client Portal Login',
+            'template' => 'page-login.php',
+        ),
+        'signup' => array(
+            'title'    => 'Get Started / Sign Up',
+            'template' => 'page-signup.php',
+            'alt_slug' => 'sign-up',
+        ),
+    );
+
+    // If not yet initialized or in admin screen, make sure pages exist
+    if (!$initialized || is_admin()) {
+        $did_modify = false;
+
+        foreach ($pages as $slug => $data) {
+            $page_obj = get_page_by_path($slug);
+            if (!$page_obj && !empty($data['alt_slug'])) {
+                $page_obj = get_page_by_path($data['alt_slug']);
+            }
+
+            if (!$page_obj) {
+                $new_page_id = wp_insert_post(array(
+                    'post_title'     => $data['title'],
+                    'post_name'      => $slug,
+                    'post_status'    => 'publish',
+                    'post_type'      => 'page',
+                    'comment_status' => 'closed',
+                    'ping_status'    => 'closed',
+                ));
+
+                if ($new_page_id && !is_wp_error($new_page_id)) {
+                    update_post_meta($new_page_id, '_wp_page_template', $data['template']);
+                    $did_modify = true;
+                }
+            } else {
+                $current_tmpl = get_post_meta($page_obj->ID, '_wp_page_template', true);
+                if (empty($current_tmpl) || $current_tmpl === 'default') {
+                    update_post_meta($page_obj->ID, '_wp_page_template', $data['template']);
+                }
+            }
+        }
+
+        // Ensure pretty permalinks are configured
+        $current_structure = get_option('permalink_structure');
+        if (empty($current_structure)) {
+            global $wp_rewrite;
+            if (isset($wp_rewrite)) {
+                $wp_rewrite->set_permalink_structure('/%postname%/');
+                $did_modify = true;
+            }
+        }
+
+        if ($did_modify || !$initialized) {
+            flush_rewrite_rules(false);
+            update_option('riskverifier_pages_v3_ready', 1);
+        }
+    }
+}
+add_action('init', 'riskverifier_ensure_theme_pages', 5);
+
+add_action('after_switch_theme', function() {
+    delete_option('riskverifier_pages_v3_ready');
+    riskverifier_ensure_theme_pages();
+});
+
+/**
+ * Register Custom Rewrite Rules
+ */
+add_action('init', function() {
+    add_rewrite_rule('^services/?$', 'index.php?pagename=services', 'top');
+    add_rewrite_rule('^about-us/?$', 'index.php?pagename=about-us', 'top');
+    add_rewrite_rule('^about/?$', 'index.php?pagename=about-us', 'top');
+    add_rewrite_rule('^how-it-works/?$', 'index.php?pagename=how-it-works', 'top');
+    add_rewrite_rule('^contact-us/?$', 'index.php?pagename=contact-us', 'top');
+    add_rewrite_rule('^contact/?$', 'index.php?pagename=contact-us', 'top');
+    add_rewrite_rule('^login/?$', 'index.php?pagename=login', 'top');
+    add_rewrite_rule('^signup/?$', 'index.php?pagename=signup', 'top');
+    add_rewrite_rule('^sign-up/?$', 'index.php?pagename=signup', 'top');
+}, 10);
+
+/**
+ * Bulletproof Fallback Router
+ * If WordPress receives a request that results in 404 or missing page for any theme
+ * route (e.g. /services, /about-us, /contact-us, /how-it-works, /login, /signup),
+ * this filter guarantees the proper template is served with HTTP 200 OK.
+ */
+add_filter('template_include', function ($template) {
+    if (is_404() || !is_singular('page')) {
+        $raw_uri = $_SERVER['REQUEST_URI'] ?? '';
+        $path = trim(parse_url($raw_uri, PHP_URL_PATH) ?? '', '/');
+
+        // Strip subfolder if WordPress is inside a subdirectory
+        $home_path = trim(parse_url(home_url(), PHP_URL_PATH) ?? '', '/');
+        if ($home_path !== '' && strpos($path, $home_path) === 0) {
+            $path = trim(substr($path, strlen($home_path)), '/');
+        }
+
+        // Clean out index.php prefix if present
+        $path = preg_replace('/^index\.php\/?/', '', $path);
+
+        $route_map = array(
+            'services'     => 'page-services.php',
+            'about-us'     => 'page-about.php',
+            'about'        => 'page-about.php',
+            'how-it-works' => 'page-how-it-works.php',
+            'contact-us'   => 'page-contact.php',
+            'contact'      => 'page-contact.php',
+            'login'        => 'page-login.php',
+            'signup'       => 'page-signup.php',
+            'sign-up'      => 'page-signup.php',
+        );
+
+        if (isset($route_map[$path])) {
+            global $wp_query;
+            $wp_query->is_404 = false;
+            status_header(200);
+
+            // Populate queried object so get_the_ID(), wp_title(), and body classes function properly
+            $page_obj = get_page_by_path($path);
+            if (!$page_obj) {
+                if ($path === 'about') $page_obj = get_page_by_path('about-us');
+                if ($path === 'contact') $page_obj = get_page_by_path('contact-us');
+                if ($path === 'sign-up') $page_obj = get_page_by_path('signup');
+            }
+            if ($page_obj) {
+                $wp_query->queried_object = $page_obj;
+                $wp_query->queried_object_id = $page_obj->ID;
+                $wp_query->is_page = true;
+                $wp_query->is_singular = true;
+                $wp_query->posts = array($page_obj);
+                $wp_query->post_count = 1;
+            }
+
+            $matched_template = locate_template(array($route_map[$path]));
+            if ($matched_template) {
+                return $matched_template;
+            }
+        }
+    }
+    return $template;
+}, 99);
+
 

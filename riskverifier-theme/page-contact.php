@@ -5,6 +5,33 @@
  * @package RiskVerifier
  */
 
+$is_elementor = false;
+if (is_singular()) {
+    $pid = get_the_ID();
+    if ($pid) {
+        if (defined('ELEMENTOR_VERSION') && class_exists('\Elementor\Plugin')) {
+            $is_elementor = \Elementor\Plugin::$instance->db->is_built_with_elementor($pid);
+        }
+        if (!$is_elementor && function_exists('get_post_meta')) {
+            $is_elementor = (get_post_meta($pid, '_elementor_edit_mode', true) === 'builder');
+        }
+    }
+}
+
+if ($is_elementor) {
+    $page_layout = is_singular() ? get_post_meta(get_the_ID(), '_wp_page_template', true) : '';
+    if ($page_layout === 'elementor_canvas') {
+        while (have_posts()) { the_post(); the_content(); }
+        return;
+    }
+    get_header();
+    echo '<main id="main-content" class="elementor-content-container">';
+    while (have_posts()) { the_post(); the_content(); }
+    echo '</main>';
+    get_footer();
+    return;
+}
+
 get_header();
 ?>
   <main>

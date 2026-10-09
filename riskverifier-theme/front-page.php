@@ -5,107 +5,83 @@
  * @package RiskVerifier
  */
 
+$is_elementor = false;
+if (is_singular() || (is_front_page() && get_option('page_on_front'))) {
+    $pid = get_the_ID() ?: get_option('page_on_front');
+    if ($pid) {
+        if (defined('ELEMENTOR_VERSION') && class_exists('\Elementor\Plugin')) {
+            $is_elementor = \Elementor\Plugin::$instance->db->is_built_with_elementor($pid);
+        }
+        if (!$is_elementor && function_exists('get_post_meta')) {
+            $is_elementor = (get_post_meta($pid, '_elementor_edit_mode', true) === 'builder');
+        }
+    }
+}
+
+if ($is_elementor) {
+    $page_layout = is_singular() ? get_post_meta(get_the_ID(), '_wp_page_template', true) : '';
+    if ($page_layout === 'elementor_canvas') {
+        while (have_posts()) { the_post(); the_content(); }
+        return;
+    }
+    get_header();
+    echo '<main id="main-content" class="elementor-content-container">';
+    while (have_posts()) { the_post(); the_content(); }
+    echo '</main>';
+    get_footer();
+    return;
+}
+
 get_header();
 ?>
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <div class="container hero-grid">
+      <div class="container">
         <div class="hero-content">
-          <div class="badge badge-blue">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Accurate • Compliant • 100+ Countries
-          </div>
-          <h1 class="hero-title">Business Confidence starts with <span class="highlight">Risk Verification</span></h1>
-          <p class="hero-description">
-            Risk Verifier helps businesses, multinational corporations, and decision-makers verify information with confidence. Fast turnaround, evidence-based background screening, corporate due diligence, and risk intelligence you can trust.
-          </p>
-          <div class="hero-actions">
-            <a href="#quote-form-section" class="btn btn-primary btn-lg">
-              Start Verification Request
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#services-catalog" class="btn btn-outline btn-lg">Explore 12 Services</a>
+
+          <!-- Eyebrow Badge -->
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-dot"></span>
+            Trusted Background Screening &bull; 100+ Countries &bull; Evidence-Based
           </div>
 
+          <h1 class="hero-title">The Due Diligence Partner<br>That <span class="highlight">Enterprises Trust</span></h1>
+
+          <p class="hero-description">
+            Risk Verifier delivers court-verified background checks, corporate due diligence, sanctions screening,
+            and risk intelligence for businesses, law firms, and multinationals operating across the globe.
+            Accurate, confidential, and fully compliant &mdash; with results in 24 to 72 hours.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#quote-form-section" class="btn btn-primary btn-lg">
+              Request a Verification
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="<?php echo esc_url(home_url('/services/')); ?>" class="btn btn-outline btn-lg">Explore All Services</a>
+          </div>
+
+          <!-- Trust Metrics -->
           <div class="hero-metrics">
             <div class="metric-item">
               <span class="metric-value">100+</span>
               <span class="metric-label">Countries Covered</span>
             </div>
             <div class="metric-item">
-              <span class="metric-value">24–72h</span>
-              <span class="metric-label">Rapid SLA Delivery</span>
+              <span class="metric-value">24&ndash;72h</span>
+              <span class="metric-label">SLA Turnaround</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">12+</span>
+              <span class="metric-label">Verification Services</span>
             </div>
             <div class="metric-item">
               <span class="metric-value">100%</span>
-              <span class="metric-label">Verified Sources</span>
+              <span class="metric-label">Source-Verified</span>
             </div>
           </div>
-        </div>
 
-        <!-- Interactive Hero Simulator -->
-        <div class="hero-visual">
-          <div class="hero-card">
-            <div class="card-header-sim">
-              <span class="card-title-sim">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                Live Screening Portal Simulator
-              </span>
-              <span class="status-badge">System Live</span>
-            </div>
-
-            <div class="sim-search-box">
-              <input type="text" id="simSubjectInput" class="sim-input" placeholder="Enter Subject Name or Entity..." value="Morgan Global Enterprises">
-              <button id="simRunBtn" class="btn btn-primary btn-sm">Simulate</button>
-            </div>
-
-            <div class="sim-results" id="simResultsContainer">
-              <div class="sim-result-row">
-                <div class="sim-service-info">
-                  <div class="sim-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                  </div>
-                  <div>
-                    <div class="sim-name">Criminal & Court Record Check</div>
-                    <div class="sim-detail">Cross-jurisdictional police & court check</div>
-                  </div>
-                </div>
-                <span class="sim-tag tag-verified">CLEAR</span>
-              </div>
-
-              <div class="sim-result-row">
-                <div class="sim-service-info">
-                  <div class="sim-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                  </div>
-                  <div>
-                    <div class="sim-name">Credit & Financial Solvency</div>
-                    <div class="sim-detail">Corporate filings & payment rating</div>
-                  </div>
-                </div>
-                <span class="sim-tag tag-verified">VERIFIED</span>
-              </div>
-
-              <div class="sim-result-row">
-                <div class="sim-service-info">
-                  <div class="sim-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
-                  </div>
-                  <div>
-                    <div class="sim-name">Sanctions & Adverse Media</div>
-                    <div class="sim-detail">UN, OFAC, Interpol watchlists screened</div>
-                  </div>
-                </div>
-                <span class="sim-tag tag-verified">NO MATCH</span>
-              </div>
-            </div>
-
-            <div style="margin-top: 20px; padding: 12px 14px; background: #ffffff; border: 1px solid rgba(8,61,119,0.15); border-radius: 8px; font-size: 0.78rem; color: #083d77; display: flex; align-items: center; justify-content: space-between;">
-              <span>🔒 Legally authorized consent workflow</span>
-              <strong style="color: #083d77;">Confidential & Encrypted</strong>
-            </div>
-          </div>
         </div>
       </div>
     </section>

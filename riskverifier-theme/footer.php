@@ -94,11 +94,6 @@
       <div>
         © <?php echo date('Y'); ?> Risk Verifier. All Rights Reserved. Business Confidence Starts with Risk Verification.
       </div>
-      <div class="footer-bottom-links">
-        <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">Privacy Policy</a>
-        <a href="<?php echo esc_url(home_url('/compliance/')); ?>">Compliance & FCRA</a>
-        <a href="<?php echo esc_url(home_url('/terms/')); ?>">Terms of Service</a>
-      </div>
     </div>
   </footer>
 

@@ -36,49 +36,343 @@ get_header();
 ?>
   <main>
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
+      <!-- Ambient Fluid Topography & Atmospheric Vectors -->
+      <div class="hero-ambient-layer" aria-hidden="true">
+        <svg class="hero-ambient-wave" viewBox="0 0 1440 680" fill="none" preserveAspectRatio="none">
+          <path d="M-60 220 C240 120, 520 340, 840 210 C1120 90, 1360 260, 1540 180" stroke="#0284c7" stroke-opacity="0.06" stroke-width="2" />
+          <path d="M-40 310 C260 210, 560 420, 880 300 C1160 180, 1380 350, 1560 270" stroke="#0284c7" stroke-opacity="0.08" stroke-width="1.6" stroke-dasharray="6 8" />
+          <path d="M-80 430 C220 320, 500 520, 820 410 C1100 290, 1340 450, 1520 380" stroke="#0284c7" stroke-opacity="0.05" stroke-width="1.8" />
+        </svg>
+      </div>
+
       <div class="container">
-        <div class="hero-content">
+        <div class="hero-grid">
 
-          <!-- Eyebrow Badge -->
-          <div class="hero-eyebrow">
-            <span class="hero-eyebrow-dot"></span>
-            Trusted Background Screening &bull; 100+ Countries &bull; Evidence-Based
+          <!-- Left Column: Authentic Executive Copy & Titles (from riskverifier.com) -->
+          <div class="hero-text-col">
+            <h1 class="hero-title">Verify the Facts.<br><span class="highlight">Decide with Confidence.</span></h1>
+
+            <p class="hero-description">
+              At Risk Verifier, we help organizations, multinational corporations, and decision-makers verify information, identify risks early, and make confident decisions through court-verified background checks, corporate due diligence, media analytics, and geopolitical advisory.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#quote-form-section" class="btn btn-primary btn-lg">
+                Request a Verification
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="<?php echo esc_url(home_url('/services/')); ?>" class="btn btn-outline btn-lg">Explore All Services</a>
+            </div>
+
+            <!-- Trust Metrics -->
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-value">100+</span>
+                <span class="metric-label">Countries Covered</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">24&ndash;72h</span>
+                <span class="metric-label">SLA Turnaround</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">12+</span>
+                <span class="metric-label">Core Services</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">100%</span>
+                <span class="metric-label">Source-Verified</span>
+              </div>
+            </div>
           </div>
 
-          <h1 class="hero-title">The Due Diligence Partner<br>That <span class="highlight">Enterprises Trust</span></h1>
+          <!-- Right Column: Interactive Animated Risk Intelligence Orbit Loop -->
+          <div class="hero-visual-col">
+            <div class="risk-orbit-wrapper">
+              <!-- Ambient luminous back glow -->
+              <div class="orbit-ambient-glow"></div>
 
-          <p class="hero-description">
-            Risk Verifier delivers court-verified background checks, corporate due diligence, sanctions screening,
-            and risk intelligence for businesses, law firms, and multinationals operating across the globe.
-            Accurate, confidential, and fully compliant &mdash; with results in 24 to 72 hours.
-          </p>
+              <div class="risk-orbit-stage" id="riskOrbitStage">
+                
+                <!-- SVG Radar Grid, Concentric Tracks, World Map Silhouette & Sweep Beam -->
+                <svg class="orbit-radar-svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="radarMapGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.1" />
+                      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.04" />
+                      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="orbitLineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.65" />
+                      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.15" />
+                    </linearGradient>
+                    <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.25" />
+                      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.08" />
+                      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+                    </linearGradient>
+                    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="3" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
 
-          <div class="hero-actions">
-            <a href="#quote-form-section" class="btn btn-primary btn-lg">
-              Request a Verification
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="<?php echo esc_url(home_url('/services/')); ?>" class="btn btn-outline btn-lg">Explore All Services</a>
-          </div>
+                  <!-- World Map Tech Dot Matrix / Silhouette -->
+                  <g class="radar-world-map">
+                    <circle cx="300" cy="300" r="280" fill="url(#radarMapGrad)" />
+                    <!-- Stylized continents silhouettes -->
+                    <path d="M185 200 Q205 180 235 190 T265 220 T245 250 T205 260 T175 230 Z" fill="#0284c7" opacity="0.1" />
+                    <path d="M175 275 Q205 285 225 330 T215 380 T185 400 T165 330 Z" fill="#0284c7" opacity="0.1" />
+                    <path d="M280 180 Q320 170 340 195 T330 230 T285 225 Z" fill="#0284c7" opacity="0.1" />
+                    <path d="M285 240 Q330 250 335 300 T315 360 T275 330 T270 270 Z" fill="#0284c7" opacity="0.1" />
+                    <path d="M345 175 Q395 160 445 190 T435 250 T375 245 T340 210 Z" fill="#0284c7" opacity="0.1" />
+                    <path d="M385 310 Q435 315 440 355 T405 390 T375 360 Z" fill="#0284c7" opacity="0.1" />
+                  </g>
 
-          <!-- Trust Metrics -->
-          <div class="hero-metrics">
-            <div class="metric-item">
-              <span class="metric-value">100+</span>
-              <span class="metric-label">Countries Covered</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-value">24&ndash;72h</span>
-              <span class="metric-label">SLA Turnaround</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-value">12+</span>
-              <span class="metric-label">Verification Services</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-value">100%</span>
-              <span class="metric-label">Source-Verified</span>
+                  <!-- Crosshair Grid Lines -->
+                  <line x1="300" y1="30" x2="300" y2="570" stroke="#0284c7" stroke-opacity="0.16" stroke-dasharray="3 4" />
+                  <line x1="30" y1="300" x2="570" y2="300" stroke="#0284c7" stroke-opacity="0.16" stroke-dasharray="3 4" />
+                  <line x1="110" y1="110" x2="490" y2="490" stroke="#0284c7" stroke-opacity="0.08" stroke-dasharray="2 4" />
+                  <line x1="110" y1="490" x2="490" y2="110" stroke="#0284c7" stroke-opacity="0.08" stroke-dasharray="2 4" />
+
+                  <!-- Concentric Radar Rings -->
+                  <circle class="radar-ring radar-ring-1" cx="300" cy="300" r="76" stroke="#0284c7" stroke-opacity="0.25" stroke-width="1.2" />
+                  <circle class="radar-ring radar-ring-2" cx="300" cy="300" r="142" stroke="#0284c7" stroke-opacity="0.2" stroke-width="1.2" stroke-dasharray="5 7" />
+                  <circle class="radar-ring radar-ring-3" cx="300" cy="300" r="212" stroke="#0284c7" stroke-opacity="0.28" stroke-width="1.5" />
+                  <circle class="radar-ring radar-ring-4" cx="300" cy="300" r="275" stroke="#0284c7" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="3 5" />
+
+                  <!-- Rotating Radar Sweep Line & Sector -->
+                  <g class="radar-sweep-group">
+                    <path d="M300 300 L300 25 A275 275 0 0 1 494 105 Z" fill="url(#sweepGrad)" opacity="0.6" />
+                    <line x1="300" y1="300" x2="494" y2="105" stroke="#38bdf8" stroke-width="1.8" filter="url(#glowFilter)" />
+                  </g>
+
+                  <!-- Ray Connection Lines from center to each orbital waypoint -->
+                  <g class="radar-connecting-rays">
+                    <line class="ray-line ray-1" x1="300" y1="300" x2="300" y2="88" stroke="url(#orbitLineGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+                    <line class="ray-line ray-2" x1="300" y1="300" x2="450" y2="150" stroke="url(#orbitLineGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+                    <line class="ray-line ray-3" x1="300" y1="300" x2="512" y2="300" stroke="url(#orbitLineGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+                    <line class="ray-line ray-4" x1="300" y1="300" x2="450" y2="450" stroke="url(#orbitLineGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+                    <line class="ray-line ray-5" x1="300" y1="300" x2="300" y2="512" stroke="url(#orbitLineGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+                    <line class="ray-line ray-6" x1="300" y1="300" x2="150" y2="450" stroke="url(#orbitLineGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+                    <line class="ray-line ray-7" x1="300" y1="300" x2="88" y2="300" stroke="url(#orbitLineGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+                    <line class="ray-line ray-8" x1="300" y1="300" x2="150" y2="150" stroke="url(#orbitLineGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+                  </g>
+
+                  <!-- Waypoint Nodes on Orbit Track -->
+                  <circle cx="300" cy="88" r="4.5" fill="#0284c7" />
+                  <circle cx="450" cy="150" r="4.5" fill="#0284c7" />
+                  <circle cx="512" cy="300" r="4.5" fill="#0284c7" />
+                  <circle cx="450" cy="450" r="4.5" fill="#0284c7" />
+                  <circle cx="300" cy="512" r="4.5" fill="#0284c7" />
+                  <circle cx="150" cy="450" r="4.5" fill="#0284c7" />
+                  <circle cx="88" cy="300" r="4.5" fill="#0284c7" />
+                  <circle cx="150" cy="150" r="4.5" fill="#0284c7" />
+                </svg>
+
+                <!-- Center Verified Shield Core -->
+                <div class="orbit-center-core" id="orbitCenterCore">
+                  <!-- Multi-layer pulse ripples -->
+                  <div class="core-ripple core-ripple-1"></div>
+                  <div class="core-ripple core-ripple-2"></div>
+                  <div class="core-ripple core-ripple-3"></div>
+
+                  <!-- Shield Emblem -->
+                  <div class="core-shield" title="Risk Verifier – 100% Evidence Verified">
+                    <svg class="core-shield-svg" viewBox="0 0 64 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M32 2L4 14V34C4 53.6 15.9 71.8 32 72C48.1 71.8 60 53.6 60 34V14L32 2Z" fill="url(#shieldBlueGrad)" stroke="#38bdf8" stroke-width="2.5" />
+                      <path d="M22 36L29 43L43 28" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <defs>
+                        <linearGradient id="shieldBlueGrad" x1="32" y1="2" x2="32" y2="72" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#0284c7" />
+                          <stop offset="0.55" stop-color="#0369a1" />
+                          <stop offset="1" stop-color="#075985" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+
+                  <div class="core-label-box">
+                    <span class="core-brand-name">RISK VERIFIER</span>
+                    <span class="core-brand-badge">
+                      <span class="core-live-dot"></span>
+                      ACTIVE INTELLIGENCE
+                    </span>
+                  </div>
+                </div>
+
+                <!-- 8 Surrounding Orbital Capability Cards with High-Fidelity Dual-Tone Icons -->
+                <!-- 1. Background Check (Top) -->
+                <div class="orbit-node node-pos-1" data-node="1" tabindex="0" role="button" aria-label="Background Check Service">
+                  <div class="node-card">
+                    <div class="node-icon-box">
+                      <!-- High-Fidelity Verified Person & Shield Icon -->
+                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="11" r="5" fill="#ffffff" />
+                        <path d="M6 26C6 21.6 9.6 18 14 18H18C22.4 18 26 21.6 26 26" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
+                        <circle cx="23" cy="22" r="5.5" fill="#38bdf8" />
+                        <path d="M21 22L22.5 23.5L25.5 20.5" stroke="#075985" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <div class="node-text-box">
+                      <span class="node-title">Background Check</span>
+                      <span class="node-sub">Court &amp; Civil Records</span>
+                    </div>
+                  </div>
+                  <span class="node-connector-dot"></span>
+                </div>
+
+                <!-- 2. Employment Screening (Top-Right) -->
+                <div class="orbit-node node-pos-2" data-node="2" tabindex="0" role="button" aria-label="Employment Screening Service">
+                  <div class="node-card">
+                    <div class="node-icon-box">
+                      <!-- High-Fidelity Talent Search Loupe Icon -->
+                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="8" stroke="#38bdf8" stroke-width="2.4" />
+                        <path d="M20 20L27 27" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" />
+                        <circle cx="14" cy="12.5" r="2.8" fill="#ffffff" />
+                        <path d="M9.5 18C10.5 16.2 12.1 15.5 14 15.5C15.9 15.5 17.5 16.2 18.5 18" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                    <div class="node-text-box">
+                      <span class="node-title">Employment Screening</span>
+                      <span class="node-sub">Tenure &amp; Performance</span>
+                    </div>
+                  </div>
+                  <span class="node-connector-dot"></span>
+                </div>
+
+                <!-- 3. Educational Verification (Middle-Right) -->
+                <div class="orbit-node node-pos-3" data-node="3" tabindex="0" role="button" aria-label="Educational Verification Service">
+                  <div class="node-card">
+                    <div class="node-icon-box">
+                      <!-- High-Fidelity Mortarboard Academic Cap Icon -->
+                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 6L3 13L16 20L29 13L16 6Z" fill="#ffffff" />
+                        <path d="M7 16V22.5C7 22.5 10.8 26 16 26C21.2 26 25 22.5 25 22.5V16" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M26 15V24.5L28 26" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="16" cy="13" r="1.5" fill="#0284c7" />
+                      </svg>
+                    </div>
+                    <div class="node-text-box">
+                      <span class="node-title">Educational Verification</span>
+                      <span class="node-sub">Degrees &amp; Accreditation</span>
+                    </div>
+                  </div>
+                  <span class="node-connector-dot"></span>
+                </div>
+
+                <!-- 4. Media Analytics (Bottom-Right) -->
+                <div class="orbit-node node-pos-4" data-node="4" tabindex="0" role="button" aria-label="Media Analytics Service">
+                  <div class="node-card">
+                    <div class="node-icon-box">
+                      <!-- High-Fidelity Growth Analytics Bar Graph Icon -->
+                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="18" width="4.5" height="9" rx="1.5" fill="#38bdf8" />
+                        <rect x="12" y="12" width="4.5" height="15" rx="1.5" fill="#ffffff" />
+                        <rect x="19" y="7" width="4.5" height="20" rx="1.5" fill="#38bdf8" />
+                        <path d="M6 14L13 8L18 11L26 4" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="26" cy="4" r="2.2" fill="#ffffff" />
+                      </svg>
+                    </div>
+                    <div class="node-text-box">
+                      <span class="node-title">Media Analytics</span>
+                      <span class="node-sub">Adverse News &amp; ESG</span>
+                    </div>
+                  </div>
+                  <span class="node-connector-dot"></span>
+                </div>
+
+                <!-- 5. Due Diligence (Bottom) -->
+                <div class="orbit-node node-pos-5" data-node="5" tabindex="0" role="button" aria-label="Due Diligence Service">
+                  <div class="node-card">
+                    <div class="node-icon-box">
+                      <!-- High-Fidelity Official Inspection Clipboard Icon -->
+                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="6" width="20" height="22" rx="3.5" stroke="#ffffff" stroke-width="2.2" />
+                        <rect x="11" y="4" width="10" height="4.5" rx="1.8" fill="#38bdf8" />
+                        <path d="M10 13H12.5M10 18H12.5M10 23H12.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
+                        <path d="M16 13L17.5 14.5L21.5 11" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16 18L17.5 19.5L21.5 16" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16 23L17.5 24.5L21.5 21" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <div class="node-text-box">
+                      <span class="node-title">Due Diligence</span>
+                      <span class="node-sub">Corporate &amp; Executive</span>
+                    </div>
+                  </div>
+                  <span class="node-connector-dot"></span>
+                </div>
+
+                <!-- 6. Risk Assessment (Bottom-Left) -->
+                <div class="orbit-node node-pos-6" data-node="6" tabindex="0" role="button" aria-label="Risk Assessment Service">
+                  <div class="node-card">
+                    <div class="node-icon-box">
+                      <!-- High-Fidelity Warning Hazard Triangle Icon -->
+                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 4.5L29 26.5H3L16 4.5Z" fill="#ffffff" />
+                        <path d="M16 12V18" stroke="#0369a1" stroke-width="2.6" stroke-linecap="round" />
+                        <circle cx="16" cy="22" r="1.5" fill="#0369a1" />
+                        <path d="M16 2L30.5 26.5C31.2 27.8 30.2 29 28.8 29H3.2C1.8 29 0.8 27.8 1.5 26.5L16 2Z" stroke="#38bdf8" stroke-width="1.6" />
+                      </svg>
+                    </div>
+                    <div class="node-text-box">
+                      <span class="node-title">Risk Assessment</span>
+                      <span class="node-sub">Threat &amp; Exposure Matrix</span>
+                    </div>
+                  </div>
+                  <span class="node-connector-dot"></span>
+                </div>
+
+                <!-- 7. Bespoke Research (Middle-Left) -->
+                <div class="orbit-node node-pos-7" data-node="7" tabindex="0" role="button" aria-label="Bespoke Research Service">
+                  <div class="node-card">
+                    <div class="node-icon-box">
+                      <!-- High-Fidelity Precision Radar Crosshair Scope Icon -->
+                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="11" stroke="#ffffff" stroke-width="2.2" />
+                        <circle cx="16" cy="16" r="6.5" stroke="#38bdf8" stroke-width="2" />
+                        <circle cx="16" cy="16" r="2.5" fill="#ffffff" />
+                        <line x1="16" y1="2" x2="16" y2="7.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
+                        <line x1="16" y1="24.5" x2="16" y2="30" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
+                        <line x1="2" y1="16" x2="7.5" y2="16" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
+                        <line x1="24.5" y1="16" x2="30" y2="16" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                    <div class="node-text-box">
+                      <span class="node-title">Bespoke Research</span>
+                      <span class="node-sub">Targeted Investigation</span>
+                    </div>
+                  </div>
+                  <span class="node-connector-dot"></span>
+                </div>
+
+                <!-- 8. Geo Political Advisory (Top-Left) -->
+                <div class="orbit-node node-pos-8" data-node="8" tabindex="0" role="button" aria-label="Geo Political Advisory Service">
+                  <div class="node-card">
+                    <div class="node-icon-box">
+                      <!-- High-Fidelity 3D Wireframe Globe Sphere Icon -->
+                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="11.5" stroke="#ffffff" stroke-width="2.2" />
+                        <ellipse cx="16" cy="16" rx="5.5" ry="11.5" stroke="#38bdf8" stroke-width="2" />
+                        <line x1="4.5" y1="16" x2="27.5" y2="16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                        <line x1="7.5" y1="10" x2="24.5" y2="10" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round" />
+                        <line x1="7.5" y1="22" x2="24.5" y2="22" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                    <div class="node-text-box">
+                      <span class="node-title">Geo Political Advisory</span>
+                      <span class="node-sub">Sovereign &amp; Border Intel</span>
+                    </div>
+                  </div>
+                  <span class="node-connector-dot"></span>
+                </div>
+
+              </div>
             </div>
           </div>
 

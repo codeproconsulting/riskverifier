@@ -704,4 +704,33 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProgress();
     window.addEventListener('resize', updateProgress);
   }
+
+  // =========================================================================
+  // Risk Intelligence Orbit Interactive Connector Rays
+  // =========================================================================
+  const orbitNodes = document.querySelectorAll('.orbit-node');
+  const stage = document.getElementById('riskOrbitStage');
+  if (stage && orbitNodes.length) {
+    orbitNodes.forEach((node) => {
+      const nodeIndex = node.getAttribute('data-node');
+      const targetRay = stage.querySelector(`.ray-${nodeIndex}`);
+
+      node.addEventListener('mouseenter', () => {
+        if (targetRay) targetRay.classList.add('is-active');
+      });
+
+      node.addEventListener('mouseleave', () => {
+        if (targetRay) targetRay.classList.remove('is-active');
+      });
+
+      node.addEventListener('focus', () => {
+        if (targetRay) targetRay.classList.add('is-active');
+      });
+
+      node.addEventListener('blur', () => {
+        if (targetRay) targetRay.classList.remove('is-active');
+      });
+    });
+  }
 });
+

@@ -3,63 +3,159 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Nav Toggle & Mega Dropdown
+  // Mega Dropdown & Mobile Nav Logic
   const mobileToggle = document.getElementById('mobileNavToggle');
   const navMenu = document.getElementById('navMenu');
   const megaParents = document.querySelectorAll('.mega-dropdown-parent');
+
+  const closeAllDropdowns = () => {
+    megaParents.forEach(p => {
+      p.classList.remove('is-open');
+      p.classList.remove('mobile-open');
+      p.classList.add('dropdown-closed');
+      const toggle = p.querySelector('.nav-link-dropdown-toggle, .dropdown-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+    if (document.activeElement && typeof document.activeElement.blur === 'function') {
+      document.activeElement.blur();
+    }
+  };
 
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
       navMenu.classList.toggle('active');
     });
+  }
 
-    // Handle dropdown toggles on mobile
-    megaParents.forEach(parent => {
-      const toggle = parent.querySelector('.nav-link-dropdown-toggle, .dropdown-toggle');
-      if (toggle) {
-        toggle.addEventListener('click', (e) => {
-          if (window.innerWidth <= 991) {
-            e.preventDefault();
-            e.stopPropagation();
-            parent.classList.toggle('mobile-open');
-            const isExpanded = parent.classList.contains('mobile-open');
-            toggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-          }
-        });
+  // Handle dropdown interactions (Desktop & Mobile)
+  let closeTimer = null;
+  let isMouseOverHeader = false;
+  const siteHeader = document.querySelector('.site-header');
+
+  if (siteHeader) {
+    siteHeader.addEventListener('mouseenter', () => { isMouseOverHeader = true; });
+    siteHeader.addEventListener('mouseleave', () => { isMouseOverHeader = false; });
+  }
+
+  megaParents.forEach(parent => {
+    const toggle = parent.querySelector('.nav-link-dropdown-toggle, .dropdown-toggle');
+    const menu = parent.querySelector('.mega-dropdown-menu');
+
+    const openDropdown = () => {
+      if (closeTimer) {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+      parent.classList.remove('dropdown-closed');
+      parent.classList.add('is-open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'true');
+    };
+
+    const scheduleClose = () => {
+      if (closeTimer) clearTimeout(closeTimer);
+      closeTimer = setTimeout(() => {
+        parent.classList.remove('is-open');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }, 220);
+    };
+
+    // Desktop hover handlers with smooth debounce grace period
+    parent.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 991) {
+        openDropdown();
       }
     });
 
-    // Close menu when clicking nav links that are NOT dropdown toggles
-    navMenu.querySelectorAll('.nav-link:not(.nav-link-dropdown-toggle), .mega-service-card, .mega-view-all-card').forEach(link => {
+    parent.addEventListener('mousemove', () => {
+      if (window.innerWidth > 991) {
+        if (parent.classList.contains('dropdown-closed')) {
+          parent.classList.remove('dropdown-closed');
+        }
+        if (!parent.classList.contains('is-open')) {
+          openDropdown();
+        }
+      }
+    });
+
+    parent.addEventListener('mouseleave', () => {
+      if (window.innerWidth > 991) {
+        scheduleClose();
+      }
+    });
+
+    if (menu) {
+      menu.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 991) {
+          openDropdown();
+        }
+      });
+      menu.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 991) {
+          scheduleClose();
+        }
+      });
+    }
+
+    if (toggle) {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          e.stopPropagation();
+          parent.classList.remove('dropdown-closed');
+          parent.classList.toggle('mobile-open');
+          const isExpanded = parent.classList.contains('mobile-open');
+          toggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        } else {
+          // On desktop, clicking the toggle can dismiss or toggle it
+          if (parent.classList.contains('is-open') && !parent.classList.contains('dropdown-closed')) {
+            parent.classList.add('dropdown-closed');
+            parent.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            if (document.activeElement) document.activeElement.blur();
+          } else {
+            openDropdown();
+          }
+        }
+      });
+    }
+
+    // When clicking any link inside mega dropdown, dismiss immediately
+    parent.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        megaParents.forEach(p => p.classList.remove('mobile-open'));
+        closeAllDropdowns();
+        if (navMenu) navMenu.classList.remove('active');
       });
     });
+  });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
-        megaParents.forEach(p => {
-          p.classList.remove('mobile-open');
-          p.classList.remove('is-open');
-        });
+  // Clicking ANYWHERE on the page (outside the dropdown) dismisses it immediately
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.mega-dropdown-parent')) {
+      closeAllDropdowns();
+    }
+    if (navMenu && mobileToggle && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+      navMenu.classList.remove('active');
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllDropdowns();
+      if (navMenu) navMenu.classList.remove('active');
+    }
+  });
+
+  // Smooth scroll handler: close on actual page scroll if cursor is not on header/dropdown
+  window.addEventListener('scroll', () => {
+    if (isMouseOverHeader) return;
+    megaParents.forEach(p => {
+      if (!p.classList.contains('mobile-open')) {
+        p.classList.remove('is-open');
       }
     });
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        navMenu.classList.remove('active');
-        megaParents.forEach(p => {
-          p.classList.remove('mobile-open');
-          p.classList.remove('is-open');
-        });
-      }
-    });
-  }
+  }, { passive: true });
 
   // 12 Services Data Object
   const servicesData = {

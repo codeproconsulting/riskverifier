@@ -112,8 +112,7 @@ get_header();
               <h3 class="office-region">United States</h3>
             </div>
             <p class="office-address">
-              5900 Balcones Drive STE 33098<br>
-              Austin, TX 78731, USA
+              Austin, United States
             </p>
             <div class="office-contacts">
               <a href="tel:+13862431035" class="office-contact-link">📞 +1 (386) 243-1035</a>
@@ -129,8 +128,7 @@ get_header();
               <h3 class="office-region">Canada</h3>
             </div>
             <p class="office-address">
-              388 Hepatica Way<br>
-              Orleans, ON, K4A 0Z1, Canada
+              Ottawa, Canada
             </p>
             <div class="office-contacts">
               <a href="tel:+14168221904" class="office-contact-link">📞 +1 (416) 822-1904</a>
@@ -146,8 +144,7 @@ get_header();
               <h3 class="office-region">United Kingdom</h3>
             </div>
             <p class="office-address">
-              82 Ashampstead Road<br>
-              Reading, Berkshire RG30 3LG, UK
+              Reading, United Kingdom
             </p>
             <div class="office-contacts">
               <a href="tel:+447973499517" class="office-contact-link">📞 +44 7973 499517</a>
@@ -163,8 +160,7 @@ get_header();
               <h3 class="office-region">Pakistan</h3>
             </div>
             <p class="office-address">
-              F-16, First Floor, Galleria Mall<br>
-              I-8 Markaz, Islamabad, Pakistan
+              Islamabad, Pakistan
             </p>
             <div class="office-contacts">
               <a href="tel:+923005555884" class="office-contact-link">📞 +92 300 5555884</a>

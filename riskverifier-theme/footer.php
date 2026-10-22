@@ -38,6 +38,11 @@
         <div style="font-size:0.85rem; color:#ffffff;">
           <strong>Global Offices:</strong> Texas • Ottawa • Reading (UK) • Islamabad
         </div>
+        <div class="footer-accreditation">
+          <div class="footer-pbsa-badge">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/pbsa-logo.png'); ?>" alt="PBSA - Professional Background Screening Association">
+          </div>
+        </div>
       </div>
 
       <!-- Col 2: Services -->

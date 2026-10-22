@@ -16,8 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const toggle = p.querySelector('.nav-link-dropdown-toggle, .dropdown-toggle');
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
     });
+    // Only blur if the focused element is actually within a mega dropdown or navigation toggle
     if (document.activeElement && typeof document.activeElement.blur === 'function') {
-      document.activeElement.blur();
+      if (document.activeElement.closest && document.activeElement.closest('.mega-dropdown-parent, .site-header, .mobile-nav-toggle')) {
+        document.activeElement.blur();
+      }
     }
   };
 
@@ -112,7 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
             parent.classList.add('dropdown-closed');
             parent.classList.remove('is-open');
             toggle.setAttribute('aria-expanded', 'false');
-            if (document.activeElement) document.activeElement.blur();
+            if (document.activeElement && document.activeElement.closest && document.activeElement.closest('.mega-dropdown-parent')) {
+              document.activeElement.blur();
+            }
           } else {
             openDropdown();
           }
@@ -132,7 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Clicking ANYWHERE on the page (outside the dropdown) dismisses it immediately
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.mega-dropdown-parent')) {
-      closeAllDropdowns();
+      const anyOpen = Array.from(megaParents).some(p => p.classList.contains('is-open') || p.classList.contains('mobile-open'));
+      if (anyOpen) {
+        closeAllDropdowns();
+      }
     }
     if (navMenu && mobileToggle && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
       navMenu.classList.remove('active');
@@ -802,31 +810,292 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // Risk Intelligence Orbit Interactive Connector Rays
+  // 3D Rotating Glowing World Map Globe Animation ("gol gol gomay")
   // =========================================================================
-  const orbitNodes = document.querySelectorAll('.orbit-node');
-  const stage = document.getElementById('riskOrbitStage');
-  if (stage && orbitNodes.length) {
-    orbitNodes.forEach((node) => {
-      const nodeIndex = node.getAttribute('data-node');
-      const targetRay = stage.querySelector(`.ray-${nodeIndex}`);
+  const initHeroGlobe = () => {
+    const canvas = document.getElementById('heroGlobeCanvas');
+    if (!canvas) return;
 
-      node.addEventListener('mouseenter', () => {
-        if (targetRay) targetRay.classList.add('is-active');
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // High DPI scaling
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const size = 600;
+    canvas.width = size * dpr;
+    canvas.height = size * dpr;
+    ctx.scale(dpr, dpr);
+
+    const cx = 300;
+    const cy = 300;
+    const R = 182; // Sphere radius
+
+    // Procedural Earth Land Coordinates (Continent Dot Matrix)
+    const continentBounds = [
+      // North America
+      { minLat: 15, maxLat: 72, minLon: -168, maxLon: -52, filter: (lat, lon) => !(lat < 30 && lon > -80) && !(lat > 55 && lon > -60 && lon < -50) },
+      // South America
+      { minLat: -56, maxLat: 13, minLon: -82, maxLon: -34, filter: (lat, lon) => (lat > -20 || lon > -75) && (lat > -40 || lon < -55) },
+      // Europe
+      { minLat: 36, maxLat: 71, minLon: -10, maxLon: 45, filter: (lat, lon) => !(lat < 42 && lon < -5) },
+      // Africa
+      { minLat: -35, maxLat: 37, minLon: -18, maxLon: 52, filter: (lat, lon) => !(lat < -10 && lon > 42) && !(lat > 20 && lon < -12) },
+      // Asia
+      { minLat: 5, maxLat: 75, minLon: 45, maxLon: 145, filter: (lat, lon) => !(lat < 20 && lon < 60) && !(lat < 10 && lon > 90) },
+      // Australia & NZ
+      { minLat: -44, maxLat: -10, minLon: 112, maxLon: 154, filter: () => true },
+      // Japan & East Islands
+      { minLat: 30, maxLat: 46, minLon: 130, maxLon: 146, filter: () => true },
+      // UK & Ireland
+      { minLat: 50, maxLat: 59, minLon: -10, maxLon: 2, filter: () => true }
+    ];
+
+    const landDots = [];
+    for (let lat = -58; lat <= 72; lat += 3.6) {
+      for (let lon = -180; lon <= 180; lon += 3.8) {
+        if (continentBounds.some(c => lat >= c.minLat && lat <= c.maxLat && lon >= c.minLon && lon <= c.maxLon && c.filter(lat, lon))) {
+          landDots.push({ lat, lon });
+        }
+      }
+    }
+
+    // Key Global Intelligence City Hubs
+    const hubs = [
+      { name: 'New York', lat: 40.7, lon: -74.0 },
+      { name: 'London', lat: 51.5, lon: -0.1 },
+      { name: 'Paris', lat: 48.8, lon: 2.3 },
+      { name: 'Dubai', lat: 25.2, lon: 55.3 },
+      { name: 'Islamabad', lat: 33.7, lon: 73.0 },
+      { name: 'Singapore', lat: 1.3, lon: 103.8 },
+      { name: 'Tokyo', lat: 35.7, lon: 139.7 },
+      { name: 'Sydney', lat: -33.8, lon: 151.2 },
+      { name: 'Toronto', lat: 43.6, lon: -79.4 },
+      { name: 'Sao Paulo', lat: -23.5, lon: -46.6 }
+    ];
+
+    // Flight / Intelligence Verification Connections between hubs
+    const connections = [
+      { from: 0, to: 1 }, // NY to London
+      { from: 1, to: 3 }, // London to Dubai
+      { from: 3, to: 4 }, // Dubai to Islamabad
+      { from: 4, to: 5 }, // Islamabad to Singapore
+      { from: 5, to: 6 }, // Singapore to Tokyo
+      { from: 1, to: 2 }, // London to Paris
+      { from: 0, to: 8 }, // NY to Toronto
+      { from: 0, to: 9 }, // NY to Sao Paulo
+      { from: 6, to: 7 }  // Tokyo to Sydney
+    ];
+
+    let rotation = 0;
+    const rotationSpeed = 0.0042; // Continuous smooth rotation
+    const tilt = 0.18; // 3D Axial tilt (approx 10 degrees)
+    let photonOffset = 0;
+
+    const render = () => {
+      ctx.clearRect(0, 0, size, size);
+      rotation += rotationSpeed;
+      photonOffset = (photonOffset + 0.008) % 1;
+
+      // 1. Back Atmospheric Glow
+      const glowGrad = ctx.createRadialGradient(cx, cy, R * 0.75, cx, cy, R * 1.35);
+      glowGrad.addColorStop(0, 'rgba(2, 132, 199, 0.12)');
+      glowGrad.addColorStop(0.55, 'rgba(56, 189, 248, 0.05)');
+      glowGrad.addColorStop(1, 'rgba(2, 132, 199, 0)');
+      ctx.fillStyle = glowGrad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, R * 1.35, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 2. Base Sphere (Clean Light Ice-Blue with 3D Radial Highlight)
+      const oceanGrad = ctx.createRadialGradient(cx - 50, cy - 50, 20, cx, cy, R);
+      oceanGrad.addColorStop(0, '#ffffff'); // Pure white illumination highlight top-left
+      oceanGrad.addColorStop(0.35, '#f0f9ff'); // Soft ice tint
+      oceanGrad.addColorStop(0.75, '#e0f2fe'); // Clear light sky blue
+      oceanGrad.addColorStop(0.95, '#dbeafe'); // Subtle shading curve
+      oceanGrad.addColorStop(1, '#93c5fd'); // 3D sphere curvature edge
+      ctx.fillStyle = oceanGrad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, R, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Sphere Outer Boundary Line
+      ctx.strokeStyle = 'rgba(2, 132, 199, 0.35)';
+      ctx.lineWidth = 1.6;
+      ctx.stroke();
+
+      // Clip content inside the sphere
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(cx, cy, R, 0, Math.PI * 2);
+      ctx.clip();
+
+      // Helper function to project (lat, lon) to 3D sphere coordinates
+      const project = (lat, lon, altitude = 0) => {
+        const radLat = (lat * Math.PI) / 180;
+        const radLon = (lon * Math.PI) / 180 + rotation;
+        const r = R + altitude;
+
+        const cosLat = Math.cos(radLat);
+        const sinLat = Math.sin(radLat);
+        const cosLon = Math.cos(radLon);
+        const sinLon = Math.sin(radLon);
+
+        const x = cx + r * cosLat * sinLon;
+        const y = cy - r * (sinLat * Math.cos(tilt) - cosLat * cosLon * Math.sin(tilt));
+        const z = r * (cosLat * cosLon * Math.cos(tilt) + sinLat * Math.sin(tilt));
+
+        return { x, y, z };
+      };
+
+      // 3. Latitude & Longitude Dotted Grid Lines
+      ctx.strokeStyle = 'rgba(2, 132, 199, 0.16)';
+      ctx.lineWidth = 1;
+      [-50, -25, 0, 25, 50].forEach(gridLat => {
+        ctx.beginPath();
+        let started = false;
+        for (let l = -180; l <= 180; l += 8) {
+          const pt = project(gridLat, l);
+          if (pt.z > 0) {
+            if (!started) { ctx.moveTo(pt.x, pt.y); started = true; }
+            else { ctx.lineTo(pt.x, pt.y); }
+          } else {
+            started = false;
+          }
+        }
+        ctx.stroke();
       });
 
-      node.addEventListener('mouseleave', () => {
-        if (targetRay) targetRay.classList.remove('is-active');
+      // Longitude Meridians
+      for (let gridLon = 0; gridLon < 360; gridLon += 40) {
+        ctx.beginPath();
+        let started = false;
+        for (let l = -80; l <= 80; l += 5) {
+          const pt = project(l, gridLon);
+          if (pt.z > 0) {
+            if (!started) { ctx.moveTo(pt.x, pt.y); started = true; }
+            else { ctx.lineTo(pt.x, pt.y); }
+          } else {
+            started = false;
+          }
+        }
+        ctx.stroke();
+      }
+
+      // 4. Draw Land Continent Dots
+      for (let i = 0; i < landDots.length; i++) {
+        const pt = project(landDots[i].lat, landDots[i].lon);
+        if (pt.z > 0) {
+          const k = pt.z / R; // 0 to 1 depth factor
+          const alpha = 0.25 + k * 0.75;
+          const radius = 1.15 + k * 1.35;
+
+          // Base continent dot: Brand navy blue
+          ctx.fillStyle = `rgba(8, 61, 119, ${alpha * 0.85})`;
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, radius, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Highlight front-facing dots with crisp vibrant cyan/blue
+          if (k > 0.6) {
+            ctx.fillStyle = `rgba(2, 132, 199, ${(k - 0.6) * 2.2})`;
+            ctx.beginPath();
+            ctx.arc(pt.x, pt.y, radius * 0.7, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+      }
+
+      // 5. Draw 3D Arcs Between Intelligence City Hubs
+      connections.forEach(conn => {
+        const h1 = hubs[conn.from];
+        const h2 = hubs[conn.to];
+        const p1 = project(h1.lat, h1.lon);
+        const p2 = project(h2.lat, h2.lon);
+
+        if (p1.z > -20 || p2.z > -20) {
+          // Midpoint calculated with extra altitude
+          const midLat = (h1.lat + h2.lat) / 2;
+          const midLon = (h1.lon + h2.lon) / 2;
+          const arcHeight = 22; // Height of arc above sphere
+          const midPt = project(midLat, midLon, arcHeight);
+
+          if (midPt.z > 0) {
+            const arcAlpha = Math.max(0, Math.min(1, (midPt.z / R) * 0.9));
+            ctx.strokeStyle = `rgba(2, 132, 199, ${arcAlpha * 0.65})`;
+            ctx.lineWidth = 1.6;
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.quadraticCurveTo(midPt.x, midPt.y, p2.x, p2.y);
+            ctx.stroke();
+
+            // Traveling photon light along the arc
+            const t = photonOffset;
+            const qx = (1 - t) * (1 - t) * p1.x + 2 * (1 - t) * t * midPt.x + t * t * p2.x;
+            const qy = (1 - t) * (1 - t) * p1.y + 2 * (1 - t) * t * midPt.y + t * t * p2.y;
+
+            ctx.fillStyle = `rgba(8, 61, 119, ${arcAlpha})`;
+            ctx.beginPath();
+            ctx.arc(qx, qy, 2.6, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = `rgba(2, 132, 199, ${arcAlpha * 0.75})`;
+            ctx.beginPath();
+            ctx.arc(qx, qy, 5, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
       });
 
-      node.addEventListener('focus', () => {
-        if (targetRay) targetRay.classList.add('is-active');
+      // 6. Draw City Hub Beacons & Pulsing Nodes
+      const now = performance.now();
+      hubs.forEach(hub => {
+        const p = project(hub.lat, hub.lon, 1);
+        if (p.z > 0) {
+          const k = p.z / R;
+          const alpha = 0.3 + k * 0.7;
+
+          // Beacon center dot
+          ctx.fillStyle = `rgba(8, 61, 119, ${alpha})`;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 3.2, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.fillStyle = `rgba(2, 132, 199, ${alpha * 0.85})`;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 5.5, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Expanding radar pulse ring around key hubs
+          const pulsePhase = ((now * 0.0018) % 1);
+          const pulseRadius = 5 + pulsePhase * 14;
+          const pulseAlpha = (1 - pulsePhase) * alpha * 0.8;
+
+          ctx.strokeStyle = `rgba(2, 132, 199, ${pulseAlpha})`;
+          ctx.lineWidth = 1.4;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, pulseRadius, 0, Math.PI * 2);
+          ctx.stroke();
+        }
       });
 
-      node.addEventListener('blur', () => {
-        if (targetRay) targetRay.classList.remove('is-active');
-      });
-    });
-  }
+      // 7. Inner Atmospheric Rim Glow / Soft 3D Lighting Curve
+      const rim = ctx.createRadialGradient(cx, cy, R * 0.82, cx, cy, R);
+      rim.addColorStop(0, 'rgba(2, 132, 199, 0)');
+      rim.addColorStop(0.7, 'rgba(56, 189, 248, 0.12)');
+      rim.addColorStop(1, 'rgba(2, 132, 199, 0.4)');
+      ctx.fillStyle = rim;
+      ctx.beginPath();
+      ctx.arc(cx, cy, R, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.restore(); // Restore clipping
+
+      requestAnimationFrame(render);
+    };
+
+    render();
+  };
+
+  initHeroGlobe();
 });
 

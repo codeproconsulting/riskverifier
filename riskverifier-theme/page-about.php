@@ -113,21 +113,18 @@ get_header();
               <h2 class="mv-heading">Our Mission<br>&amp; Vision</h2>
               <div class="mv-accent-bars">
                 <span class="mv-bar-navy"></span>
-                <span class="mv-bar-green"></span>
+                <span class="mv-bar-cyan"></span>
               </div>
             </div>
 
-            <!-- Right: Mission Card (Circle on Left, Text on Right) -->
+            <!-- Right: Mission Card (Icon on Left, Text on Right) -->
             <div class="mv-card mv-card-mission">
-              <div class="mv-circle-wrap">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/mission-circle.jpg" alt="Our Mission" class="mv-circle-img">
-                <div class="mv-circle-icon-badge" title="Mission">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="6"></circle>
-                    <circle cx="12" cy="12" r="2"></circle>
-                  </svg>
-                </div>
+              <div class="mv-circle-wrap" title="Our Mission">
+                <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
               </div>
               <div class="mv-card-body">
                 <h3 class="mv-card-title">Mission</h3>
@@ -138,7 +135,7 @@ get_header();
             </div>
           </div>
 
-          <!-- Bottom Row: Vision Card (Text on Left, Circle on Right) -->
+          <!-- Bottom Row: Vision Card (Text on Left, Icon on Right) -->
           <div class="mv-bottom-row">
             <div class="mv-card mv-card-vision">
               <div class="mv-card-body">
@@ -147,14 +144,11 @@ get_header();
                   Our vision is to become a trusted global partner for organizations seeking to understand and manage risk. We aim to set a high standard for professional screening, verification, and due diligence by combining thorough research, responsible practices, and practical risk solutions that support safer hiring and stronger business decisions.
                 </p>
               </div>
-              <div class="mv-circle-wrap">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/vision-circle.jpg" alt="Our Vision" class="mv-circle-img">
-                <div class="mv-circle-icon-badge badge-green" title="Vision">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>
-                </div>
+              <div class="mv-circle-wrap" title="Our Vision">
+                <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
               </div>
             </div>
           </div>

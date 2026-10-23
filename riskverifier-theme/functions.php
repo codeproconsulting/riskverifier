@@ -3,7 +3,7 @@
  * Risk Verifier Theme Functions and definitions
  *
  * @package RiskVerifier
- * @version 2.0.0
+ * @version 2.0.1
  */
 
 if (!defined('ABSPATH')) {
@@ -120,7 +120,7 @@ function riskverifier_enqueue_scripts() {
         'riskverifier-main-style',
         get_template_directory_uri() . '/assets/css/theme-style.css',
         array(),
-        '2.0.0'
+        md5_file(get_template_directory() . '/assets/css/theme-style.css')
     );
 
     // WordPress Root style.css
@@ -128,7 +128,7 @@ function riskverifier_enqueue_scripts() {
         'riskverifier-style',
         get_stylesheet_uri(),
         array('riskverifier-main-style'),
-        '2.0.0'
+        md5_file(get_stylesheet_directory() . '/style.css')
     );
 
     // Framer Motion Animation Engine
@@ -145,7 +145,7 @@ function riskverifier_enqueue_scripts() {
         'riskverifier-main-script',
         get_template_directory_uri() . '/assets/js/theme-main.js',
         array('framer-motion'),
-        '2.0.0',
+        md5_file(get_template_directory() . '/assets/js/theme-main.js'),
         true
     );
 }
@@ -374,177 +374,108 @@ add_filter('walker_nav_menu_start_el', function ($item_output, $item, $depth, $a
 }, 10, 4);
 
 /**
- * =========================================================================
- * Automatic Core Pages Setup & Permalinks Management
- * =========================================================================
- * Ensures that on theme activation/loading, essential pages ('services',
- * 'about-us', 'how-it-works', 'contact-us', 'login', 'signup') are
- * automatically created as real WordPress Pages in the database with their
- * templates assigned and permalinks set to /%postname%/.
+ * Provision real pages once on activation or theme upgrade. Native WordPress
+ * page routing supplies the query, title, canonical URL and template together.
  */
 function riskverifier_ensure_theme_pages() {
-    $initialized = get_option('riskverifier_pages_v3_ready');
+    if (get_option('riskverifier_setup_version') === '2.0.1') {
+        return;
+    }
 
     $pages = array(
-        'services' => array(
-            'title'    => 'Services',
-            'template' => 'page-services.php',
-        ),
-        'about-us' => array(
-            'title'    => 'About Us',
-            'template' => 'page-about.php',
-            'alt_slug' => 'about',
-        ),
-        'how-it-works' => array(
-            'title'    => 'How It Works',
-            'template' => 'page-how-it-works.php',
-        ),
-        'contact-us' => array(
-            'title'    => 'Contact Us',
-            'template' => 'page-contact.php',
-            'alt_slug' => 'contact',
-        ),
-        'login' => array(
-            'title'    => 'Client Portal Login',
-            'template' => 'page-login.php',
-        ),
-        'signup' => array(
-            'title'    => 'Get Started / Sign Up',
-            'template' => 'page-signup.php',
-            'alt_slug' => 'sign-up',
-        ),
+        'home' => array('Home', ''),
+        'services' => array('Services', 'page-services.php'),
+        'about-us' => array('About Us', 'page-about.php'),
+        'how-it-works' => array('How It Works', 'page-how-it-works.php'),
+        'contact-us' => array('Contact Us', 'page-contact.php'),
+        'login' => array('Client Portal Login', 'page-login.php'),
+        'signup' => array('Get Started / Sign Up', 'page-signup.php'),
     );
-
-    // If not yet initialized or in admin screen, make sure pages exist
-    if (!$initialized || is_admin()) {
-        $did_modify = false;
-
-        foreach ($pages as $slug => $data) {
-            $page_obj = get_page_by_path($slug);
-            if (!$page_obj && !empty($data['alt_slug'])) {
-                $page_obj = get_page_by_path($data['alt_slug']);
+    $complete = true;
+    $home_id = 0;
+    foreach ($pages as $slug => $data) {
+        $page = get_page_by_path($slug, OBJECT, 'page');
+        if (!$page) {
+            $page_id = wp_insert_post(array(
+                'post_title' => $data[0],
+                'post_name' => $slug,
+                'post_status' => 'publish',
+                'post_type' => 'page',
+                'comment_status' => 'closed',
+                'ping_status' => 'closed',
+            ), true);
+            if (is_wp_error($page_id) || !$page_id) {
+                $complete = false;
+                continue;
             }
-
-            if (!$page_obj) {
-                $new_page_id = wp_insert_post(array(
-                    'post_title'     => $data['title'],
-                    'post_name'      => $slug,
-                    'post_status'    => 'publish',
-                    'post_type'      => 'page',
-                    'comment_status' => 'closed',
-                    'ping_status'    => 'closed',
-                ));
-
-                if ($new_page_id && !is_wp_error($new_page_id)) {
-                    update_post_meta($new_page_id, '_wp_page_template', $data['template']);
-                    $did_modify = true;
-                }
-            } else {
-                $current_tmpl = get_post_meta($page_obj->ID, '_wp_page_template', true);
-                if (empty($current_tmpl) || $current_tmpl === 'default') {
-                    update_post_meta($page_obj->ID, '_wp_page_template', $data['template']);
-                }
+            if ($data[1]) {
+                update_post_meta($page_id, '_wp_page_template', $data[1]);
+            }
+        } else {
+            $page_id = $page->ID;
+            // Preserve existing content, publication status and builder templates.
+            $template = get_post_meta($page_id, '_wp_page_template', true);
+            if ($data[1] && (!$template || $template === 'default')) {
+                update_post_meta($page_id, '_wp_page_template', $data[1]);
             }
         }
-
-        // Ensure pretty permalinks are configured
-        $current_structure = get_option('permalink_structure');
-        if (empty($current_structure)) {
-            global $wp_rewrite;
-            if (isset($wp_rewrite)) {
-                $wp_rewrite->set_permalink_structure('/%postname%/');
-                $did_modify = true;
-            }
-        }
-
-        if ($did_modify || !$initialized) {
-            flush_rewrite_rules(false);
-            update_option('riskverifier_pages_v3_ready', 1);
+        if ($slug === 'home') {
+            $home_id = $page_id;
         }
     }
+
+    if ($home_id && !get_option('page_on_front') && get_post_status($home_id) === 'publish') {
+        update_option('page_on_front', $home_id);
+        update_option('show_on_front', 'page');
+    }
+    if (!get_option('permalink_structure')) {
+        global $wp_rewrite;
+        $wp_rewrite->set_permalink_structure('/%postname%/');
+    }
+    // Defer flushing until all init callbacks have registered their rules.
+    update_option('riskverifier_flush_rewrites', 1);
+    if ($complete) {
+        update_option('riskverifier_setup_version', '2.0.1');
+    }
 }
-add_action('init', 'riskverifier_ensure_theme_pages', 5);
+add_action('init', 'riskverifier_ensure_theme_pages', 20);
 
 add_action('after_switch_theme', function() {
-    delete_option('riskverifier_pages_v3_ready');
+    delete_option('riskverifier_setup_version');
     riskverifier_ensure_theme_pages();
 });
 
-/**
- * Register Custom Rewrite Rules
- */
 add_action('init', function() {
-    add_rewrite_rule('^services/?$', 'index.php?pagename=services', 'top');
-    add_rewrite_rule('^about-us/?$', 'index.php?pagename=about-us', 'top');
-    add_rewrite_rule('^about/?$', 'index.php?pagename=about-us', 'top');
-    add_rewrite_rule('^how-it-works/?$', 'index.php?pagename=how-it-works', 'top');
-    add_rewrite_rule('^contact-us/?$', 'index.php?pagename=contact-us', 'top');
-    add_rewrite_rule('^contact/?$', 'index.php?pagename=contact-us', 'top');
-    add_rewrite_rule('^login/?$', 'index.php?pagename=login', 'top');
-    add_rewrite_rule('^signup/?$', 'index.php?pagename=signup', 'top');
-    add_rewrite_rule('^sign-up/?$', 'index.php?pagename=signup', 'top');
-}, 10);
-
-/**
- * Bulletproof Fallback Router
- * If WordPress receives a request that results in 404 or missing page for any theme
- * route (e.g. /services, /about-us, /contact-us, /how-it-works, /login, /signup),
- * this filter guarantees the proper template is served with HTTP 200 OK.
- */
-add_filter('template_include', function ($template) {
-    if (is_404() || !is_singular('page')) {
-        $raw_uri = $_SERVER['REQUEST_URI'] ?? '';
-        $path = trim(parse_url($raw_uri, PHP_URL_PATH) ?? '', '/');
-
-        // Strip subfolder if WordPress is inside a subdirectory
-        $home_path = trim(parse_url(home_url(), PHP_URL_PATH) ?? '', '/');
-        if ($home_path !== '' && strpos($path, $home_path) === 0) {
-            $path = trim(substr($path, strlen($home_path)), '/');
-        }
-
-        // Clean out index.php prefix if present
-        $path = preg_replace('/^index\.php\/?/', '', $path);
-
-        $route_map = array(
-            'services'     => 'page-services.php',
-            'about-us'     => 'page-about.php',
-            'about'        => 'page-about.php',
-            'how-it-works' => 'page-how-it-works.php',
-            'contact-us'   => 'page-contact.php',
-            'contact'      => 'page-contact.php',
-            'login'        => 'page-login.php',
-            'signup'       => 'page-signup.php',
-            'sign-up'      => 'page-signup.php',
-        );
-
-        if (isset($route_map[$path])) {
-            global $wp_query;
-            $wp_query->is_404 = false;
-            status_header(200);
-
-            // Populate queried object so get_the_ID(), wp_title(), and body classes function properly
-            $page_obj = get_page_by_path($path);
-            if (!$page_obj) {
-                if ($path === 'about') $page_obj = get_page_by_path('about-us');
-                if ($path === 'contact') $page_obj = get_page_by_path('contact-us');
-                if ($path === 'sign-up') $page_obj = get_page_by_path('signup');
-            }
-            if ($page_obj) {
-                $wp_query->queried_object = $page_obj;
-                $wp_query->queried_object_id = $page_obj->ID;
-                $wp_query->is_page = true;
-                $wp_query->is_singular = true;
-                $wp_query->posts = array($page_obj);
-                $wp_query->post_count = 1;
-            }
-
-            $matched_template = locate_template(array($route_map[$path]));
-            if ($matched_template) {
-                return $matched_template;
-            }
+    // Keep legacy URLs working without masking an existing page at that URL.
+    foreach (array('about' => 'about-us', 'contact' => 'contact-us', 'sign-up' => 'signup') as $alias => $slug) {
+        if (!get_page_by_path($alias, OBJECT, 'page')) {
+            add_rewrite_rule('^' . $alias . '/?$', 'index.php?pagename=' . $slug, 'top');
         }
     }
-    return $template;
-}, 99);
+}, 30);
 
+add_action('wp_loaded', function() {
+    if (get_option('riskverifier_flush_rewrites')) {
+        // Also write .htaccess when permitted so a fresh installation can route pages.
+        flush_rewrite_rules();
+        delete_option('riskverifier_flush_rewrites');
+    }
+});
 
+/** Match the fallback navigation markup when a WordPress menu is assigned. */
+add_filter('nav_menu_link_attributes', function($atts, $item, $args, $depth) {
+    if (isset($args->theme_location) && $args->theme_location === 'primary' && $depth === 0) {
+        $classes = isset($atts['class']) ? $atts['class'] : '';
+        $classes .= ' nav-link';
+        if (in_array('current-menu-item', (array) $item->classes, true)) {
+            $classes .= ' active';
+        }
+        if (strcasecmp(trim($item->title), 'Services') === 0 || strpos($item->url, '/services') !== false) {
+            $classes .= ' nav-link-dropdown-toggle';
+            $atts['aria-expanded'] = 'false';
+            $atts['aria-haspopup'] = 'true';
+        }
+        $atts['class'] = trim($classes);
+    }
+    return $atts;
+}, 10, 4);

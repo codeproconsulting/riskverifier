@@ -323,7 +323,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -415,7 +415,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -507,7 +507,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -599,7 +599,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -691,7 +691,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -783,7 +783,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -875,7 +875,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -967,7 +967,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -1059,7 +1059,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -1151,7 +1151,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -1243,7 +1243,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -1335,7 +1335,7 @@ get_header();
             </ul>
 
             <div class="showcase-actions">
-              <a href="index.html#quote-form-section" class="btn btn-primary btn-md">
+              <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>

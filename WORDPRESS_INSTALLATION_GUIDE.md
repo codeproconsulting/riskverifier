@@ -70,13 +70,22 @@ If you prefer uploading files directly to your server:
 
 ## ⚙️ Post-Installation Configuration
 
-### 1. Set the Front Page (Homepage)
-If your WordPress installation does not automatically display the new custom front page:
-1. Go to **Settings > Reading** in your WordPress Admin.
-2. Under **Your homepage displays**, select **A static page**.
-3. Set **Homepage** to your Home page (or create a blank page titled "Home").
-4. Because the theme includes `front-page.php`, WordPress will automatically render the entire redesigned, interactive homepage with hero simulator, services grid, quote calculator, and regional offices.
-5. Click **Save Changes**.
+### 1. Automatic page and route setup
+On activation (or the first request after updating the active theme), `functions.php`
+creates Home, Services, About Us, How It Works, Contact Us, Login and Signup when
+missing, and assigns the included templates. Home becomes the static homepage if
+no homepage is already configured. Existing pages, content and custom templates
+are preserved. No separate execution script or manual page creation is required.
+
+The theme enables pretty permalinks when none are configured and refreshes routing
+once. Legacy `/about/`, `/contact/` and `/sign-up/` routes work too, while existing
+pages at those addresses keep their content. If the host prevents WordPress from
+writing rewrite configuration, save **Settings > Permalinks** and apply the server
+rules WordPress displays.
+
+When replacing an older copy, upload the new ZIP and choose **Replace current with
+uploaded**. Version 2.0.1 uses content versions for CSS and JavaScript, so changed
+assets get new cache URLs. Purge any WordPress page cache or CDN cache after upload.
 
 ### 2. Configure Navigation Menu (Optional)
 The theme comes with a responsive navigation bar and automatic fallbacks. If you want to use WordPress's native menu builder:
@@ -85,7 +94,7 @@ The theme comes with a responsive navigation bar and automatic fallbacks. If you
 3. Under **Menu Settings > Display location**, check **Primary Navigation Menu**.
 4. Click **Save Menu**.
 
-### 3. Assign Page Templates (For Inner Pages)
+### 3. Assign Page Templates (Optional for additional pages)
 When editing or creating pages in **Pages > All Pages**:
 - For the **About** page: Select Template **About Us Page** in the right sidebar under *Page Attributes / Template*.
 - For the **Services** page: Select Template **Services Portfolio Page**.

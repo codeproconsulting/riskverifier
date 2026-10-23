@@ -4,7 +4,7 @@ Theme URI: https://riskverifier.com
 Author: Risk Verifier Engineering
 Author URI: https://riskverifier.com
 Description: Modern, high-performance white and blue corporate theme for Risk Verifier - Global background checks, due diligence, and corporate risk intelligence across 100+ countries.
-Version: 2.0.0
+Version: 2.0.1
 Requires at least: 5.8
 Tested up to: 6.6
 Requires PHP: 7.4
@@ -14,4 +14,4 @@ Text Domain: riskverifier
 Tags: corporate, business, clean, blue-white, modern, translation-ready
 */
 
-@import url("assets/css/theme-style.css");
+/* Design styles are loaded once through wp_enqueue_scripts in functions.php. */

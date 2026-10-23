@@ -42,3 +42,28 @@ riskverifier/
 2. Navigate to **Appearance > Themes > Add New > Upload Theme**
 3. Choose `riskverifier-theme.zip` and click **Install Now**
 4. Click **Activate**
+
+
+## Responsive layout and service copy (2.0.2)
+
+Large-display styles start at 1600 CSS pixels. Shared containers, typography and
+hero visuals grow within caps; existing mobile/tablet styles remain in effect.
+The Services dropdown uses three grouped text lists and supports hover, keyboard
+focus and mobile expansion.
+
+Service copy was retrieved from https://riskverifier.com/services/ and its twelve
+service detail pages on 2026-10-23. The source text, page URLs and published timing
+are saved in `riskverifier-theme/assets/data/services.json`. Update that file and
+run `python3 scripts/build-services.py` to regenerate static and WordPress service
+panels, homepage cards and modal data. The builder does not fetch remote content.
+Some advisory pages on the live site repeat generic sanctions/media FAQs; their
+wording is retained with the source copy. Pages without a published turnaround
+invite the visitor to contact the team rather than promising a timeframe.
+
+Keep `css/style.css` and `riskverifier-theme/assets/css/theme-style.css` identical,
+and likewise `js/main.js` and `riskverifier-theme/assets/js/theme-main.js`.
+Run `python3 scripts/package-theme.py` after changing theme sources to rebuild and
+verify `riskverifier-theme.zip`.
+
+The homepage process is a compact five-step preview linking to the full How It
+Works page. Portable Obsidian context is in [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).

@@ -65,13 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Desktop hover handlers with smooth debounce grace period
     parent.addEventListener('mouseenter', () => {
-      if (window.innerWidth > 991) {
+      if (window.innerWidth > 992) {
         openDropdown();
       }
     });
 
     parent.addEventListener('mousemove', () => {
-      if (window.innerWidth > 991) {
+      if (window.innerWidth > 992) {
         if (parent.classList.contains('dropdown-closed')) {
           parent.classList.remove('dropdown-closed');
         }
@@ -82,19 +82,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     parent.addEventListener('mouseleave', () => {
-      if (window.innerWidth > 991) {
+      if (window.innerWidth > 992) {
         scheduleClose();
       }
     });
 
     if (menu) {
       menu.addEventListener('mouseenter', () => {
-        if (window.innerWidth > 991) {
+        if (window.innerWidth > 992) {
           openDropdown();
         }
       });
       menu.addEventListener('mouseleave', () => {
-        if (window.innerWidth > 991) {
+        if (window.innerWidth > 992) {
           scheduleClose();
         }
       });
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (toggle) {
       toggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 991) {
+        if (window.innerWidth <= 992) {
           e.preventDefault();
           e.stopPropagation();
           parent.classList.remove('dropdown-closed');
@@ -125,8 +125,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    parent.addEventListener('focusin', () => {
+      if (window.innerWidth > 992) openDropdown();
+    });
+    parent.addEventListener('focusout', (event) => {
+      if (window.innerWidth > 992 && !parent.contains(event.relatedTarget)) scheduleClose();
+    });
+
     // When clicking any link inside mega dropdown, dismiss immediately
-    parent.querySelectorAll('a').forEach(link => {
+    parent.querySelectorAll('.mega-dropdown-menu a').forEach(link => {
       link.addEventListener('click', () => {
         closeAllDropdowns();
         if (navMenu) navMenu.classList.remove('active');
@@ -167,151 +174,146 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 12 Services Data Object
   const servicesData = {
-    'criminal-records': {
-      title: 'Criminal Records Check',
-      category: 'legal',
-      turnaround: '24–72 Hours',
-      desc: 'Conduct comprehensive criminal background checks across multiple jurisdictions to ensure safe hiring, regulatory compliance, and risk mitigation.',
-      details: [
-        'Legally accessible Police & Court criminal record searches',
-        'Felony, misdemeanor, and active warrant cross-referencing',
-        'Official criminal clearance certificate authenticity verification',
-        'Full compliance with local privacy, FCRA, and GDPR regulations'
-      ]
-    },
-    'civil-records': {
-      title: 'Civil Records Search',
-      category: 'legal',
-      turnaround: '24–48 Hours',
-      desc: 'Access civil litigation records, court filings, bankruptcies, and commercial legal disputes to uncover hidden liabilities.',
-      details: [
-        'Superior, district, and municipal court civil dispute indexes',
-        'Contract disputes, breach of fiduciary duty, and tort claims',
-        'Judgments, liens, and corporate entity legal histories',
-        'Cross-jurisdictional litigation profile synthesis'
-      ]
-    },
-    'credit-finance': {
-      title: 'Credit & Finance Reports',
-      category: 'financial',
-      turnaround: '24–48 Hours',
-      desc: 'Gain deep insights into financial behavior with individual and corporate credit reports to evaluate fiscal stability and fraud exposure.',
-      details: [
-        'Official credit bureau score and payment history checks',
-        'Public records: bankruptcies, foreclosures, and tax liens',
-        'Corporate debt ratios, credit rating & solvency status',
-        'Authorized consent-driven compliant credit assessments'
-      ]
-    },
-    'vital-records': {
-      title: 'Vital Records Verification',
-      category: 'identity',
-      turnaround: '2–5 Business Days',
-      desc: 'Verify essential registry records including birth certificates, marital status, and government death records for conclusive identity confirmation.',
-      details: [
-        'Government registry verification and official apostille validation',
-        'Cross-referencing vital records against civil status archives',
-        'Anti-fraud document security feature inspection',
-        'International civil registry authentication across 100+ nations'
-      ]
-    },
-    'identity-credentials': {
-      title: 'Identity & Credentials Verification',
-      category: 'identity',
-      turnaround: '24–48 Hours',
-      desc: 'Authenticate government-issued IDs, academic degrees, and professional licensing to eliminate resume fraud and identity theft.',
-      details: [
-        'Passport, National ID, and Driving License biometric checks',
-        'Direct registrar degree and higher education institution verification',
-        'Professional association and regulatory licensing validation',
-        'AI-assisted tamper detection and biometric liveness checks'
-      ]
-    },
-    'property-asset': {
-      title: 'Property & Asset Searches',
-      category: 'financial',
-      turnaround: '2–4 Business Days',
-      desc: 'Identify real estate deeds, corporate asset registrations, and vehicle ownership to evaluate financial strength and uncover hidden assets.',
-      details: [
-        'Land registry and cadastral property deed investigations',
-        'Commercial property, plant, and high-value asset registries',
-        'Lien, mortgage, and encumbrance tracking',
-        'Beneficial ownership structures and entity asset mapping'
-      ]
-    },
-    'driving-records': {
-      title: 'Driving & Motor Vehicle Records (MVR)',
-      category: 'identity',
-      turnaround: '24–48 Hours',
-      desc: 'Verify driver history, license validity, suspension orders, and moving violations to protect fleet operations and workplace safety.',
-      details: [
-        'Department of Motor Vehicles (DMV) official record pulling',
-        'Traffic violation history, DUI/DWI records, and penalty points',
-        'Commercial driver license (CDL) endorsement verification',
-        'Fleet driver compliance monitoring and re-screening'
-      ]
-    },
-    'verifications-references': {
-      title: 'Verifications & References',
-      category: 'identity',
-      turnaround: '2–4 Business Days',
-      desc: 'Structured verification of past employment history, job titles, responsibilities, tenure, and professional supervisor references.',
-      details: [
-        'Direct HR contact verification of employment dates and titles',
-        'Eligibility for rehire and separation reason confirmation',
-        'In-depth telephone supervisor reference interviews',
-        'Standardized behavioral and competency reference reports'
-      ]
-    },
-    'due-diligence': {
-      title: 'Due Diligence & Sanctions Screening',
-      category: 'advisory',
-      turnaround: '3–5 Business Days',
-      desc: 'Analyze executive and corporate profiles against international sanctions, PEP lists, watchlists, and adverse intelligence.',
-      details: [
-        'Global PEP (Politically Exposed Persons) & sanctions database screening',
-        'Adverse media and negative press investigations',
-        'UBO (Ultimate Beneficial Ownership) and corporate hierarchy tracking',
-        'Bribery, FCPA, and AML (Anti-Money Laundering) risk checks'
-      ]
-    },
-    'media-analytics': {
-      title: 'Media Analytics',
-      category: 'advisory',
-      turnaround: '2–4 Business Days',
-      desc: 'Monitor, scrape, and analyze digital news, regulatory alerts, social channels, and media exposure to safeguard brand reputation.',
-      details: [
-        'Sentiment analysis across tier-1 news, trade press, and blogs',
-        'Social footprint risk assessment and digital footprint analysis',
-        'Crisis detection and PR impact scoring',
-        'Historical news coverage archive search'
-      ]
-    },
-    'bespoke-research': {
-      title: 'Bespoke Research',
-      category: 'advisory',
-      turnaround: 'Tailored Scope',
-      desc: 'Tailored, customized intelligence reports designed around specific corporate M&A transactions, executive vetting, and unique needs.',
-      details: [
-        'Discreet corporate intelligence and strategic competitor profiling',
-        'Market entry risk analysis and local counterparty profiling',
-        'Deep-web investigative research and open-source intelligence (OSINT)',
-        'Custom evidentiary deliverables prepared by senior analysts'
-      ]
-    },
-    'geopolitical-advisory': {
-      title: 'Geopolitical Advisory',
-      category: 'advisory',
-      turnaround: 'Continuous / Scoped',
-      desc: 'Actionable analysis on cross-border political stability, sovereign risk, regulatory shifts, and emerging operational threats.',
-      details: [
-        'Country risk assessment and regulatory stability analysis',
-        'Cross-border supply chain security and sovereign risk reporting',
-        'Emerging market operational barrier assessments',
-        'Executive travel security briefs and geopolitical forecasts'
-      ]
-    }
-  };
+  "criminal-records": {
+    "title": "Criminal Records Check",
+    "category": "legal",
+    "turnaround": "24–72 hours",
+    "desc": "Conduct comprehensive criminal background checks across multiple jurisdictions to ensure safe hiring and risk mitigation.",
+    "details": [
+      "Criminal Record Checks — searching legally accessible Police/Court criminal records.",
+      "Criminal Conduct Checks — identifying relevant criminal proceedings or offense information where legally accessible.",
+      "Criminal Certificate Verification — verifying the authenticity and issuing authority of criminal conduct/clearance certificates."
+    ]
+  },
+  "civil-records": {
+    "title": "Civil Records Search",
+    "category": "legal",
+    "turnaround": "2 to 7 days depending on country",
+    "desc": "Access civil litigation records, court filings, and legal disputes to identify potential risks associated with individuals or organizations.",
+    "details": [
+      "Civil Record Checks",
+      "Bankruptcy Records Check"
+    ]
+  },
+  "credit-finance": {
+    "title": "Credit & Finance Reports",
+    "category": "financial",
+    "turnaround": "2 to 7 days; may take longer depending on country",
+    "desc": "Gain deep insights into financial behavior with our credit reporting services. We provide both individual and business credit reports to help assess financial stability and risk.",
+    "details": [
+      "Personal Credit Report",
+      "Business Credit Report",
+      "Business Registration Search",
+      "Directorship Search"
+    ]
+  },
+  "vital-records": {
+    "title": "Vital Records Verification",
+    "category": "identity",
+    "turnaround": "24 hours to 7 days depending on country",
+    "desc": "Verify essential documents such as birth certificates, marriage records, and death records for identity confirmation and legal compliance.",
+    "details": [
+      "1. Birth Record Verification",
+      "2. Death Record Verification",
+      "3. Marriage Record Verification"
+    ]
+  },
+  "identity-credentials": {
+    "title": "Identity & Credentials Verification",
+    "category": "identity",
+    "turnaround": "24 hours to 7 days depending on country and document type",
+    "desc": "Authenticate personal identity, educational qualifications, and professional credentials to prevent fraud.",
+    "details": [
+      "Verify the authenticity of government-issued identification documents such as national ID cards, driver IDs, and other official identity records.",
+      "Government ID authenticity check",
+      "Name and identity matching",
+      "Document validity verification",
+      "Issuing authority confirmation",
+      "Passport Verification",
+      "Legal status/citizenship"
+    ]
+  },
+  "property-asset": {
+    "title": "Property & Asset Searches",
+    "category": "financial",
+    "turnaround": "2 to 7 days; may take longer depending on country",
+    "desc": "Identify ownership of properties and assets to assess financial strength and uncover hidden risks.",
+    "details": [
+      "Physical Address Confirmation",
+      "Property Ownership Search"
+    ]
+  },
+  "driving-records": {
+    "title": "Driving & Motor Vehicle Records (MVR)",
+    "category": "identity",
+    "turnaround": "24 hours to 7 days depending on country",
+    "desc": "Verify driving history, license status, and violations to ensure safety and compliance for employees and contractors.",
+    "details": [
+      "Driver License Verification",
+      "Traffic Violation Check"
+    ]
+  },
+  "verifications-references": {
+    "title": "Verifications & References",
+    "category": "identity",
+    "turnaround": "2 to 7 days; may take longer depending on country and educational institution SOPs",
+    "desc": "Verify employment history, references, and professional background to ensure accurate candidate evaluation.",
+    "details": [
+      "1. Address Verification",
+      "2. Education Verification",
+      "3. Employment Verification",
+      "4. Personal References",
+      "5. Professional Association Verification",
+      "6. Professional License Verification",
+      "7. Professional Reference Verification"
+    ]
+  },
+  "due-diligence": {
+    "title": "Due Diligence",
+    "category": "advisory",
+    "turnaround": "One week to several weeks, depending on scope and jurisdictions",
+    "desc": "Analyze reputational risks through media searches, sanctions lists, and adverse information to support informed business decisions.",
+    "details": [
+      "This service combines global sanctions screening with adverse media analysis to identify individuals or entities linked to financial crime, regulatory violations, or negative press coverage.",
+      "Global sanctions list screening (OFAC, UN, EU, etc.)",
+      "Adverse media monitoring (negative news coverage)",
+      "Politically Exposed Persons (PEPs) screening",
+      "Risk classification and alerts"
+    ]
+  },
+  "media-analytics": {
+    "title": "Media Analytics",
+    "category": "advisory",
+    "turnaround": "Contact us for timing",
+    "desc": "Our Media Analytics service helps organizations monitor, analyze, and understand media coverage across digital and traditional platforms.",
+    "details": [
+      "Digital Media",
+      "TV Channels and Newspapers",
+      "Customized Reports"
+    ]
+  },
+  "bespoke-research": {
+    "title": "Bespoke Research",
+    "category": "advisory",
+    "turnaround": "Contact us for timing",
+    "desc": "Our Bespoke Research service provides tailored, in-depth research designed around each client’s specific needs and objectives.",
+    "details": [
+      "Tailored to Your Needs",
+      "Tailored to Your Format"
+    ]
+  },
+  "geopolitical-advisory": {
+    "title": "Geopolitical Advisory",
+    "category": "advisory",
+    "turnaround": "Contact us for timing",
+    "desc": "Our Geopolitical Advisory service helps organizations understand and navigate complex global developments, political dynamics, and emerging risks.",
+    "details": [
+      "Geopolitical Analysis",
+      "Country and Regional Assessments",
+      "Strategic Briefings"
+    ]
+  }
+};
 
   // Service Tabs Filtering (Favif Bento and standard)
   const tabButtons = document.querySelectorAll('.service-tab-btn, .favif-filter-btn');
@@ -427,8 +429,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
-        <span>${item}</span>
+        <span></span>
       `;
+      li.querySelector('span').textContent = item;
       modalBullets.appendChild(li);
     });
 
@@ -484,10 +487,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (selectedTurnaroundEl) {
       if (checked.length === 0) {
         selectedTurnaroundEl.textContent = 'Select services to calculate';
-      } else if (checked.length <= 2) {
-        selectedTurnaroundEl.textContent = '24 – 48 Hours';
       } else {
-        selectedTurnaroundEl.textContent = '2 – 5 Business Days';
+        const timings = [...new Set(checked.map(cb => servicesData[cb.value]?.turnaround).filter(Boolean))];
+        selectedTurnaroundEl.textContent = timings.length === 1
+          ? timings[0]
+          : 'Varies by selected services and country; see service details';
       }
     }
 
@@ -648,12 +652,12 @@ document.addEventListener('DOMContentLoaded', () => {
     portalRows.forEach(row => { row.style.opacity = '0'; });
 
     inView(hiwPortalSection, () => {
-      animate(portalRows, { opacity: [0, 1], transform: ['translateY(30px)', 'translateY(0px)'] }, {
+      if (portalRows.length) animate(portalRows, { opacity: [0, 1], transform: ['translateY(30px)', 'translateY(0px)'] }, {
         delay: stagger(0.12),
         duration: 0.6,
         easing: [0.16, 1, 0.3, 1]
       });
-      animate(portalNodes, { opacity: [0, 1], scale: [0.5, 1.15, 1] }, {
+      if (portalNodes.length) animate(portalNodes, { opacity: [0, 1], scale: [0.5, 1.15, 1] }, {
         delay: stagger(0.12, { start: 0.08 }),
         duration: 0.55,
         easing: [0.34, 1.56, 0.64, 1]
@@ -676,12 +680,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (faqProgress) {
         animate(faqProgress, { height: ['0%', '100%'] }, { duration: 1.1, easing: [0.16, 1, 0.3, 1] });
       }
-      animate(faqNodes, { opacity: [0, 1], scale: [0, 1.25, 1] }, {
+      if (faqNodes.length) animate(faqNodes, { opacity: [0, 1], scale: [0, 1.25, 1] }, {
         delay: stagger(0.12),
         duration: 0.5,
         easing: [0.34, 1.56, 0.64, 1]
       });
-      animate(faqCards, { opacity: [0, 1], transform: ['translateX(35px)', 'translateX(0px)'] }, {
+      if (faqCards.length) animate(faqCards, { opacity: [0, 1], transform: ['translateX(35px)', 'translateX(0px)'] }, {
         delay: stagger(0.12, { start: 0.08 }),
         duration: 0.6,
         easing: [0.16, 1, 0.3, 1]
@@ -819,12 +823,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // High DPI scaling
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // Keep the 600-unit drawing coordinates, but render at the displayed size
+    // so the globe stays crisp on wide screens and after a viewport resize.
     const size = 600;
-    canvas.width = size * dpr;
-    canvas.height = size * dpr;
-    ctx.scale(dpr, dpr);
+    const resizeCanvas = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const pixels = Math.max(1, Math.round(canvas.getBoundingClientRect().width * dpr));
+      if (canvas.width !== pixels || canvas.height !== pixels) {
+        canvas.width = pixels;
+        canvas.height = pixels;
+        ctx.setTransform(pixels / size, 0, 0, pixels / size, 0, 0);
+      }
+    };
+    resizeCanvas();
+    if (typeof ResizeObserver !== 'undefined') {
+      new ResizeObserver(resizeCanvas).observe(canvas);
+    }
+    window.addEventListener('resize', resizeCanvas, { passive: true });
 
     const cx = 300;
     const cy = 300;

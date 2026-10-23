@@ -245,7 +245,7 @@ get_header();
           <div class="services-console-showcase" id="servicesConsoleShowcase">
           <!-- Showcase Pane: Criminal Records Check -->
           <div class="service-showcase-pane" id="showcase-criminal-records" style="display: block;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt="Criminal Records Check">
               </div>
@@ -253,76 +253,9 @@ get_header();
                 <span class="showcase-category-pill">Legal Screening</span>
                 <h2 class="showcase-title">Criminal Records Check</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 24–72 Hours</span>
-            </div>
-
-            <p class="showcase-desc">Conduct comprehensive criminal background checks across multiple jurisdictions to ensure safe hiring, regulatory compliance, and risk mitigation.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Police Archives</span><span class="showcase-tag-pill">Court Registries</span><span class="showcase-tag-pill">FCRA Compliant</span><span class="showcase-tag-pill">GDPR Ready</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt="Police Clearance Records" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Police Clearance Records</h4>
-                    <p class="sub-card-desc">Searches across municipal, state, and federal law enforcement databases for arrests and dispositions.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Court Docket Searches" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Court Docket Searches</h4>
-                    <p class="sub-card-desc">Direct verification of felony, misdemeanor, and active warrant court dockets across authorized registries.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="National & Global Registries" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">National & Global Registries</h4>
-                    <p class="sub-card-desc">Cross-referencing national criminal indexes and international police cooperation archives.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Certificate Authentication" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Certificate Authentication</h4>
-                    <p class="sub-card-desc">Validation of government-issued police character certificates and apostille seals against issuing authorities.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Evidentiary summary with official court case docket numbers</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Verification timestamps directly recorded from police bureaus</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Objective risk severity index (Clear / Record Found)</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Strict adherence to FCRA adverse-action guidance and GDPR protocols</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: 24–72 hours</span>
+            </div><p class="showcase-desc">Risk Verifier provides comprehensive criminal background check services to help organizations ensure safety, compliance, and informed decision-making. Our solutions verify criminal history, validate official certificates, and identify potential risks across multiple jurisdictions. We deliver accurate and confidential reports while complying with local legal and data protection requirements.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Criminal Background Screening &amp; Verification</h4><div class="sub-card-desc"><p>It encompasses all three areas:</p><p>Criminal Record Checks — searching legally accessible Police/Court criminal records.</p><p>Criminal Conduct Checks — identifying relevant criminal proceedings or offense information where legally accessible.</p><p>Criminal Certificate Verification — verifying the authenticity and issuing authority of criminal conduct/clearance certificates.</p></div></div></div></div><h3 class="showcase-section-heading">Compliance &amp; Confidentiality</h3><div class="showcase-source-section"><p>Risk Verifier ensures:</p><ul><li>All services are conducted in accordance with applicable laws and privacy regulations in the respective countries.</li><li>Strict data privacy and confidentiality</li><li>Ethical and authorized data sourcing</li></ul></div><h3 class="showcase-section-heading">Why Choose Risk Verifier</h3><div class="showcase-source-section"><ul><li>Accurate and verified criminal data</li><li>Global screening capabilities</li><li>Fast turnaround (24–72 hours)</li><li>Secure and confidential reports</li><li>Trusted by businesses worldwide</li></ul></div><h3 class="showcase-section-heading">How It Works</h3><div class="showcase-source-section"><p>1. Submit your request</p><p>2. Select criminal check type</p><p>3. Provide subject details</p><p>4. Receive verified report</p></div>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -337,7 +270,7 @@ get_header();
           </div>
           <!-- Showcase Pane: Civil Records Search -->
           <div class="service-showcase-pane" id="showcase-civil-records" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Civil Records Search">
               </div>
@@ -345,76 +278,9 @@ get_header();
                 <span class="showcase-category-pill">Legal Screening</span>
                 <h2 class="showcase-title">Civil Records Search</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 24–48 Hours</span>
-            </div>
-
-            <p class="showcase-desc">Access civil litigation records, court filings, bankruptcies, and commercial legal disputes to uncover hidden liabilities associated with individuals or firms.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Superior Courts</span><span class="showcase-tag-pill">Commercial Disputes</span><span class="showcase-tag-pill">Bankruptcies</span><span class="showcase-tag-pill">Contractual Claims</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Commercial Litigation" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Commercial Litigation</h4>
-                    <p class="sub-card-desc">Identification of active and historical contract disputes, breach of fiduciary duty, and corporate litigation.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Judgments & Liens" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Judgments & Liens</h4>
-                    <p class="sub-card-desc">Cross-referencing tax liens, monetary judgments, foreclosures, and enforceable legal debts.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Bankruptcy Records" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Bankruptcy Records</h4>
-                    <p class="sub-card-desc">Comprehensive insolvency court record checks across regional and national bankruptcy registries.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Dispute Resolution History" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Dispute Resolution History</h4>
-                    <p class="sub-card-desc">Tracking arbitration awards, settlement records, and tribunal determinations across jurisdictions.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Plaintiff / defendant cross-party litigation search report</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Docket filings, claim amounts, and ultimate judgment dispositions</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Analysis of commercial reliability and dispute risk rating</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Complete jurisdiction indexing across superior and appellate courts</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: 2 to 7 days depending on country</span>
+            </div><p class="showcase-desc">Risk Verifier provides comprehensive civil records searches to help businesses identify legal risks, financial disputes, and litigation history. Our civil background checks offer accurate insights into non-criminal legal matters across multiple jurisdictions.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Civil Record Checks</h4><div class="sub-card-desc"><p>Search civil court records to uncover lawsuits, disputes, and legal actions involving individuals or companies. This helps organizations identify potential risks before making business decisions</p><ul><li>Civil lawsuits and disputes</li><li>Court case details</li><li>Judgments and settlements</li><li>Plaintiff/defendant information</li><li>Legal history insights</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Bankruptcy Records Check</h4><div class="sub-card-desc"><p>Identify individuals or businesses that have filed for bankruptcy. This report provides critical financial risk indicators and helps you evaluate creditworthiness and reliability.</p><ul><li>Bankruptcy filing status</li><li>Filing date and case details</li><li>Court jurisdiction</li><li>Type of bankruptcy (where applicable)</li><li>Financial risk indicators</li><li>Financial risk assessment</li><li>Lending decisions</li><li>Tenant screening</li><li>Business partnerships</li></ul></div></div></div></div><h3 class="showcase-section-heading">Compliance &amp; Confidentiality</h3><div class="showcase-source-section"><p>Risk Verifier ensures:</p><ul><li>All services are conducted in accordance with applicable laws and privacy regulations in the respective countries.</li><li>Strict data privacy and confidentiality</li><li>Ethical and authorized data sourcing</li></ul></div><h3 class="showcase-section-heading">Why Choose Risk Verifier</h3><div class="showcase-source-section"><ul><li>Accurate and verified criminal data</li><li>Global screening capabilities</li><li>Fast turnaround (2 to 7 days depending on country)</li><li>Secure and confidential reports</li><li>Trusted by businesses worldwide</li></ul></div><h3 class="showcase-section-heading">How It Works</h3><div class="showcase-source-section"><p>1. Submit your request</p><p>2. Select Civil record check type</p><p>3. Provide subject details</p><p>4. Receive verified report</p></div>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -429,84 +295,17 @@ get_header();
           </div>
           <!-- Showcase Pane: Credit & Finance Reports -->
           <div class="service-showcase-pane" id="showcase-credit-finance" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Credit & Finance Reports">
               </div>
               <div class="showcase-title-area">
                 <span class="showcase-category-pill">Financial Risk</span>
-                <h2 class="showcase-title">Credit & Finance Reports</h2>
+                <h2 class="showcase-title">Credit &amp; Finance Reports</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 24–48 Hours</span>
-            </div>
-
-            <p class="showcase-desc">Gain deep insights into financial behavior with individual and corporate credit reports to evaluate fiscal stability and fraud exposure.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Credit Bureau</span><span class="showcase-tag-pill">Solvency Rating</span><span class="showcase-tag-pill">Debt Obligations</span><span class="showcase-tag-pill">Corporate Solvency</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Credit Bureau Profile" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Credit Bureau Profile</h4>
-                    <p class="sub-card-desc">Authorized retrieval of official credit bureau scores, payment histories, and historical delinquent accounts.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Corporate Financial Health" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Corporate Financial Health</h4>
-                    <p class="sub-card-desc">Assessment of balance sheet filings, solvency ratings, debt ratios, and company creditworthiness.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Public Financial Records" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Public Financial Records</h4>
-                    <p class="sub-card-desc">Tracking unsatisfied judgments, tax collection notices, and public commercial default filings.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Financial Authority Inquiries" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Financial Authority Inquiries</h4>
-                    <p class="sub-card-desc">Verification with central banks, securities commissions, and financial conduct authorities.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Official credit bureau score breakdown and risk grade</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>36-month repayment track record and debt utilization ratio</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Independent assessment of fiscal stability and fraud vulnerability</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Compliant with local credit reporting authorization laws</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: 2 to 7 days; may take longer depending on country</span>
+            </div><p class="showcase-desc">Risk Verifier provides comprehensive credit and financial intelligence reports to help businesses assess risk, verify credibility, and make informed decisions.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Personal Credit Report</h4><div class="sub-card-desc"><p>Access individual credit data to evaluate financial reliability. Ideal for tenant screening, lending decisions, and identity verification.</p></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Business Credit Report</h4><div class="sub-card-desc"><p>Get detailed insights into a company’s financial health, creditworthiness, and risk profile. Our business credit reports include credit scores, payment behavior, financial history, and risk indicators.</p><ul><li>Company credit score &amp; rating</li><li>Payment history &amp; trends</li><li>Outstanding debts &amp; liabilities</li><li>Financial stability analysis</li><li>Risk grading</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Business Registration Search</h4><div class="sub-card-desc"><p>Verify the legal existence and registration details of a company. This service confirms whether a business is officially registered and compliant with local regulations.</p><ul><li>Company registration status</li><li>Registration number &amp; date</li><li>Legal structure</li><li>Registered address</li><li>Business activity details</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Directorship Search</h4><div class="sub-card-desc"><p>Identify directors and key individuals associated with a company. This helps uncover hidden risks and connections between businesses.</p><ul><li>Director names &amp; profiles</li><li>Linked companies</li><li>Historical directorships</li><li>Corporate relationships</li></ul></div></div></div></div><h3 class="showcase-section-heading">Compliance &amp; Confidentiality</h3><div class="showcase-source-section"><p>Risk Verifier ensures:</p><ul><li>All services are conducted in accordance with applicable laws and privacy regulations in the respective countries.</li><li>Strict data privacy and confidentiality</li><li>Ethical and authorized data sourcing</li></ul></div><h3 class="showcase-section-heading">Why Choose Risk Verifier</h3><div class="showcase-source-section"><ul><li>Accurate and verified criminal data</li><li>Global screening capabilities</li><li>Normally it takes 2 to 7 days, although it may take longer depending on the Country</li><li>Secure and confidential reports</li><li>Trusted by businesses worldwide</li></ul></div><h3 class="showcase-section-heading">How It Works</h3><div class="showcase-source-section"><p>1. Submit your request</p><p>2. Select Credit &amp; Finance Report</p><p>3. Provide subject details</p><p>4. Receive verified report</p></div>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -521,7 +320,7 @@ get_header();
           </div>
           <!-- Showcase Pane: Vital Records Verification -->
           <div class="service-showcase-pane" id="showcase-vital-records" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt="Vital Records Verification">
               </div>
@@ -529,76 +328,9 @@ get_header();
                 <span class="showcase-category-pill">Identity Records</span>
                 <h2 class="showcase-title">Vital Records Verification</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 2–5 Business Days</span>
-            </div>
-
-            <p class="showcase-desc">Verify essential registry records including birth certificates, marital status, and government death records for conclusive identity confirmation.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Civil Registry</span><span class="showcase-tag-pill">Birth Certificates</span><span class="showcase-tag-pill">Marital Records</span><span class="showcase-tag-pill">Apostille Authentication</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt="Birth Registry Inquiries" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Birth Registry Inquiries</h4>
-                    <p class="sub-card-desc">Direct validation against municipal and national civil status registries to verify origin records.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Marital Status Validation" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Marital Status Validation</h4>
-                    <p class="sub-card-desc">Verification of marriage registrations, civil partnership records, and legal dissolutions.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Official Death Master Files" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Official Death Master Files</h4>
-                    <p class="sub-card-desc">Cross-referencing government vital status archives to protect against deceased identity theft.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Consular & Apostille Checks" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Consular & Apostille Checks</h4>
-                    <p class="sub-card-desc">Verification of consular legalizations, apostille certificates, and international diplomatic seals.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Certified confirmation from primary government civil registry</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Verification of official serial numbers, watermarks, and security seals</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Definitive identity lineage and vital status confirmation</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>International multi-language translation and evidentiary support</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: 24 hours to 7 days depending on country</span>
+            </div><p class="showcase-desc">Risk Verifier provides reliable vital records verification services to confirm key life events and identity information. These records are essential for legal compliance, identity validation, and due diligence processes.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">1. Birth Record Verification</h4><div class="sub-card-desc"><p>Verify an individual’s birth details to confirm identity, age, and nationality. This service ensures the authenticity of official birth records.</p><ul><li>Full name verification</li><li>Date and place of birth</li><li>Registration details</li><li>Issuing authority validation</li><li>Record authenticity check</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">2. Death Record Verification</h4><div class="sub-card-desc"><p>Confirm official death records for individuals. This service is essential for legal, financial, and insurance-related processes.</p><ul><li>Date of death confirmation</li><li>Place of death</li><li>Registration details</li><li>Issuing authority verification</li><li>Record authenticity</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">3. Marriage Record Verification</h4><div class="sub-card-desc"><p>Verify marital status and marriage records for individuals. This service confirms the legality and authenticity of marital relationships.</p><ul><li>Marriage status confirmation</li><li>Spouse details</li><li>Date and place of marriage</li><li>Registration authority verification</li><li>Record validation</li></ul></div></div></div></div><h3 class="showcase-section-heading">Compliance &amp; Confidentiality</h3><div class="showcase-source-section"><p>Risk Verifier ensures:</p><ul><li>All services are conducted in accordance with applicable laws and privacy regulations in the respective countries.</li><li>Strict data privacy and confidentiality</li><li>Ethical and authorized data sourcing</li></ul></div><h3 class="showcase-section-heading">Why Choose Risk Verifier</h3><div class="showcase-source-section"><ul><li>Access to official and trusted sources</li><li>Accurate and verified records</li><li>Fast turnaround times (2 to 7 days)</li><li>Confidential and secure processing</li><li>Global verification expertise</li></ul></div><h3 class="showcase-section-heading">How It Works</h3><div class="showcase-source-section"><p>1. Submit your request</p><p>2. Select record type</p><p>3. Provide required details</p><p>4. Receive verified report</p></div><h3 class="showcase-section-heading">FAQ</h3><details class="showcase-faq"><summary>What are vital records?</summary><p>Vital records include birth, death, and marriage certificates used to verify identity and legal status.</p></details><details class="showcase-faq"><summary>How long does verification take?</summary><p>Most requests are completed within 24 hours to 7 days depending on the Country.</p></details><details class="showcase-faq"><summary>Are these records legally valid?</summary><p>Yes, we verify records through official and authorized sources.</p></details>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -613,84 +345,17 @@ get_header();
           </div>
           <!-- Showcase Pane: Identity & Credentials Verification -->
           <div class="service-showcase-pane" id="showcase-identity-credentials" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Identity & Credentials Verification">
               </div>
               <div class="showcase-title-area">
                 <span class="showcase-category-pill">Identity & Credentials</span>
-                <h2 class="showcase-title">Identity & Credentials Verification</h2>
+                <h2 class="showcase-title">Identity &amp; Credentials Verification</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 24–48 Hours</span>
-            </div>
-
-            <p class="showcase-desc">Authenticate government-issued IDs, academic degrees, and professional licensing to eliminate resume fraud and identity theft.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Passport MRZ</span><span class="showcase-tag-pill">Registrar Degree Check</span><span class="showcase-tag-pill">Professional Licenses</span><span class="showcase-tag-pill">Biometric Validation</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Government ID Verification" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Government ID Verification</h4>
-                    <p class="sub-card-desc">Verification of passports, National ID cards, and work permits via official issuing database registries.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Academic Degree Authentication" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Academic Degree Authentication</h4>
-                    <p class="sub-card-desc">Direct contact with university registrar offices to verify degree title, major, honors, and graduation date.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Professional License Status" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Professional License Status</h4>
-                    <p class="sub-card-desc">Querying bar associations, medical councils, accounting institutes, and engineering boards.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Tamper & Forgery Detection" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Tamper & Forgery Detection</h4>
-                    <p class="sub-card-desc">Forensic inspection of micro-printing, MRZ optical barcodes, security fibers, and holograms.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Direct registrar verification letters with institution seals</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Comprehensive credential validation matching resume representations</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Biometric document liveness and validity confirmation</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Zero tolerance detection of diploma mills and fraudulent credentials</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: 24 hours to 7 days depending on country and document type</span>
+            </div><p class="showcase-desc">Risk Verifier provides credible identity and credential verification services to help organizations confirm the authenticity of personal identification documents. Our solutions reduce fraud, strengthen compliance, and ensure that individuals are who they claim to be.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Government ID Verification</h4><div class="sub-card-desc"><p>Verify the authenticity of government-issued identification documents such as national ID cards, driver IDs, and other official identity records.</p><ul><li>Government ID authenticity check</li><li>Name and identity matching</li><li>Document validity verification</li><li>Issuing authority confirmation</li><li>Passport Verification</li><li>Legal status/citizenship</li></ul></div></div></div></div><h3 class="showcase-section-heading">Security &amp; Compliance</h3><div class="showcase-source-section"><p>Risk Verifier ensures:</p><ul><li>All services are conducted in accordance with applicable laws and privacy regulations in the respective countries.</li><li>Strict identity protection protocols</li><li>Secure and encrypted data handling</li><li>Compliance with global verification laws</li><li>Strict data privacy and confidentiality</li><li>Ethical and authorized data sourcing</li></ul></div><h3 class="showcase-section-heading">Why Choose Risk Verifier</h3><div class="showcase-source-section"><ul><li>Highly accurate identity validation</li><li>Global document verification capability</li><li>Fast processing times (24 Hours to 7 days)</li><li>Fraud detection intelligence</li><li>Trusted by financial and corporate sectors</li></ul></div><h3 class="showcase-section-heading">How It Works</h3><div class="showcase-source-section"><p>1. Submit ID or passport details</p><p>2. Select verification type</p><p>3. We validate through authorized sources</p><p>4. Receive secure verification report</p></div><h3 class="showcase-section-heading">FAQ</h3><details class="showcase-faq"><summary>What is identity verification?</summary><p>It is the process of confirming that a person’s identity documents are real and belong to them.</p></details><details class="showcase-faq"><summary>How long does verification take?</summary><p>Most checks are completed within 24 hours to 7 days depending on country and document type.</p></details>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -705,84 +370,17 @@ get_header();
           </div>
           <!-- Showcase Pane: Property & Asset Searches -->
           <div class="service-showcase-pane" id="showcase-property-asset" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Property & Asset Searches">
               </div>
               <div class="showcase-title-area">
                 <span class="showcase-category-pill">Asset Intelligence</span>
-                <h2 class="showcase-title">Property & Asset Searches</h2>
+                <h2 class="showcase-title">Property &amp; Asset Searches</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 2–4 Business Days</span>
-            </div>
-
-            <p class="showcase-desc">Identify real estate deeds, corporate asset registrations, and vehicle ownership to evaluate financial strength and uncover hidden assets.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Cadastral Registries</span><span class="showcase-tag-pill">Commercial Assets</span><span class="showcase-tag-pill">Encumbrances</span><span class="showcase-tag-pill">Beneficial Ownership</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Land & Real Estate Title" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Land & Real Estate Title</h4>
-                    <p class="sub-card-desc">Querying cadastral registries and county deed offices for residential and commercial parcels.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Corporate Asset Holdings" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Corporate Asset Holdings</h4>
-                    <p class="sub-card-desc">Investigation of plant, machinery, heavy equipment, and commercial vehicle fleet ownership.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Encumbrance & Mortgage Search" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Encumbrance & Mortgage Search</h4>
-                    <p class="sub-card-desc">Mapping outstanding mortgages, secondary liens, and municipal tax encumbrances on assets.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Beneficial Asset Mapping" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Beneficial Asset Mapping</h4>
-                    <p class="sub-card-desc">Unraveling holding companies, family trusts, and offshore entities concealing asset ownership.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Cadastral property parcel ownership deeds and transaction valuations</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Comprehensive lien and mortgage liability breakdown</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Asset trace profile across multiple domestic and offshore jurisdictions</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Independent verification of collateral for commercial transactions</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: 2 to 7 days; may take longer depending on country</span>
+            </div><p class="showcase-desc">Risk Verifier provides reliable property and asset verification services to help businesses assess financial strength, confirm ownership, and prevent fraud. Our solutions enable organizations to verify physical addresses and identify property ownership details across multiple jurisdictions.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Physical Address Confirmation</h4><div class="sub-card-desc"><p>Verify whether a given address exists and is associated with an individual or business. This service confirms location authenticity and helps detect fraudulent or fake addresses.</p><ul><li>Address existence verification</li><li>Occupancy confirmation (where available)</li><li>Standardized address validation</li><li>Location authenticity check</li><li>Site Visit</li><li>Risk indicators for suspicious addresses</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Property Ownership Search</h4><div class="sub-card-desc"><p>Identify ownership details of residential or commercial properties. This service helps verify assets and assess financial credibility.</p><ul><li>Property ownership details</li><li>Owner name and records</li><li>Property type (residential/commercial)</li><li>Registration and title information</li><li>Historical ownership data (where available)</li></ul></div></div></div></div><h3 class="showcase-section-heading">Compliance &amp; Confidentiality</h3><div class="showcase-source-section"><p>Risk Verifier ensures:</p><ul><li>All services are conducted in accordance with applicable laws and privacy regulations in the respective countries.</li><li>Strict data privacy and confidentiality</li><li>Ethical and authorized data sourcing</li></ul></div><h3 class="showcase-section-heading">Why Choose Risk Verifier</h3><div class="showcase-source-section"><ul><li>Accurate property and asset data</li><li>Global verification capabilities</li><li>Fast and reliable reporting</li><li>Easy-to-read insights</li><li>Trusted by financial and legal professionals</li></ul></div><h3 class="showcase-section-heading">How It Works</h3><div class="showcase-source-section"><p>1. Submit property or address details</p><p>2. Select service type</p><p>3. We verify official records</p><p>4. Receive your report</p></div><h3 class="showcase-section-heading">FAQ</h3><details class="showcase-faq"><summary>What is a property ownership search?</summary><p>It identifies the legal owner of a property along with related registration details.</p></details><details class="showcase-faq"><summary>Why is address verification important?</summary><p>It helps prevent fraud and ensures accurate identity and location validation.</p></details><details class="showcase-faq"><summary>How long does it take?</summary><p>Normally (2 to 7 days) may take longer depending on the Country.</p></details>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -797,84 +395,17 @@ get_header();
           </div>
           <!-- Showcase Pane: Driving & Motor Vehicle Records (MVR) -->
           <div class="service-showcase-pane" id="showcase-driving-records" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/driving-record-check.png" alt="Driving & Motor Vehicle Records (MVR)">
               </div>
               <div class="showcase-title-area">
                 <span class="showcase-category-pill">Motor Vehicle Records</span>
-                <h2 class="showcase-title">Driving & Motor Vehicle Records (MVR)</h2>
+                <h2 class="showcase-title">Driving &amp; Motor Vehicle Records (MVR)</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 24–48 Hours</span>
-            </div>
-
-            <p class="showcase-desc">Verify driver history, license validity, suspension orders, and moving violations to protect fleet operations and workplace safety.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">DMV Records</span><span class="showcase-tag-pill">CDL Endorsements</span><span class="showcase-tag-pill">Traffic Violations</span><span class="showcase-tag-pill">Fleet Compliance</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/driving-record-check.png" alt="Driver License Status" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Driver License Status</h4>
-                    <p class="sub-card-desc">Real-time verification of driver license validity, expiration, class, and jurisdictional jurisdiction.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Violation & Infraction Record" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Violation & Infraction Record</h4>
-                    <p class="sub-card-desc">Extracting moving violations, speeding citations, points balance, and reckless driving citations.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt="Suspension & Revocation History" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Suspension & Revocation History</h4>
-                    <p class="sub-card-desc">Identification of past or active DUI / DWI offenses, mandatory court suspensions, and revocations.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Commercial CDL Endorsements" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Commercial CDL Endorsements</h4>
-                    <p class="sub-card-desc">Verification of hazmat, passenger, tanker, and double-trailer commercial endorsements.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Official DMV motor vehicle record printout and status code</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>3-to-7 year traffic violation history and penalty points balance</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Fleet insurance eligibility and liability risk classification</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Automated annual re-screening schedule for enterprise fleets</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: 24 hours to 7 days depending on country</span>
+            </div><p class="showcase-desc">Risk Verifier provides reliable driving and motor vehicle record (MVR) checks to help businesses ensure road safety, regulatory compliance, and responsible hiring. Our services verify driver credentials and identify past violations, helping organizations reduce risk and maintain operational standards.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/driving-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Driver License Verification</h4><div class="sub-card-desc"><p>Confirm the authenticity and status of a driver’s license. This service verifies whether a license is valid, active, and issued by the appropriate authority.</p><ul><li>License validity and status</li><li>Issuing authority verification</li><li>Expiry date confirmation</li><li>License class/category</li><li>Identity matching</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/driving-record-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Traffic Violation Check</h4><div class="sub-card-desc"><p>Access driving history and identify traffic violations, penalties, or infractions associated with an individual.</p><ul><li>Traffic offense records</li><li>Violation history</li><li>Fines and penalties (where available)</li><li>License suspension or points (if applicable)</li><li>Risk profile indicators</li></ul></div></div></div></div><h3 class="showcase-section-heading">Compliance &amp; Safety</h3><div class="showcase-source-section"><p>Risk Verifier ensures:</p><ul><li>Compliance with local transport regulations</li><li>Secure and confidential handling of driver data</li><li>Accurate reporting from authorized sources</li></ul></div><h3 class="showcase-section-heading">Why Choose Risk Verifier</h3><div class="showcase-source-section"><ul><li>All services are conducted in accordance with applicable laws and privacy regulations in the respective countries.</li><li>Verified motor vehicle records</li><li>Fast turnaround times</li><li>Multi-country coverage</li><li>Easy-to-understand reports</li><li>Trusted by logistics and transportation companies</li></ul></div><h3 class="showcase-section-heading">How It Works</h3><div class="showcase-source-section"><p>1. Submit driver details</p><p>2. Select verification service</p><p>3. We check official databases</p><p>4. Receive detailed report</p></div><h3 class="showcase-section-heading">FAQ</h3><details class="showcase-faq"><summary>What is a motor vehicle record (MVR)?</summary><p>An MVR contains a driver’s license status, driving history, and any traffic violations.</p></details><details class="showcase-faq"><summary>Why is driver license verification important?</summary><p>It ensures the driver is legally authorized and reduces risk for employers.</p></details><details class="showcase-faq"><summary>How long does it take?</summary><p>Most reports are delivered within 24 hours to 7 days depending on country</p></details>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -889,84 +420,17 @@ get_header();
           </div>
           <!-- Showcase Pane: Verifications & References -->
           <div class="service-showcase-pane" id="showcase-verifications-references" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Verifications & References">
               </div>
               <div class="showcase-title-area">
                 <span class="showcase-category-pill">HR & Employment</span>
-                <h2 class="showcase-title">Verifications & References</h2>
+                <h2 class="showcase-title">Verifications &amp; References</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 2–4 Business Days</span>
-            </div>
-
-            <p class="showcase-desc">Structured verification of past employment history, job titles, responsibilities, tenure, and professional supervisor references.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Employment Dates</span><span class="showcase-tag-pill">Title Authentication</span><span class="showcase-tag-pill">Rehire Eligibility</span><span class="showcase-tag-pill">Supervisor Interviews</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Employment Tenure Verification" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Employment Tenure Verification</h4>
-                    <p class="sub-card-desc">Direct HR registry contact to verify start/end dates, full-time/part-time status, and job titles.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Separation Reason & Rehire" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Separation Reason & Rehire</h4>
-                    <p class="sub-card-desc">Confirmation of voluntary/involuntary termination and formal eligibility for rehire status.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="In-Depth Supervisor Interviews" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">In-Depth Supervisor Interviews</h4>
-                    <p class="sub-card-desc">Structured telephone interviews with direct line managers evaluating work performance and integrity.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Peer & Competency Reviews" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Peer & Competency Reviews</h4>
-                    <p class="sub-card-desc">360-degree professional peer evaluations assessing leadership, technical skills, and ethics.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Detailed corporate HR verification records with corporate stamps</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Transcribed supervisor reference interview notes and performance scoring</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Discrepancy flag analysis comparing candidate resumes with official records</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Standardized objective evaluation report conforming to privacy statutes</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: 2 to 7 days; may take longer depending on country and educational institution SOPs</span>
+            </div><p class="showcase-desc">Risk Verifier provides comprehensive verification and reference checking services to help organizations make safe, informed, and compliant decisions. We validate personal, educational, employment, and professional records using trusted and authorized data sources across multiple countries.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">1. Address Verification</h4><div class="sub-card-desc"><p>Confirm the authenticity of residential or business addresses to ensure accurate identity and location details.</p><ul><li>Address existence validation</li><li>Residential/business confirmation</li><li>Formatting and postal verification</li><li>Fraud risk detection</li><li>Site Visit for verification</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">2. Education Verification</h4><div class="sub-card-desc"><p>Verify academic qualifications and degrees to ensure candidates hold genuine educational credentials.</p><ul><li>Degree and diploma verification</li><li>Institution authenticity check</li><li>Graduation date confirmation</li><li>Qualification validation</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">3. Employment Verification</h4><div class="sub-card-desc"><p>Confirm previous employment history, job titles, and tenure with past employers.</p><ul><li>Job title verification</li><li>Employment duration check</li><li>Employer confirmation</li><li>Work history validation</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">4. Personal References</h4><div class="sub-card-desc"><p>Validate personal references provided by candidates to ensure authenticity and reliability.</p><ul><li>Reference identity confirmation</li><li>Relationship validation</li><li>Contact authenticity checks</li><li>Behavioral insights (where available)</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">5. Professional Association Verification</h4><div class="sub-card-desc"><p>Verify membership in professional organizations and associations relevant to a candidate’s field.</p><ul><li>Membership validation</li><li>Association authenticity check</li><li>Active/inactive status</li><li>Industry affiliation confirmation</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">6. Professional License Verification</h4><div class="sub-card-desc"><p>Confirm the validity of professional licenses such as medical, legal, engineering, or financial certifications.</p><ul><li>License authenticity check</li><li>Issuing authority verification</li><li>Expiry and status validation</li><li>Disciplinary action checks (if available)</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">7. Professional Reference Verification</h4><div class="sub-card-desc"><p>Validate references from professional contacts to confirm skills, experience, and work behavior.</p><ul><li>Employer reference confirmation</li><li>Skill validation</li><li>Performance feedback checks</li><li>Reference authenticity</li></ul></div></div></div></div><h3 class="showcase-section-heading">Compliance &amp; Security</h3><div class="showcase-source-section"><p>Risk Verifier ensures:</p><ul><li>Secure handling of sensitive personal data</li><li>Ethical and authorized data sourcing</li><li>Confidential reporting standards</li><li>All services are conducted in accordance with applicable laws and privacy regulations in the respective the Countries and SOPs of educational institutions.</li></ul></div><h3 class="showcase-section-heading">Why Choose Risk Verifier</h3><div class="showcase-source-section"><ul><li>Accurate multi-country verification service</li><li>Trusted by HR &amp; compliance teams</li><li>Fraud prevention focused</li><li>Easy-to-read verification reports</li></ul></div><h3 class="showcase-section-heading">How It Works</h3><div class="showcase-source-section"><p>1. Submit candidate details</p><p>2. Select verification type(s)</p><p>3. We validate through official sources</p><p>4. Receive detailed verification report</p></div><h3 class="showcase-section-heading">FAQ</h3><details class="showcase-faq"><summary>Why is employment verification important?</summary><p>It ensures candidates have genuine work experience and reduces hiring risk.</p></details><details class="showcase-faq"><summary>How long does verification take?</summary><p>Normally, it takes 2 to 7 days, although it may take longer depending on the Country and Educational Institutions SOPs.</p></details><details class="showcase-faq"><summary>Are your verification services compliant?</summary><p>Yes, we follow international standards including GDPR and FCRA where applicable.</p></details>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -981,84 +445,17 @@ get_header();
           </div>
           <!-- Showcase Pane: Due Diligence & Sanctions Screening -->
           <div class="service-showcase-pane" id="showcase-due-diligence" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Due Diligence & Sanctions Screening">
               </div>
               <div class="showcase-title-area">
                 <span class="showcase-category-pill">Corporate Intelligence</span>
-                <h2 class="showcase-title">Due Diligence & Sanctions Screening</h2>
+                <h2 class="showcase-title">Due Diligence</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 3–5 Business Days</span>
-            </div>
-
-            <p class="showcase-desc">Analyze executive and corporate profiles against international sanctions, PEP lists, watchlists, and adverse intelligence.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">OFAC Sanctions</span><span class="showcase-tag-pill">PEP Screening</span><span class="showcase-tag-pill">Adverse Media</span><span class="showcase-tag-pill">UBO Identification</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Global Sanctions Watchlists" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Global Sanctions Watchlists</h4>
-                    <p class="sub-card-desc">Screening across OFAC, UN Security Council, EU Consolidated, UK HMT, and Interpol lists.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Politically Exposed Persons (PEP)" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Politically Exposed Persons (PEP)</h4>
-                    <p class="sub-card-desc">Identification of senior political figures, military officers, state enterprise executives, and associates.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Ultimate Beneficial Ownership (UBO)" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Ultimate Beneficial Ownership (UBO)</h4>
-                    <p class="sub-card-desc">Piercing complex multi-tier offshore holding structures to identify true individual owners.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Bribery & FCPA Compliance" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Bribery & FCPA Compliance</h4>
-                    <p class="sub-card-desc">Reviewing regulatory disciplinary enforcement, anti-money laundering (AML) alerts, and fraud databases.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Comprehensive sanctions and PEP match matrix with false-positive elimination</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Multi-tiered corporate ownership diagram and shareholder hierarchy</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Adverse regulatory, compliance, and international law enforcement profile</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Risk rating advisory summary for executive investment committees</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: One week to several weeks, depending on scope and jurisdictions</span>
+            </div><p class="showcase-desc">Risk Verifier offers comprehensive due diligence and media screening services to help organizations identify reputational, financial, and regulatory risks. Our solutions include sanctions checks, adverse media searches, and global risk intelligence. We support businesses in maintaining compliance with international regulations while protecting their reputation and operations.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Sanctions &amp; Adverse Media Search</h4><div class="sub-card-desc"><p>This service combines global sanctions screening with adverse media analysis to identify individuals or entities linked to financial crime, regulatory violations, or negative press coverage.</p><ul><li>Global sanctions list screening (OFAC, UN, EU, etc.)</li><li>Adverse media monitoring (negative news coverage)</li><li>Politically Exposed Persons (PEPs) screening</li><li>Risk classification and alerts</li></ul></div></div></div></div><h3 class="showcase-section-heading">Compliance &amp; Risk Management</h3><div class="showcase-source-section"><p>Risk Verifier helps you comply with:</p><ul><li>AML (Anti-Money Laundering) regulations</li><li>KYC (Know Your Customer) requirements</li><li>International sanctions frameworks</li><li>Data protection laws (GDPR, etc.)</li></ul></div><h3 class="showcase-section-heading">Why Choose Risk Verifier</h3><div class="showcase-source-section"><ul><li>Accurate and actionable insights</li><li>Fast and secure reporting</li><li>Trusted by financial and corporate sectors</li></ul></div><h3 class="showcase-section-heading">How It Works</h3><div class="showcase-source-section"><p>1. Submit entity or individual details</p><p>2. Select due diligence service</p><p>3. We perform global screening</p><p>4. Receive detailed risk report</p></div><h3 class="showcase-section-heading">FAQ</h3><details class="showcase-faq"><summary>What is adverse media screening?</summary><p>It involves searching global news sources for negative information related to an individual or business.</p></details><details class="showcase-faq"><summary>How long does due diligence report take?</summary><p>The turnaround time typically ranges from one week to several weeks, depending on the scope, complexity, jurisdictions involved, and information required for the report.</p></details>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1073,7 +470,7 @@ get_header();
           </div>
           <!-- Showcase Pane: Media Analytics -->
           <div class="service-showcase-pane" id="showcase-media-analytics" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt="Media Analytics">
               </div>
@@ -1081,76 +478,9 @@ get_header();
                 <span class="showcase-category-pill">Risk Intelligence</span>
                 <h2 class="showcase-title">Media Analytics</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: 2–4 Business Days</span>
-            </div>
-
-            <p class="showcase-desc">Monitor, scrape, and analyze digital news, regulatory alerts, social channels, and media exposure to safeguard brand reputation.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Adverse Press</span><span class="showcase-tag-pill">Sentiment Scoring</span><span class="showcase-tag-pill">Regulatory Bulletins</span><span class="showcase-tag-pill">Reputational Risk</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt="Global News Archive Scrapes" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Global News Archive Scrapes</h4>
-                    <p class="sub-card-desc">Searching across 10,000+ local, national, and international newspapers and financial journals.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Regulatory Gazette Tracking" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Regulatory Gazette Tracking</h4>
-                    <p class="sub-card-desc">Monitoring gazette notices, trade commission alerts, and regulatory disciplinary proceedings.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Digital Footprint & Social Risk" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Digital Footprint & Social Risk</h4>
-                    <p class="sub-card-desc">Auditing public social media profiles, domain ownership, and online controversy signals.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Reputational Sentiment Analysis" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Reputational Sentiment Analysis</h4>
-                    <p class="sub-card-desc">AI-assisted sentiment evaluation calculating negative exposure ratios and trend vectors.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Chronological media exposure dossier highlighting adverse stories</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Direct citations and archived copies of deleted or paywalled news articles</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Reputational risk index and stakeholder perception assessment</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Continuous automated monitoring options for high-profile personnel</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: Contact us for timing</span>
+            </div><p class="showcase-desc">We track traditional and digital media across a wide range of sources, languages and geographies to bring you a clear picture of how events are being reported and discussed. Whether it&#x27;s mainstream press, niche publications or international outlets, our analysts distil large volumes of content into meaningful patterns, highlighting key messages and stakeholder perspectives. Our monitoring covers ongoing developments and long-term trends, providing you with timely awareness of what&#x27;s gaining traction and why it matters.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Digital Media</h4><div class="sub-card-desc"><p>Our digital media analytics offer:</p><ul><li>Analysis of social media platforms</li><li>Tracking of narratives</li><li>Thematic clustering and visualization of conversations</li><li>Single and multi-regional focus</li><li>A blend of technological and human judgement to detect what algorithms alone often miss</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">TV Channels and Newspapers</h4><div class="sub-card-desc"><p>Traditional media insights help you decode the stories that influence public opinion, policy discourse and reputational dynamics. We cover:</p><ul><li>Wide range of sources, languages and geographies</li><li>Mainstream press, niche publications or international outlets</li><li>Distilling large volumes of content into meaningful patterns</li><li>Highlights of key messages and stakeholder perspectives</li><li>Source credibility assessments</li><li>Thematic mapping</li><li>Anticipation of reputational risks</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Customized Reports</h4><div class="sub-card-desc"><p>We provide fully customised digital media analysis, aligned with your strategic priorities. Oru reports include:</p><ul><li>Daily updates</li><li>Rapid alerts</li><li>Long-term campaign tracking</li><li>In-depth periodic analyses</li></ul></div></div></div></div><h3 class="showcase-section-heading">FAQ</h3><details class="showcase-faq"><summary>What is adverse media screening?</summary><p>It involves searching global news sources for negative information related to an individual or business.</p></details><details class="showcase-faq"><summary>What are sanctions lists?</summary><p>Sanctions lists include individuals or entities restricted by governments or international organizations.</p></details><details class="showcase-faq"><summary>Why is sanctions screening important?</summary><p>It helps businesses avoid legal penalties, financial risks, and reputational damage.</p></details>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1165,7 +495,7 @@ get_header();
           </div>
           <!-- Showcase Pane: Bespoke Research -->
           <div class="service-showcase-pane" id="showcase-bespoke-research" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/bespoke-research.png" alt="Bespoke Research">
               </div>
@@ -1173,76 +503,9 @@ get_header();
                 <span class="showcase-category-pill">Custom Intelligence</span>
                 <h2 class="showcase-title">Bespoke Research</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: Tailored Scope</span>
-            </div>
-
-            <p class="showcase-desc">Tailored, customized intelligence reports designed around specific corporate M&A transactions, executive vetting, and unique needs.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Cross-Border M&A</span><span class="showcase-tag-pill">OSINT Investigation</span><span class="showcase-tag-pill">Counterparty Profile</span><span class="showcase-tag-pill">Senior Executive Vetting</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/bespoke-research.png" alt="Cross-Border M&A Due Diligence" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Cross-Border M&A Due Diligence</h4>
-                    <p class="sub-card-desc">Bespoke investigation of acquisition targets, joint-venture partners, and local representatives.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Deep-Web OSINT Intelligence" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Deep-Web OSINT Intelligence</h4>
-                    <p class="sub-card-desc">Advanced open-source intelligence gathering across unindexed databases and public repositories.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Counterparty Integrity Profiling" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Counterparty Integrity Profiling</h4>
-                    <p class="sub-card-desc">Discrete assessment of counterparty integrity, commercial track record, and operational reality.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="High-Stakes Executive Vetting" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">High-Stakes Executive Vetting</h4>
-                    <p class="sub-card-desc">Comprehensive 360-degree investigation of prospective C-suite officers and board members.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Fully customized investigative brief prepared by senior forensic intelligence analysts</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Primary evidentiary exhibits, registered documents, and verified factual corroborations</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Unbiased, objective risk analysis highlighting deal-breaking red flags</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Executive briefing presentation ready for board and audit committee review</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: Contact us for timing</span>
+            </div><p class="showcase-desc">Our research is designed to keep you ahead of the curve in an increasingly complex world. Our research reports provide: • In-depth analysis of the geopolitical and social developments • Clear and concise assessments • Highlights on emerging risks and opportunities • From periodic situation reports to thematic assessments</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/bespoke-research.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Tailored to Your Needs</h4><div class="sub-card-desc"><p>For clients with specific questions, unique requirements or strategic priorities, our bespoke research service offers fully customised solutions. We work closely with you to: • Understand the sensitive to the context of your organisation</p><ul><li>Define the scope, objectives and intended outcomes of each project</li><li>Help you enter a new market, assess reputational risks or prepare for policy engagement</li><li>Provide depth, nuance and strategic value</li><li>Draw on our interdisciplinary expertise</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/bespoke-research.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Tailored to Your Format</h4><div class="sub-card-desc"><p>Bespoke research can range from:</p><ul><li>Short-term briefings</li><li>Long-form studies</li><li>Regional case studies</li><li>Comprehensive policy impact assessments</li></ul></div></div></div></div><h3 class="showcase-section-heading">FAQ</h3><details class="showcase-faq"><summary>What is adverse media screening?</summary><p>It involves searching global news sources for negative information related to an individual or business.</p></details><details class="showcase-faq"><summary>What are sanctions lists?</summary><p>Sanctions lists include individuals or entities restricted by governments or international organizations.</p></details><details class="showcase-faq"><summary>Why is sanctions screening important?</summary><p>It helps businesses avoid legal penalties, financial risks, and reputational damage.</p></details>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1257,7 +520,7 @@ get_header();
           </div>
           <!-- Showcase Pane: Geopolitical Advisory -->
           <div class="service-showcase-pane" id="showcase-geopolitical-advisory" style="display: none;">
-            <div class="showcase-header-row">
+<div class="showcase-header-row">
               <div class="showcase-icon-badge">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Geopolitical Advisory">
               </div>
@@ -1265,76 +528,9 @@ get_header();
                 <span class="showcase-category-pill">Strategic Advisory</span>
                 <h2 class="showcase-title">Geopolitical Advisory</h2>
               </div>
-              <span class="showcase-turnaround-badge">⚡ SLA: Continuous / Scoped</span>
-            </div>
-
-            <p class="showcase-desc">Actionable analysis on cross-border political stability, sovereign risk, regulatory shifts, and emerging operational threats.</p>
-
-            <div class="showcase-tags-cloud">
-              <span class="showcase-tag-pill">Sovereign Risk</span><span class="showcase-tag-pill">Regulatory Shifts</span><span class="showcase-tag-pill">Supply Chain Security</span><span class="showcase-tag-pill">Executive Travel Security</span>
-            </div>
-
-            <h3 class="showcase-section-heading">Core Areas of Verification</h3>
-            <div class="showcase-subservices-grid">
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Country & Sovereign Risk" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Country & Sovereign Risk</h4>
-                    <p class="sub-card-desc">Evaluating political stability, expropriation risks, currency controls, and sovereign default indicators.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Regulatory & Policy Shifts" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Regulatory & Policy Shifts</h4>
-                    <p class="sub-card-desc">Forecasting imminent statutory changes, foreign ownership restrictions, and sanction regimes.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Supply Chain Fragility Analysis" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Supply Chain Fragility Analysis</h4>
-                    <p class="sub-card-desc">Assessing geopolitical vulnerabilities across maritime chokepoints and border logistics corridors.</p>
-                  </div>
-                </div>
-                <div class="showcase-sub-card">
-                  <div class="sub-card-icon-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Executive Travel Security Briefs" style="width:20px; height:20px; object-fit:contain; filter:brightness(0) invert(1);">
-                  </div>
-                  <div class="sub-card-text">
-                    <h4 class="sub-card-title">Executive Travel Security Briefs</h4>
-                    <p class="sub-card-desc">Real-time threat assessments, civil unrest alerts, and localized security advisories for travelling teams.</p>
-                  </div>
-                </div>
-            </div>
-
-            <h3 class="showcase-section-heading">Key Verification Deliverables</h3>
-            <ul class="showcase-features-list">
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Tailored country risk intelligence bulletins and sovereign vulnerability ratings</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Predictive regulatory forecast matrix highlighting emerging compliance risks</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Executive threat briefing and localized security protocols</span>
-                </li>
-                <li class="showcase-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#083d77" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Direct advisory access to regional subject-matter specialists</span>
-                </li>
-            </ul>
-
-            <div class="showcase-actions">
+              <span class="showcase-turnaround-badge">Turnaround: Contact us for timing</span>
+            </div><p class="showcase-desc">In today&#x27;s volatile environment, having access to high-quality research isn’t just an advantage, it&#x27;s a necessity. We support you with the advisory you need to navigate uncertainty and seize opportunities.</p><h3 class="showcase-section-heading">Service details</h3><div class="showcase-subservices-grid"><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Geopolitical Analysis</h4><div class="sub-card-desc"><p>Our geopolitical advisory offers:</p><ul><li>Analysis of political, economic and security developments</li><li>Monitoring of regional and global geopolitical trends</li><li>Assessment of key stakeholders, interests and strategic dynamics</li><li>Identification of emerging risks and opportunities</li><li>Scenario analysis and forward-looking assessments</li><li>A blend of technological tools and human judgement to provide depth, context and nuance</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Country and Regional Assessments</h4><div class="sub-card-desc"><p>Our country and regional insights help you understand the political and strategic environments that shape markets and policy. We cover:</p><ul><li>Political and institutional developments</li><li>Regional power dynamics and international relations</li><li>Government and stakeholder assessments</li><li>Policy and regulatory developments</li><li>Security and stability considerations</li><li>Anticipation of geopolitical risks and potential disruptions</li></ul></div></div></div><div class="showcase-sub-card"><div class="sub-card-icon-wrap"><img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt=""></div><div class="sub-card-text"><h4 class="sub-card-title">Strategic Briefings</h4><div class="sub-card-desc"><p>We provide tailored geopolitical briefings aligned with your strategic priorities. Our briefings include:</p><ul><li>Rapid assessments of emerging developments</li><li>Executive briefings</li><li>Early-warning alerts</li><li>Scenario and contingency assessments</li><li>Periodic geopolitical updates</li><li>In-depth thematic analyses</li></ul></div></div></div></div><h3 class="showcase-section-heading">FAQ</h3><details class="showcase-faq"><summary>What is adverse media screening?</summary><p>It involves searching global news sources for negative information related to an individual or business.</p></details><details class="showcase-faq"><summary>What are sanctions lists?</summary><p>Sanctions lists include individuals or entities restricted by governments or international organizations.</p></details><details class="showcase-faq"><summary>Why is sanctions screening important?</summary><p>It helps businesses avoid legal penalties, financial risks, and reputational damage.</p></details>
+<div class="showcase-actions">
               <a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>" class="btn btn-primary btn-md">
                 Request This Verification Check
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1530,7 +726,7 @@ get_header();
 
         <div style="margin-top: 40px; text-align: center;">
           <div style="display: inline-block; padding: 14px 26px; background-color: #ffffff; border: 1.5px solid #083d77; border-radius: 12px; font-size: 0.9rem; color: #083d77; font-weight: 700;">
-            ⚡ <strong>Turnaround SLA:</strong> Most background reports are completed within <strong>2 to 7 business days</strong>.
+            <strong>Turnaround:</strong> Timing varies by service and country. See each service for its published timeframe.
           </div>
         </div>
       </div>
@@ -1880,7 +1076,7 @@ get_header();
           <details style="background:#ffffff; border:1.5px solid rgba(8,61,119,0.15); border-radius:12px; padding:20px; cursor:pointer;" open>
             <summary style="font-weight:700; color:#083d77; font-size:1.05rem;">How fast is the turnaround time for international checks?</summary>
             <p style="margin-top:12px; color:rgba(8,61,119,0.8); font-size:0.925rem; line-height:1.6;">
-              Most standard background checks (Criminal record searches, Credit reports, and Identity verifications) are returned within <strong>24 to 72 hours</strong>. Complex international checks or deep educational registrar verifications typically take 2 to 7 business days depending on the country.
+              Criminal checks typically take 24–72 hours. Other verification times vary by country, records and institution; due diligence can take one week to several weeks. See the selected service for details.
             </p>
           </details>
 

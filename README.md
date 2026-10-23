@@ -65,5 +65,5 @@ and likewise `js/main.js` and `riskverifier-theme/assets/js/theme-main.js`.
 Run `python3 scripts/package-theme.py` after changing theme sources to rebuild and
 verify `riskverifier-theme.zip`.
 
-The homepage process is a compact five-step preview linking to the full How It
-Works page. Portable Obsidian context is in [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
+The homepage process is a compact interactive five-step preview with selectable
+steps, progress feedback, a short caption and a link to the full How It Works page. Portable Obsidian context is in [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).

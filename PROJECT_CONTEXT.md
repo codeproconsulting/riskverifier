@@ -24,7 +24,7 @@ This is the portable context note for the Risk Verifier website. Open this repos
 - Product: background screening, record verification, corporate due diligence, media analysis, research and geopolitical advisory.
 - Regional contacts: USA (Texas), Canada (Ottawa), UK (Reading), Pakistan (Islamabad).
 - Main design: white backgrounds, brand navy `#083d77`, restrained blue accents, Plus Jakarta Sans / Inter.
-- Theme version after the current updates: **2.0.2**.
+- Theme version after the current updates: **2.0.5**.
 
 ## What is in the repository
 
@@ -145,9 +145,9 @@ The homepage now has five short numbered steps:
 4. Receive your report.
 5. Make your decision.
 
-The steps form a five-column row on large screens, a two-column layout on intermediate widths, and compact single-column rows on phones. There are no long descriptions or decorative timeline nodes in this preview. **See more details** links to `how-it-works.html` in the static site and `/how-it-works/` in WordPress.
+The steps form a five-column row on large screens, a two-column layout on intermediate widths, and compact single-column rows on phones. Following feedback that the first preview was too plain, it now uses a frosted-glass process window with a floating verification brief, five stage-specific preview cards, selectable framed numbers, a progress line and one short caption. Selecting a step replaces the card content: request form, selected checks, source verification, consolidated report, then decision summary. The stage heading and status badge update with it. Hover, focus or tap a step to explore it; arrow keys, Home and End also work. Steps do not advance automatically. The user requested removing the pause control. Decorative movement now finishes within four seconds, with brief transitions on selection; reduced-motion preferences disable it. The process window is an illustration, not a live check or a submitted request. Long descriptions remain on the dedicated page. **See more details** links to `how-it-works.html` in the static site and `/how-it-works/` in WordPress.
 
-The `.home-process-*` classes are scoped to this preview. Do not simplify or redesign the dedicated process page as a side effect. Its full timeline and explanations are intentionally retained.
+The `.home-process-*` classes and the `processShell` JavaScript are scoped to this preview. Do not simplify or redesign the dedicated process page as a side effect. Its full timeline and explanations are intentionally retained.
 
 ## JavaScript features and boundaries
 

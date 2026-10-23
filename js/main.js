@@ -3,6 +3,97 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Compact, user-controlled homepage process preview.
+  const processShell = document.querySelector('.home-process-shell');
+  if (processShell) {
+    const buttons = Array.from(processShell.querySelectorAll('.home-process-button'));
+    const caption = processShell.querySelector('.home-process-caption');
+    const position = processShell.querySelector('.home-process-position');
+    const captions = [
+      'Tell us what you need verified.',
+      'Select the checks that fit your needs.',
+      'We research and validate the information.',
+      'Review your verified findings in one report.',
+      'Use the findings to decide with confidence.'
+    ];
+    const stageTitles = ['Your request, clearly defined.', 'The right checks, selected.', 'Details checked at the source.', 'Your findings, brought together.', 'Your next move, informed.'];
+    const stageStates = ['Request received', 'Scope selected', 'Verifying sources', 'Report prepared', 'Ready to decide'];
+    const previewCard = processShell.querySelector('.process-document');
+    const previewBody = processShell.querySelector('.process-document-body');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const previews = [
+      {
+        title: 'Your request', subtitle: '01 / REQUEST INTAKE',
+        content: '<div class="process-intake-field"><span>Contact details</span><i></i></div><div class="process-intake-field"><span>Your organization</span><i></i></div><div class="process-intake-action">Verification request <span>↗</span></div>'
+      },
+      {
+        title: 'Build your scope', subtitle: '02 / SELECT YOUR CHECKS',
+        content: '<div class="process-scope-row"><b>✓</b><span>Criminal records</span><em>Selected</em></div><div class="process-scope-row"><b>✓</b><span>Credentials</span><em>Selected</em></div><div class="process-scope-row"><b>✓</b><span>Credit &amp; finance</span><em>Selected</em></div><div class="process-preview-footnote">A scope tailored to your needs</div>'
+      },
+      {
+        title: 'Source verification', subtitle: '03 / RESEARCH & VALIDATE',
+        content: '<div class="process-source-map"><span>Request</span><i></i><b>RV</b><i></i><span>Source</span><div class="process-source-signal"></div></div><div class="process-source-row"><span>Issuing authority</span><b>Checking</b></div><div class="process-source-row"><span>Record matching</span><b>In progress</b></div><div class="process-source-progress"><i></i></div>'
+      },
+      {
+        title: 'Your findings report', subtitle: '04 / CONSOLIDATED FINDINGS',
+        content: '<div class="process-report-heading"><span>Verification summary</span><b>↓ PDF</b></div><div class="process-report-grid"><span>Identity<b>✓</b></span><span>Records<b>✓</b></span><span>Sources<b>✓</b></span></div><div class="process-report-lines"><i></i><i></i><i></i></div>'
+      },
+      {
+        title: 'An informed next step', subtitle: '05 / REVIEW & DECIDE',
+        content: '<div class="process-decision"><span class="process-decision-mark">✓</span><strong>Clarity for your next move</strong><span>The findings are yours to act on.</span></div><div class="process-decision-steps"><span>Review</span><i>→</i><span>Decide</span><i>→</i><span>Proceed</span></div>'
+      }
+    ];
+    let currentStep = 0;
+    let cardTransition;
+    const selectStep = (index) => {
+      buttons.forEach((button, i) => {
+        button.setAttribute('aria-pressed', String(i === index));
+        button.closest('.home-process-step').classList.toggle('is-active', i === index);
+        button.closest('.home-process-step').classList.toggle('is-complete', i < index);
+      });
+      processShell.style.setProperty('--process-progress', `${index / (buttons.length - 1) * 100}%`);
+      caption.textContent = captions[index];
+      processShell.dataset.phase = String(index);
+      processShell.querySelector('.home-process-stage-title').textContent = stageTitles[index];
+      processShell.querySelector('.process-state-text').textContent = stageStates[index];
+      position.textContent = `${String(index + 1).padStart(2, '0')} / 05`;
+      if (index !== currentStep) {
+        processShell.querySelector('.process-document-title').textContent = previews[index].title;
+        processShell.querySelector('.process-document-subtitle').textContent = previews[index].subtitle;
+        previewBody.innerHTML = previews[index].content;
+        if (!reducedMotion.matches) {
+          cardTransition?.cancel();
+          cardTransition = previewCard.animate([
+            { opacity: 0.65, transform: 'translateY(5px) rotate(-2deg)' },
+            { opacity: 1, transform: 'translateY(0) rotate(-4deg)' }
+          ], { duration: 260, easing: 'ease-out' });
+        }
+        currentStep = index;
+      }
+    };
+    reducedMotion.addEventListener('change', (event) => {
+      if (event.matches) cardTransition?.cancel();
+    });
+    buttons.forEach((button, index) => {
+      button.addEventListener('pointerenter', (event) => {
+        if (event.pointerType === 'mouse') selectStep(index);
+      });
+      button.addEventListener('focus', () => selectStep(index));
+      button.addEventListener('click', () => selectStep(index));
+      button.addEventListener('keydown', (event) => {
+        let next;
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % buttons.length;
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index + buttons.length - 1) % buttons.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = buttons.length - 1;
+        if (next !== undefined) {
+          event.preventDefault();
+          buttons[next].focus();
+        }
+      });
+    });
+  }
+
   // Mega Dropdown & Mobile Nav Logic
   const mobileToggle = document.getElementById('mobileNavToggle');
   const navMenu = document.getElementById('navMenu');

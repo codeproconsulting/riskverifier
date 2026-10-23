@@ -3,7 +3,7 @@
  * Risk Verifier Theme Functions and definitions
  *
  * @package RiskVerifier
- * @version 2.0.2
+ * @version 2.0.5
  */
 
 if (!defined('ABSPATH')) {

@@ -1780,7 +1780,7 @@ get_header();
           <!-- USA -->
           <div class="office-card">
             <div class="office-card-top">
-              <div class="office-flag">🇺🇸</div>
+              <div class="office-flag"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/flags/us.svg'); ?>" alt="United States" class="office-flag-img"></div>
               <h3 class="office-region">United States</h3>
             </div>
             <p class="office-address">
@@ -1802,7 +1802,7 @@ get_header();
           <!-- Canada -->
           <div class="office-card">
             <div class="office-card-top">
-              <div class="office-flag">🇨🇦</div>
+              <div class="office-flag"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/flags/ca.svg'); ?>" alt="Canada" class="office-flag-img"></div>
               <h3 class="office-region">Canada</h3>
             </div>
             <p class="office-address">
@@ -1824,7 +1824,7 @@ get_header();
           <!-- United Kingdom -->
           <div class="office-card">
             <div class="office-card-top">
-              <div class="office-flag">🇬🇧</div>
+              <div class="office-flag"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/flags/gb.svg'); ?>" alt="United Kingdom" class="office-flag-img"></div>
               <h3 class="office-region">United Kingdom</h3>
             </div>
             <p class="office-address">
@@ -1846,7 +1846,7 @@ get_header();
           <!-- Pakistan -->
           <div class="office-card">
             <div class="office-card-top">
-              <div class="office-flag">🇵🇰</div>
+              <div class="office-flag"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/flags/pk.svg'); ?>" alt="Pakistan" class="office-flag-img"></div>
               <h3 class="office-region">Pakistan</h3>
             </div>
             <p class="office-address">

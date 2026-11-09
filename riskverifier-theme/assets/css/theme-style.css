@@ -3036,21 +3036,22 @@ select {
 }
 
 .footer-pbsa-badge {
-  background: #ffffff;
-  padding: 8px 12px;
-  border-radius: 12px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 130px;
-  max-width: 80%;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  justify-content: flex-start;
+  width: 135px;
+  max-width: 100%;
+  box-shadow: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .footer-pbsa-badge:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+  opacity: 0.9;
+  box-shadow: none;
 }
 
 .footer-pbsa-badge img {

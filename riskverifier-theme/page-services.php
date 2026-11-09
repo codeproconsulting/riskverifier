@@ -847,9 +847,17 @@ get_header();
                     <input type="checkbox" name="services" value="due-diligence">
                     <span>Due Diligence</span>
                   </label>
-                  <label class="checkbox-pill">
+<label class="checkbox-pill">
                     <input type="checkbox" name="services" value="media-analytics">
                     <span>Media Analytics</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="bespoke-research">
+                    <span>Bespoke Research</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="geopolitical-advisory">
+                    <span>Geopolitical Advisory</span>
                   </label>
                 </div>
 
@@ -909,10 +917,6 @@ get_header();
                   <li class="summary-item">
                     <span>Coverage Scope:</span>
                     <strong>100+ Countries</strong>
-                  </li>
-                  <li class="summary-item">
-                    <span>Compliance Protocol:</span>
-                    <strong>FCRA & GDPR Ready</strong>
                   </li>
                 </ul>
 

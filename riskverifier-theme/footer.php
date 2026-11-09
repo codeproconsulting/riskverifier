@@ -40,7 +40,7 @@
         </div>
         <div class="footer-accreditation">
           <div class="footer-pbsa-badge">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/pbsa-logo.png'); ?>" alt="PBSA - Professional Background Screening Association">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/pbsa-logo-white.png'); ?>" alt="PBSA - Professional Background Screening Association">
           </div>
         </div>
       </div>

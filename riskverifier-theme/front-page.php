@@ -452,19 +452,11 @@ get_header();
         
         <!-- Sticky Left Column -->
         <div class="favif-services-left">
-          <div class="favif-eyebrow">
+          <div class="favif-eyebrow" style="margin-bottom: 20px;">
             <span class="favif-eyebrow-dot" aria-hidden="true"></span>
-            <span class="favif-eyebrow-text">Our Services</span>
+            <h2 class="favif-eyebrow-text" style="font-size: 1.15rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin: 0; color: #083d77;">Our Services</h2>
           </div>
 
-          <h2 class="favif-services-title">
-            Everything your business needs to verify.
-            <span class="title-accent">One trusted partner. 100+ countries.</span>
-          </h2>
-
-          <p class="favif-services-desc">
-            From criminal registries and court dockets to corporate due diligence and asset tracing — we deliver direct-source evidentiary certainty across 100+ jurisdictions.
-          </p>
 
           <!-- Category Filter Pills -->
           <div class="favif-filter-nav">
@@ -927,9 +919,17 @@ get_header();
                     <input type="checkbox" name="services" value="due-diligence">
                     <span>Due Diligence</span>
                   </label>
-                  <label class="checkbox-pill">
+<label class="checkbox-pill">
                     <input type="checkbox" name="services" value="media-analytics">
                     <span>Media Analytics</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="bespoke-research">
+                    <span>Bespoke Research</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="services" value="geopolitical-advisory">
+                    <span>Geopolitical Advisory</span>
                   </label>
                 </div>
 
@@ -989,10 +989,6 @@ get_header();
                   <li class="summary-item">
                     <span>Coverage Scope:</span>
                     <strong>100+ Countries</strong>
-                  </li>
-                  <li class="summary-item">
-                    <span>Compliance Protocol:</span>
-                    <strong>FCRA & GDPR Ready</strong>
                   </li>
                 </ul>
 
@@ -1222,9 +1218,9 @@ get_header();
               <div class="faq-capsule-card">
                 <div class="faq-capsule-num">04</div>
                 <div class="faq-capsule-body">
-                  <h3 class="faq-capsule-question">How is candidate and sensitive corporate data protected?</h3>
+                  <h3 class="faq-capsule-question">How will the data be stored?</h3>
                   <div class="faq-capsule-answer">
-                    All client and candidate data is encrypted using TLS 1.3 in transit and AES-256 bit encryption at rest. We enforce role-based access restrictions, strict data retention cycles, and automated document redaction to safeguard confidential identifying information.
+                    Electronically, in cloud storage that holds tier-one security certifications, in the client's own country. Each region is fully isolated at hardware and software level.
                   </div>
                 </div>
                 <div class="faq-capsule-toggle" aria-label="Toggle answer">

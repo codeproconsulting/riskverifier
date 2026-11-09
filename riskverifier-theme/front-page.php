@@ -491,7 +491,7 @@ get_header();
           </div>
 
           <a href="<?php echo esc_url(home_url('/services/')); ?>" class="favif-services-cta">
-            <span>Explore All Capabilities</span>
+            <span>Explore All Services</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"></path>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -506,7 +506,6 @@ get_header();
           <div class="favif-bento-card" data-category="legal" onclick="openServiceModal('criminal-records')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Legal Screening</span>
-              <span class="favif-card-sla">24–72 hours</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt="Criminal Records Check" loading="lazy">
@@ -525,7 +524,6 @@ get_header();
           <div class="favif-bento-card" data-category="legal" onclick="openServiceModal('civil-records')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Legal Screening</span>
-              <span class="favif-card-sla">2–7 days*</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Civil Records Search" loading="lazy">
@@ -544,7 +542,6 @@ get_header();
           <div class="favif-bento-card" data-category="financial" onclick="openServiceModal('credit-finance')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Financial Risk</span>
-              <span class="favif-card-sla">2–7 days*</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Credit & Finance Reports" loading="lazy">
@@ -563,7 +560,6 @@ get_header();
           <div class="favif-bento-card" data-category="identity" onclick="openServiceModal('vital-records')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Identity Records</span>
-              <span class="favif-card-sla">24h–7 days*</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt="Vital Records Verification" loading="lazy">
@@ -582,7 +578,6 @@ get_header();
           <div class="favif-bento-card" data-category="identity" onclick="openServiceModal('identity-credentials')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Identity & Credentials</span>
-              <span class="favif-card-sla">24h–7 days*</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Identity & Credentials Verification" loading="lazy">
@@ -601,7 +596,6 @@ get_header();
           <div class="favif-bento-card" data-category="financial" onclick="openServiceModal('property-asset')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Asset Intelligence</span>
-              <span class="favif-card-sla">2–7 days*</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Property & Asset Searches" loading="lazy">
@@ -620,7 +614,6 @@ get_header();
           <div class="favif-bento-card" data-category="identity" onclick="openServiceModal('driving-records')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Motor Vehicle Records</span>
-              <span class="favif-card-sla">24h–7 days*</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/driving-record-check.png" alt="Driving & Motor Vehicle Records" loading="lazy">
@@ -639,7 +632,6 @@ get_header();
           <div class="favif-bento-card" data-category="identity" onclick="openServiceModal('verifications-references')">
             <div class="favif-card-header">
               <span class="favif-card-badge">HR & Employment</span>
-              <span class="favif-card-sla">2–7 days*</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Verifications & References" loading="lazy">
@@ -658,7 +650,6 @@ get_header();
           <div class="favif-bento-card" data-category="advisory" onclick="openServiceModal('due-diligence')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Due Diligence</span>
-              <span class="favif-card-sla">One to several weeks*</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Due Diligence & Sanctions Screening" loading="lazy">
@@ -677,7 +668,6 @@ get_header();
           <div class="favif-bento-card" data-category="advisory" onclick="openServiceModal('media-analytics')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Risk Intelligence</span>
-              <span class="favif-card-sla">Contact us</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt="Media Analytics" loading="lazy">
@@ -696,7 +686,6 @@ get_header();
           <div class="favif-bento-card" data-category="advisory" onclick="openServiceModal('bespoke-research')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Custom Intelligence</span>
-              <span class="favif-card-sla">Contact us</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/bespoke-research.png" alt="Bespoke Research" loading="lazy">
@@ -715,7 +704,6 @@ get_header();
           <div class="favif-bento-card" data-category="advisory" onclick="openServiceModal('geopolitical-advisory')">
             <div class="favif-card-header">
               <span class="favif-card-badge">Strategic Advisory</span>
-              <span class="favif-card-sla">Contact us</span>
             </div>
             <div class="favif-card-icon-wrap">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Geopolitical Advisory" loading="lazy">
@@ -732,9 +720,6 @@ get_header();
 
         </div>
 
-      </div>
-      <div class="container">
-        <p class="services-timing-note">* Turnaround varies by service and country. Some checks may take longer; view service details for scope and timing.</p>
       </div>
     </section>
 

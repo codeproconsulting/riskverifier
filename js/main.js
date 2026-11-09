@@ -453,12 +453,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // Services Console Sidebar Tabs Switcher (services.html)
   const consoleTabs = document.querySelectorAll('.services-sidebar-tab');
   const showcasePanes = document.querySelectorAll('.service-showcase-pane');
+  const bannerTitle = document.getElementById('servicesBannerTitle') || document.querySelector('.vector-header-banner .banner-title');
+  const bannerBreadcrumbCurrent = document.getElementById('servicesBannerBreadcrumb') || document.querySelector('.vector-header-banner .banner-breadcrumb .current');
+
+  function updateServicesBannerTitle(serviceTitle) {
+    if (!serviceTitle) return;
+    if (bannerTitle) {
+      bannerTitle.style.transition = 'opacity 0.15s ease, transform 0.15s ease';
+      bannerTitle.style.opacity = '0.3';
+      bannerTitle.style.transform = 'translateY(-3px)';
+      setTimeout(() => {
+        bannerTitle.textContent = serviceTitle;
+        bannerTitle.style.opacity = '1';
+        bannerTitle.style.transform = 'translateY(0)';
+      }, 150);
+    }
+    if (bannerBreadcrumbCurrent) {
+      bannerBreadcrumbCurrent.textContent = serviceTitle;
+    }
+  }
+
   if (consoleTabs.length && showcasePanes.length) {
     consoleTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         consoleTabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         const targetId = tab.getAttribute('data-target');
+
+        // Dynamically update banner title and breadcrumb
+        const tabTitleElem = tab.querySelector('.tab-title');
+        if (tabTitleElem) {
+          updateServicesBannerTitle(tabTitleElem.textContent.trim());
+        }
+
         showcasePanes.forEach(pane => {
           if (pane.id === `showcase-${targetId}`) {
             pane.style.display = 'block';
@@ -485,6 +512,15 @@ document.addEventListener('DOMContentLoaded', () => {
           if (hub) {
             hub.scrollIntoView({ behavior: 'smooth' });
           }
+          return;
+        }
+      }
+      // Initial state: ensure first active tab updates banner
+      const firstActiveTab = document.querySelector('.services-sidebar-tab.active') || consoleTabs[0];
+      if (firstActiveTab) {
+        const tabTitleElem = firstActiveTab.querySelector('.tab-title');
+        if (tabTitleElem) {
+          updateServicesBannerTitle(tabTitleElem.textContent.trim());
         }
       }
     };

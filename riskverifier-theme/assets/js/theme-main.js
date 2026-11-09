@@ -130,6 +130,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (siteHeader) {
     siteHeader.addEventListener('mouseenter', () => { isMouseOverHeader = true; });
     siteHeader.addEventListener('mouseleave', () => { isMouseOverHeader = false; });
+
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
   }
 
   megaParents.forEach(parent => {
@@ -1203,6 +1213,33 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   initHeroGlobe();
+
+  // Risk Intelligence Orbit Interactive Connector Rays
+  // =========================================================================
+  const orbitNodes = document.querySelectorAll('.orbit-node');
+  const stage = document.getElementById('riskOrbitStage');
+  if (stage && orbitNodes.length) {
+    orbitNodes.forEach((node) => {
+      const nodeIndex = node.getAttribute('data-node');
+      const targetRay = stage.querySelector(`.ray-${nodeIndex}`);
+
+      node.addEventListener('mouseenter', () => {
+        if (targetRay) targetRay.classList.add('is-active');
+      });
+
+      node.addEventListener('mouseleave', () => {
+        if (targetRay) targetRay.classList.remove('is-active');
+      });
+
+      node.addEventListener('focus', () => {
+        if (targetRay) targetRay.classList.add('is-active');
+      });
+
+      node.addEventListener('blur', () => {
+        if (targetRay) targetRay.classList.remove('is-active');
+      });
+    });
+  }
 });
 
 

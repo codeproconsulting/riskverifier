@@ -60,7 +60,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   width: 100%;
 }
@@ -72,7 +72,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   width: 100%;
 }
@@ -317,6 +317,7 @@ select {
    HEADER & NAVBAR
    ========================================================================== */
 .site-header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: rgba(255, 255, 255, 0.98);
@@ -325,6 +326,12 @@ select {
   z-index: 1000;
   border-bottom: 1px solid var(--border-light);
   box-shadow: 0 2px 8px rgba(8, 61, 119, 0.04);
+  transition: box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.site-header.scrolled {
+  box-shadow: 0 4px 20px rgba(8, 61, 119, 0.10);
+  background-color: #ffffff;
 }
 
 .nav-container {
@@ -999,211 +1006,514 @@ select {
   z-index: 2;
 }
 
-.risk-globe-wrapper {
+.risk-orbit-wrapper {
   position: relative;
   width: 100%;
-  max-width: 580px;
+  max-width: min(510px, calc(100vh - 190px));
   aspect-ratio: 1 / 1;
   margin: 0 auto;
   user-select: none;
 }
 
-/* Glowing Aura Behind 3D Globe */
-.globe-ambient-glow {
+.orbit-ambient-glow {
   position: absolute;
-  inset: 12%;
+  inset: 15%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(2, 132, 199, 0.14) 0%, rgba(56, 189, 248, 0.06) 45%, transparent 70%);
-  filter: blur(34px);
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.12) 0%, rgba(56, 189, 248, 0.06) 45%, transparent 70%);
+  filter: blur(28px);
   pointer-events: none;
-  animation: globe-ambient-pulse 5s ease-in-out infinite alternate;
+  animation: ambient-pulse 6s ease-in-out infinite alternate;
 }
 
-@keyframes globe-ambient-pulse {
-  0% { transform: scale(0.92); opacity: 0.75; }
+@keyframes ambient-pulse {
+  0% { transform: scale(0.92); opacity: 0.7; }
   100% { transform: scale(1.08); opacity: 1; }
 }
 
-/* Canvas for the 3D Rotating Dotted World Map Globe */
-.hero-globe-canvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.risk-orbit-stage {
+  position: relative;
   width: 100%;
   height: 100%;
-  pointer-events: none;
-  z-index: 2;
 }
 
-/* Tilted 3D Orbital Rings SVG */
-.globe-orbits-svg {
+/* SVG Radar Canvas */
+.orbit-radar-svg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
   overflow: visible;
-  z-index: 3;
 }
 
-.orbit-ellipse-1 {
+/* Rotating radar sweep beam (clock-like 360 degree rotation) */
+.radar-sweep-group {
   transform-origin: 300px 300px;
-  transform: rotate(-25deg);
-  animation: orbit-spin-1 28s linear infinite;
+  animation: radar-sweep-rotate 9s linear infinite;
 }
 
-.orbit-ellipse-2 {
+@keyframes radar-sweep-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Counter-rotating orbital dash track */
+.radar-ring-2 {
   transform-origin: 300px 300px;
-  transform: rotate(20deg);
-  animation: orbit-spin-2 34s linear infinite reverse;
+  animation: radar-track-spin 40s linear infinite;
 }
 
-.orbit-ellipse-3 {
-  transform-origin: 300px 300px;
-  transform: rotate(65deg);
-  animation: orbit-spin-3 40s linear infinite;
+@keyframes radar-track-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-@keyframes orbit-spin-1 {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: 1000; }
+/* Connecting ray lines */
+.ray-line {
+  transition: stroke-opacity 0.3s ease, stroke-width 0.3s ease;
 }
 
-@keyframes orbit-spin-2 {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: 1000; }
+.ray-line.is-active,
+.orbit-node:hover ~ .orbit-radar-svg .ray-line {
+  stroke-opacity: 0.85 !important;
+  stroke-width: 2.2px !important;
 }
 
-@keyframes orbit-spin-3 {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: 1000; }
-}
-
-/* ==========================================================================
-   THE 8 ORBITAL SERVICE BADGES (REFERENCE IMAGE MATCH)
-   ========================================================================== */
-
-.orbit-badge {
+/* Center Core Verified Shield Hub */
+.orbit-center-core {
   position: absolute;
-  z-index: 10;
-  display: inline-flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  background: #ffffff;
-  padding: 8px 16px 8px 10px;
-  border-radius: 12px;
-  border: 1px solid rgba(8, 61, 119, 0.12);
-  box-shadow: 0 8px 24px rgba(8, 61, 119, 0.09), 0 2px 6px rgba(8, 61, 119, 0.04);
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
-  white-space: nowrap;
+  justify-content: center;
+  pointer-events: auto;
 }
 
-.orbit-badge:hover {
-  transform: translateY(-4px) scale(1.04);
-  box-shadow: 0 14px 32px rgba(8, 61, 119, 0.18), 0 0 0 2px #0284c7;
-  border-color: #0284c7;
-  z-index: 25;
+/* Ripple pulses emanating from center shield */
+.core-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1.5px solid rgba(2, 132, 199, 0.4);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 }
 
-/* 8 Symmetrical Positions in Orbit Around Globe */
-.badge-pos-1 { top: 2%; left: 50%; transform: translateX(-50%); }
-.badge-pos-2 { top: 15%; right: 4%; }
-.badge-pos-3 { top: 48%; right: -2%; transform: translateY(-50%); }
-.badge-pos-4 { bottom: 16%; right: 4%; }
-.badge-pos-5 { bottom: 2%; left: 50%; transform: translateX(-50%); }
-.badge-pos-6 { bottom: 16%; left: 4%; }
-.badge-pos-7 { top: 48%; left: -2%; transform: translateY(-50%); }
-.badge-pos-8 { top: 15%; left: 4%; }
+.core-ripple-1 {
+  width: 110px;
+  height: 110px;
+  animation: ripple-grow 3.6s cubic-bezier(0.1, 0.25, 0.1, 1) infinite;
+}
 
-/* Icon Box inside Badge */
-.badge-icon-box {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+.core-ripple-2 {
+  width: 110px;
+  height: 110px;
+  animation: ripple-grow 3.6s cubic-bezier(0.1, 0.25, 0.1, 1) infinite 1.2s;
+}
+
+.core-ripple-3 {
+  width: 110px;
+  height: 110px;
+  animation: ripple-grow 3.6s cubic-bezier(0.1, 0.25, 0.1, 1) infinite 2.4s;
+}
+
+@keyframes ripple-grow {
+  0% {
+    width: 90px;
+    height: 90px;
+    opacity: 0.8;
+    border-color: rgba(56, 189, 248, 0.7);
+  }
+  100% {
+    width: 260px;
+    height: 260px;
+    opacity: 0;
+    border-color: rgba(2, 132, 199, 0.05);
+  }
+}
+
+/* Center Shield Graphic */
+.core-shield {
+  position: relative;
+  width: 68px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  filter: drop-shadow(0 8px 24px rgba(2, 132, 199, 0.45));
+  animation: core-shield-float 5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.badge-icon-box svg {
-  width: 18px;
-  height: 18px;
-  display: block;
+.core-shield:hover {
+  transform: scale(1.08);
 }
 
-.badge-title {
-  font-size: 0.92rem;
+@keyframes core-shield-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.core-shield-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.core-label-box {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3px 8px;
+  border-radius: 7px;
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(6px);
+}
+
+.core-brand-name {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #0f172a;
+}
+
+.core-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.58rem;
   font-weight: 700;
-  color: var(--brand-blue, #083d77);
-  letter-spacing: -0.01em;
-  line-height: 1;
+  color: #0284c7;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-/* Color palettes matching reference image */
-.badge-icon-box.icon-bg-check {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-}
-.badge-icon-box.icon-emp-screening {
-  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
-}
-.badge-icon-box.icon-edu-verification {
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-}
-.badge-icon-box.icon-media-analytics {
-  background: linear-gradient(135deg, #0d9488 0%, #059669 100%);
-}
-.badge-icon-box.icon-due-diligence {
-  background: linear-gradient(135deg, #0891b2 0%, #0284c7 100%);
-}
-.badge-icon-box.icon-risk-assessment {
-  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
-}
-.badge-icon-box.icon-bespoke-research {
-  background: linear-gradient(135deg, #0284c7 0%, #0f172a 100%);
-}
-.badge-icon-box.icon-geo-political {
-  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%);
+.core-live-dot {
+  width: 5px;
+  height: 5px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+  animation: pulse-dot 2s infinite;
 }
 
 /* ==========================================================================
-   RESPONSIVE STYLES FOR HERO SECTION & 3D GLOBE
+   THE 8 ORBITAL CAPABILITY CARDS
    ========================================================================== */
 
-@media (max-width: 1200px) {
-  .risk-globe-wrapper {
+.orbit-node {
+  position: absolute;
+  z-index: 15;
+  cursor: pointer;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), z-index 0.2s ease;
+  outline: none;
+  text-decoration: none;
+}
+
+.orbit-node:focus-visible {
+  outline: 2px solid #0284c7;
+  border-radius: 12px;
+}
+
+/* Octagonal Node Positions around stage - ample spacing, zero overlap */
+.node-pos-1 { top: 0px; left: 50%; transform: translateX(-50%); }
+.node-pos-2 { top: 11%; left: calc(50% + 48px); }
+.node-pos-3 { top: 50%; left: calc(50% + 78px); transform: translateY(-50%); }
+.node-pos-4 { bottom: 11%; left: calc(50% + 48px); }
+.node-pos-5 { bottom: 0px; left: 50%; transform: translateX(-50%); }
+.node-pos-6 { bottom: 11%; right: calc(50% + 48px); }
+.node-pos-7 { top: 50%; right: calc(50% + 78px); transform: translateY(-50%); }
+.node-pos-8 { top: 11%; right: calc(50% + 48px); }
+
+/* Node Card Surface */
+.node-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 14px 6px 8px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(2, 132, 199, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+/* Premium High-Fidelity Dual-Tone Icon Badge */
+.node-icon-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+.node-icon-box svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Text Box */
+.node-text-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.node-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.1;
+  transition: color 0.2s ease;
+}
+
+.node-sub {
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: #0284c7;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Connector Dot */
+.node-connector-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #0284c7;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Hover and Active State */
+.orbit-node:hover {
+  z-index: 25;
+}
+
+.orbit-node:hover .node-card,
+.orbit-node.is-active .node-card {
+  background: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 12px 32px rgba(2, 132, 199, 0.25), 0 0 0 2px #38bdf8;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.orbit-node:hover .node-icon-box,
+.orbit-node.is-active .node-icon-box {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(2, 132, 199, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  transform: scale(1.06);
+}
+
+.orbit-node:hover .node-icon-box svg,
+.orbit-node.is-active .node-icon-box svg {
+  transform: scale(1.1);
+}
+
+.orbit-node:hover .node-title,
+.orbit-node.is-active .node-title {
+  color: #0284c7;
+}
+
+/* Sequential Radar Scanning Pulse Effect on nodes */
+.node-pos-1 .node-card { animation: card-radar-pulse 9s infinite 0s; }
+.node-pos-2 .node-card { animation: card-radar-pulse 9s infinite 1.125s; }
+.node-pos-3 .node-card { animation: card-radar-pulse 9s infinite 2.25s; }
+.node-pos-4 .node-card { animation: card-radar-pulse 9s infinite 3.375s; }
+.node-pos-5 .node-card { animation: card-radar-pulse 9s infinite 4.5s; }
+.node-pos-6 .node-card { animation: card-radar-pulse 9s infinite 5.625s; }
+.node-pos-7 .node-card { animation: card-radar-pulse 9s infinite 6.75s; }
+.node-pos-8 .node-card { animation: card-radar-pulse 9s infinite 7.875s; }
+
+@keyframes card-radar-pulse {
+  0%, 100% {
+    border-color: rgba(2, 132, 199, 0.22);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+  }
+  4%, 12% {
+    border-color: #38bdf8;
+    box-shadow: 0 8px 24px rgba(2, 132, 199, 0.2), 0 0 0 2px rgba(56, 189, 248, 0.4);
+    background: #ffffff;
+  }
+  16% {
+    border-color: rgba(2, 132, 199, 0.22);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+  }
+}
+
+/* Responsive Styles for Hero and Orbit */
+@media (min-width: 992px) and (max-height: 850px) {
+  .hero {
+    padding: 16px 0 14px 0;
+  }
+  .hero-eyebrow {
+    margin-bottom: 10px;
+    padding: 4px 12px;
+    font-size: 0.72rem;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+  }
+  .hero-description {
+    font-size: 0.94rem;
+    line-height: 1.48;
+    margin-bottom: 16px;
     max-width: 520px;
   }
-  .orbit-badge {
-    padding: 7px 12px 7px 8px;
+  .hero-actions {
+    margin-bottom: 16px;
+    gap: 12px;
+  }
+  .hero .btn-primary,
+  .hero .btn-outline {
+    padding: 9px 18px;
+    font-size: 0.88rem;
+  }
+  .hero-metrics {
+    padding-top: 12px;
     gap: 8px;
   }
-  .badge-icon-box {
+  .metric-item {
+    padding: 6px 4px;
+  }
+  .metric-value {
+    font-size: 1.22rem;
+  }
+  .metric-label {
+    font-size: 0.64rem;
+  }
+  .risk-orbit-wrapper {
+    max-width: min(450px, calc(100vh - 170px));
+  }
+  .node-card {
+    padding: 5px 10px 5px 7px;
+    gap: 7px;
+    border-radius: 10px;
+  }
+  .node-icon-box {
     width: 28px;
     height: 28px;
+    border-radius: 8px;
   }
-  .badge-icon-box svg {
+  .node-icon-box svg {
     width: 16px;
     height: 16px;
   }
-  .badge-title {
-    font-size: 0.82rem;
+  .node-title {
+    font-size: 0.72rem;
+  }
+  .node-sub {
+    font-size: 0.6rem;
+  }
+  .core-shield {
+    width: 66px;
+    height: 74px;
+  }
+  .core-brand-name {
+    font-size: 0.66rem;
+  }
+}
+
+@media (min-width: 992px) and (max-height: 720px) {
+  .hero {
+    padding: 10px 0 10px 0;
+  }
+  .hero-eyebrow {
+    margin-bottom: 6px;
+    padding: 3px 10px;
+    font-size: 0.68rem;
+  }
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 6px;
+  }
+  .hero-description {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .hero-actions {
+    margin-bottom: 12px;
+    gap: 10px;
+  }
+  .hero-metrics {
+    padding-top: 8px;
+    gap: 6px;
+  }
+  .metric-item {
+    padding: 4px 3px;
+  }
+  .metric-value {
+    font-size: 1.1rem;
+  }
+  .metric-label {
+    font-size: 0.6rem;
+  }
+  .risk-orbit-wrapper {
+    max-width: min(390px, calc(100vh - 150px));
+  }
+}
+
+@media (max-width: 1140px) {
+  .hero-title {
+    font-size: 2.75rem;
+  }
+  .risk-orbit-wrapper {
+    max-width: 520px;
+  }
+  .node-title {
+    font-size: 0.74rem;
+  }
+  .node-sub {
+    font-size: 0.62rem;
+  }
+  .node-card {
+    padding: 6px 10px 6px 8px;
+    gap: 8px;
+  }
+  .node-icon-box {
+    width: 28px;
+    height: 28px;
+  }
+  .node-icon-box svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
 @media (max-width: 991px) {
   .hero {
-    padding: 40px 0 45px 0;
+    padding: 36px 0 32px 0;
     text-align: center;
   }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
   .hero-text-col {
     display: flex;
@@ -1219,53 +1529,65 @@ select {
   }
   .hero-metrics {
     width: 100%;
-    max-width: 620px;
+    max-width: 600px;
   }
-  .risk-globe-wrapper {
-    max-width: 460px;
-    margin-top: 10px;
+  .risk-orbit-wrapper {
+    max-width: 440px;
   }
-  .badge-pos-2 { right: 2%; }
-  .badge-pos-3 { right: -4%; }
-  .badge-pos-4 { right: 2%; }
-  .badge-pos-6 { left: 2%; }
-  .badge-pos-7 { left: -4%; }
-  .badge-pos-8 { left: 2%; }
+  .node-pos-2 { left: calc(50% + 36px); }
+  .node-pos-3 { left: calc(50% + 56px); }
+  .node-pos-4 { left: calc(50% + 36px); }
+  .node-pos-6 { right: calc(50% + 36px); }
+  .node-pos-7 { right: calc(50% + 56px); }
+  .node-pos-8 { right: calc(50% + 36px); }
 }
 
 @media (max-width: 640px) {
   .hero-title {
-    font-size: 2.15rem;
+    font-size: 2.1rem;
   }
   .hero-metrics {
     grid-template-columns: repeat(2, 1fr);
   }
-  .risk-globe-wrapper {
-    max-width: 360px;
+  .risk-orbit-wrapper {
+    max-width: 350px;
   }
-  .orbit-badge {
-    padding: 5px 9px 5px 7px;
+  .core-shield {
+    width: 58px;
+    height: 66px;
+  }
+  .core-brand-name {
+    font-size: 0.62rem;
+  }
+  .core-brand-badge {
+    font-size: 0.52rem;
+  }
+  .node-sub {
+    display: none;
+  }
+  .node-title {
+    font-size: 0.68rem;
+  }
+  .node-card {
+    padding: 4px 8px;
     gap: 6px;
-    border-radius: 9px;
+    border-radius: 8px;
   }
-  .badge-icon-box {
+  .node-icon-box {
     width: 24px;
     height: 24px;
     border-radius: 6px;
   }
-  .badge-icon-box svg {
+  .node-icon-box svg {
     width: 14px;
     height: 14px;
   }
-  .badge-title {
-    font-size: 0.72rem;
-  }
-  .badge-pos-2 { top: 12%; right: -2%; }
-  .badge-pos-3 { top: 48%; right: -8%; }
-  .badge-pos-4 { bottom: 12%; right: -2%; }
-  .badge-pos-6 { bottom: 12%; left: -2%; }
-  .badge-pos-7 { top: 48%; left: -8%; }
-  .badge-pos-8 { top: 12%; left: -2%; }
+  .node-pos-2 { left: calc(50% + 22px); }
+  .node-pos-3 { left: calc(50% + 38px); }
+  .node-pos-4 { left: calc(50% + 22px); }
+  .node-pos-6 { right: calc(50% + 22px); }
+  .node-pos-7 { right: calc(50% + 38px); }
+  .node-pos-8 { right: calc(50% + 22px); }
 }
 
 
@@ -5766,6 +6088,7 @@ select {
     font-size: 0.7rem;
   }
 
+  .risk-orbit-wrapper,
   .risk-globe-wrapper {
     max-width: clamp(580px, 34vw, 1200px);
   }

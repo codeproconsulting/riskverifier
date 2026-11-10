@@ -823,10 +823,9 @@ select {
    ========================================================================== */
 .hero {
   position: relative;
-  padding: 44px 0 54px 0;
-  min-height: calc(100vh - 114px);
-  display: flex;
-  align-items: center;
+  padding: 28px 0 40px 0;
+  display: block;
+  min-height: auto;
   background-color: #ffffff;
   background-image:
     radial-gradient(circle at 80% 40%, rgba(2, 132, 199, 0.06) 0%, transparent 60%),
@@ -1508,7 +1507,9 @@ select {
 
 @media (max-width: 991px) {
   .hero {
-    padding: 36px 0 32px 0;
+    padding: 22px 0 28px 0;
+    min-height: auto;
+    display: block;
     text-align: center;
   }
   .hero-grid {
@@ -3357,7 +3358,8 @@ select {
   }
 
   .hero {
-    padding: 72px 0 60px 0;
+    padding: 18px 0 28px 0;
+    min-height: auto;
   }
 
   .hero-title {
@@ -3462,7 +3464,8 @@ select {
   }
 
   .hero {
-    padding: 56px 0 48px 0;
+    padding: 14px 0 22px 0;
+    min-height: auto;
   }
 
   .hero-title {
@@ -6037,8 +6040,8 @@ select {
   }
 
   .hero {
-    padding-block: clamp(54px, 4vw, 144px);
-    min-height: min(calc(100svh - 114px), 1600px);
+    padding-block: clamp(32px, 2.5vw, 54px);
+    min-height: auto;
   }
 
   .hero .container {

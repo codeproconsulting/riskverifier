@@ -36,68 +36,87 @@ get_header();
 ?>
   <main>
     <!-- Vector Header Banner -->
-    <section class="vector-header-banner">
-      <!-- Left Vector Wing -->
-      <div class="banner-vector-left" aria-hidden="true">
-        <svg viewBox="0 0 340 160" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Vector Header Banner (Reference Match Wave Layout) -->
+    <section class="vector-header-banner" aria-label="Page Header">
+      <!-- SVG Dynamic 3D Wave Layers (Reference Match) -->
+      <div class="wave-banner-backdrop" aria-hidden="true">
+        <svg viewBox="0 0 1440 220" preserveAspectRatio="none" class="wave-banner-svg" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="cyanGradL" x1="0%" y1="0%" x2="100%" y2="80%">
-              <stop offset="0%" stop-color="#00e5ff" />
-              <stop offset="50%" stop-color="#00b4d8" />
-              <stop offset="100%" stop-color="#0077b6" />
-            </linearGradient>
-            <linearGradient id="navyGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="waveNavy" x1="0%" y1="0%" x2="100%" y2="80%">
               <stop offset="0%" stop-color="#05264b" />
-              <stop offset="100%" stop-color="#083d77" />
+              <stop offset="50%" stop-color="#083d77" />
+              <stop offset="100%" stop-color="#0c4a8a" />
             </linearGradient>
-            <filter id="vectorDropShadowL" x="-30%" y="-30%" width="160%" height="160%">
-              <feDropShadow dx="5" dy="4" stdDeviation="6" flood-color="#05264b" flood-opacity="0.35" />
+            <linearGradient id="waveCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00e5ff" />
+              <stop offset="45%" stop-color="#0284c7" />
+              <stop offset="100%" stop-color="#0369a1" />
+            </linearGradient>
+            <linearGradient id="waveAzure" x1="0%" y1="0%" x2="100%" y2="50%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8" />
+              <stop offset="50%" stop-color="#bae6fd" stop-opacity="0.7" />
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.5" />
+            </linearGradient>
+            <filter id="waveShadowL1" x="-10%" y="-10%" width="120%" height="140%">
+              <feDropShadow dx="-3" dy="6" stdDeviation="8" flood-color="#05264b" flood-opacity="0.25" />
             </filter>
-            <filter id="bevelShadowL" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.18" />
+            <filter id="waveShadowL2" x="-10%" y="-10%" width="120%" height="140%">
+              <feDropShadow dx="-2" dy="5" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.20" />
             </filter>
           </defs>
-          <path d="M 0 28 L 95 38 L 155 160 L 0 160 Z" fill="url(#navyGradL)" />
-          <path d="M 70 0 L 105 0 L 132 46 L 95 38 Z" fill="#e2e8f0" filter="url(#bevelShadowL)" />
-          <path d="M 0 0 L 85 0 L 132 46 L 180 160 L 155 160 L 95 38 L 0 28 Z" fill="url(#cyanGradL)" filter="url(#vectorDropShadowL)" />
+
+          <rect width="1440" height="220" fill="#f8fafc" />
+
+          <pattern id="bannerGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+            <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(8,61,119,0.03)" stroke-width="1"/>
+          </pattern>
+          <rect width="1440" height="220" fill="url(#bannerGrid)" />
+
+          <!-- Layer 1: Bottom Light Azure Wave Ribbon -->
+          <path d="M 0 220 Q 320 200 540 160 T 1100 70 Q 1280 35 1440 15 L 1440 220 Z" fill="url(#waveAzure)" />
+
+          <!-- Layer 2: White Contour Spacer Under Cyan Ribbon -->
+          <path d="M -20 220 C 180 220 380 180 590 135 C 820 85 1060 42 1460 10 L 1460 220 Z" fill="#ffffff" filter="url(#waveShadowL2)" />
+
+          <!-- Layer 3: Vibrant Cyan Ribbon Wave -->
+          <path d="M -20 220 C 180 220 370 186 580 141 C 810 92 1050 50 1460 18 L 1460 220 Z" fill="url(#waveCyan)" />
+
+          <!-- Layer 4: White Contour Spacer Under Navy Wave -->
+          <path d="M 440 220 C 660 210 840 142 1040 90 C 1220 44 1350 20 1460 6 L 1460 220 Z" fill="#ffffff" filter="url(#waveShadowL1)" />
+
+          <!-- Layer 5: Deep Brand Navy Wave (Top-Right Surge) -->
+          <path d="M 460 220 C 680 210 850 146 1050 94 C 1230 48 1360 24 1460 10 L 1460 220 Z" fill="url(#waveNavy)" />
+
+          <!-- Decorative Accent Glow inside Navy Curve -->
+          <circle cx="1280" cy="100" r="130" fill="#00e5ff" opacity="0.08" />
         </svg>
       </div>
 
-      <!-- Center Text Content -->
-      <div class="banner-content-box">
-        <span class="banner-tagline">SECURE CLIENT ACCESS</span>
-        <h1 class="banner-title">CLIENT LOGIN</h1>
-        <div class="banner-breadcrumb">
-          <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
-          <span class="sep">/</span>
-          <span class="current">Login</span>
+      <div class="container wave-banner-container">
+        <!-- Left Content: Modern Ribbon Hierarchy -->
+        <div class="wave-banner-left">
+          <div class="wave-banner-kicker">
+            <span class="kicker-brand-name">RISK VERIFIER</span>
+            <span class="kicker-sep">•</span>
+            <span class="kicker-desc">SECURE CLIENT ACCESS</span>
+          </div>
+
+          <div class="wave-ribbon-title-wrap">
+            <h1 class="wave-ribbon-title">
+              <span class="ribbon-text">CLIENT LOGIN</span>
+              <span class="ribbon-stripes" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </span>
+            </h1>
+          </div>
+
+          <div class="wave-breadcrumb-pill">
+            <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
+            <span class="sep">/</span>
+            <span class="current">Client Login</span>
+          </div>
         </div>
-      </div>
-
-      <!-- Right Vector Wing -->
-      <div class="banner-vector-right" aria-hidden="true">
-        <svg viewBox="0 0 340 160" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="cyanGradR" x1="0%" y1="0%" x2="100%" y2="80%">
-              <stop offset="0%" stop-color="#00e5ff" />
-              <stop offset="50%" stop-color="#00b4d8" />
-              <stop offset="100%" stop-color="#0077b6" />
-            </linearGradient>
-            <linearGradient id="navyGradR" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#05264b" />
-              <stop offset="100%" stop-color="#083d77" />
-            </linearGradient>
-            <filter id="vectorDropShadowR" x="-30%" y="-30%" width="160%" height="160%">
-              <feDropShadow dx="5" dy="4" stdDeviation="6" flood-color="#05264b" flood-opacity="0.35" />
-            </filter>
-            <filter id="bevelShadowR" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.18" />
-            </filter>
-          </defs>
-          <path d="M 0 28 L 95 38 L 155 160 L 0 160 Z" fill="url(#navyGradR)" />
-          <path d="M 70 0 L 105 0 L 132 46 L 95 38 Z" fill="#e2e8f0" filter="url(#bevelShadowR)" />
-          <path d="M 0 0 L 85 0 L 132 46 L 180 160 L 155 160 L 95 38 L 0 28 Z" fill="url(#cyanGradR)" filter="url(#vectorDropShadowR)" />
-        </svg>
+        </div>
       </div>
     </section>
 

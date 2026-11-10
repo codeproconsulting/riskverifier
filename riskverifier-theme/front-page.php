@@ -58,30 +58,26 @@ get_header();
             </p>
 
             <div class="hero-actions">
-              <a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="btn btn-primary btn-lg">
+              <a href="<?php echo esc_url(home_url('/request-verification/')); ?>" class="btn btn-primary btn-lg">
                 Get Started
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
               <a href="<?php echo esc_url(home_url('/services/')); ?>" class="btn btn-outline btn-lg">Explore All Services</a>
             </div>
 
-            <!-- Trust Metrics -->
+                        <!-- Trust Metrics (Borderless Live Running Counters) -->
             <div class="hero-metrics">
               <div class="metric-item">
-                <span class="metric-value">100+</span>
-                <span class="metric-label">Countries Covered</span>
+                <span class="metric-value" data-target="100" data-suffix="+">100+</span>
               </div>
               <div class="metric-item">
-                <span class="metric-value">24&ndash;72h</span>
-                <span class="metric-label">SLA Turnaround</span>
+                <span class="metric-value" data-range="24,72" data-suffix="h">24&ndash;72h</span>
               </div>
               <div class="metric-item">
-                <span class="metric-value">12+</span>
-                <span class="metric-label">Core Services</span>
+                <span class="metric-value" data-target="12" data-suffix="+">12+</span>
               </div>
               <div class="metric-item">
-                <span class="metric-value">100%</span>
-                <span class="metric-label">Source-Verified</span>
+                <span class="metric-value" data-target="100" data-suffix="%">100%</span>
               </div>
             </div>
           </div>
@@ -884,7 +880,7 @@ get_header();
                 <label style="font-size:0.875rem; font-weight:800; color:#083d77; margin-bottom: -4px;">Select Required Verification Checks:</label>
                 <div class="services-checkbox-grid">
                   <label class="checkbox-pill">
-                    <input type="checkbox" name="services" value="criminal-records" checked>
+                    <input type="checkbox" name="services" value="criminal-records">
                     <span>Criminal Records</span>
                   </label>
                   <label class="checkbox-pill">
@@ -892,11 +888,11 @@ get_header();
                     <span>Civil Records</span>
                   </label>
                   <label class="checkbox-pill">
-                    <input type="checkbox" name="services" value="credit-finance" checked>
+                    <input type="checkbox" name="services" value="credit-finance">
                     <span>Credit & Finance</span>
                   </label>
                   <label class="checkbox-pill">
-                    <input type="checkbox" name="services" value="identity-credentials" checked>
+                    <input type="checkbox" name="services" value="identity-credentials">
                     <span>ID & Credentials</span>
                   </label>
                   <label class="checkbox-pill">
@@ -980,11 +976,11 @@ get_header();
                 <ul class="summary-list">
                   <li class="summary-item">
                     <span>Selected Checks:</span>
-                    <strong id="selectedCount" style="color:#083d77; font-size:1.1rem;">3</strong>
+                    <strong id="selectedCount" style="color:#083d77; font-size:1.1rem;">0</strong>
                   </li>
                   <li class="summary-item">
                     <span>Estimated Turnaround:</span>
-                    <strong id="selectedTurnaround">24 – 48 Hours</strong>
+                    <strong id="selectedTurnaround">Select services to calculate</strong>
                   </li>
                   <li class="summary-item">
                     <span>Coverage Scope:</span>
@@ -995,7 +991,7 @@ get_header();
                 <div style="margin-bottom: 20px;">
                   <span style="font-size:0.8rem; font-weight:700; color:rgba(8,61,119,0.7); text-transform:uppercase; letter-spacing:0.04em; display:block; margin-bottom:8px;">Included in Request:</span>
                   <ul id="selectedServicesList" style="list-style:none; display:flex; flex-direction:column; gap:6px;">
-                    <!-- Populated dynamically via JS -->
+                    <li style="color:rgba(8,61,119,0.5); font-size:0.85rem;">No checks selected yet</li>
                   </ul>
                 </div>
 
@@ -1221,29 +1217,6 @@ get_header();
                   <h3 class="faq-capsule-question">How will the data be stored?</h3>
                   <div class="faq-capsule-answer">
                     Electronically, in cloud storage that holds tier-one security certifications, in the client's own country. Each region is fully isolated at hardware and software level.
-                  </div>
-                </div>
-                <div class="faq-capsule-toggle" aria-label="Toggle answer">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ 05 -->
-            <div class="faq-timeline-row">
-              <div class="faq-timeline-node">
-                <div class="faq-timeline-node-inner"></div>
-              </div>
-              <div class="faq-timeline-connector"></div>
-
-              <div class="faq-capsule-card">
-                <div class="faq-capsule-num">05</div>
-                <div class="faq-capsule-body">
-                  <h3 class="faq-capsule-question">What is your protocol when adverse or disputed records emerge?</h3>
-                  <div class="faq-capsule-answer">
-                    Every adverse finding undergoes mandatory secondary analyst corroboration against primary court records to prevent mistaken identity or expunged records from being reported. Detailed case docket identifiers and official source citations are provided to support legally sound dispute resolution or pre-adverse action notice procedures.
                   </div>
                 </div>
                 <div class="faq-capsule-toggle" aria-label="Toggle answer">

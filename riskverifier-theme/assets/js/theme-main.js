@@ -463,7 +463,12 @@ document.addEventListener('DOMContentLoaded', () => {
       bannerTitle.style.opacity = '0.3';
       bannerTitle.style.transform = 'translateY(-3px)';
       setTimeout(() => {
-        bannerTitle.textContent = serviceTitle;
+        const ribbonText = bannerTitle.querySelector('.ribbon-text');
+        if (ribbonText) {
+          ribbonText.textContent = serviceTitle;
+        } else {
+          bannerTitle.textContent = serviceTitle;
+        }
         bannerTitle.style.opacity = '1';
         bannerTitle.style.transform = 'translateY(0)';
       }, 150);
@@ -829,6 +834,57 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { margin: '-10% 0px -10% 0px' });
   }
+  // -------------------------------------------------------------
+  // Hero Metrics Animated Running Counters (Runs on load/reload)
+  // -------------------------------------------------------------
+  const metricValues = document.querySelectorAll('.hero-metrics .metric-value');
+  if (metricValues.length) {
+    const runMetricCounters = () => {
+      metricValues.forEach(el => {
+        const targetStr = el.getAttribute('data-target');
+        const rangeStr = el.getAttribute('data-range');
+        const suffix = el.getAttribute('data-suffix') || '';
+        const duration = 1800;
+        const startTime = performance.now();
+
+        if (rangeStr) {
+          const [startVal, endVal] = rangeStr.split(',').map(Number);
+          const animateRange = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 3);
+            const current1 = Math.round(ease * startVal);
+            const current2 = Math.round(ease * endVal);
+            el.innerHTML = `${current1}&ndash;${current2}${suffix}`;
+            if (progress < 1) {
+              requestAnimationFrame(animateRange);
+            } else {
+              el.innerHTML = `${startVal}&ndash;${endVal}${suffix}`;
+            }
+          };
+          requestAnimationFrame(animateRange);
+        } else if (targetStr) {
+          const targetNum = parseFloat(targetStr);
+          const animateSingle = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(ease * targetNum);
+            el.textContent = `${current}${suffix}`;
+            if (progress < 1) {
+              requestAnimationFrame(animateSingle);
+            } else {
+              el.textContent = `${targetNum}${suffix}`;
+            }
+          };
+          requestAnimationFrame(animateSingle);
+        }
+      });
+    };
+
+    runMetricCounters();
+  }
+
   // -------------------------------------------------------------
   // What We Do: entrance animation
   // -------------------------------------------------------------

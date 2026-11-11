@@ -107,6 +107,8 @@ add_filter('body_class', function($classes) {
  * Enqueue scripts and styles
  */
 function riskverifier_enqueue_scripts() {
+    $theme_version = '2.0.6';
+
     // Google Fonts: Plus Jakarta Sans & Inter
     wp_enqueue_style(
         'riskverifier-fonts',
@@ -115,20 +117,20 @@ function riskverifier_enqueue_scripts() {
         null
     );
 
-    // Main Theme CSS
+    // WordPress Primary style.css (Contains full theme stylesheet)
+    wp_enqueue_style(
+        'riskverifier-style',
+        get_stylesheet_uri(),
+        array(),
+        $theme_version
+    );
+
+    // Main Theme CSS in assets
     wp_enqueue_style(
         'riskverifier-main-style',
         get_template_directory_uri() . '/assets/css/theme-style.css',
         array(),
-        md5_file(get_template_directory() . '/assets/css/theme-style.css')
-    );
-
-    // WordPress Root style.css
-    wp_enqueue_style(
-        'riskverifier-style',
-        get_stylesheet_uri(),
-        array('riskverifier-main-style'),
-        md5_file(get_stylesheet_directory() . '/style.css')
+        $theme_version
     );
 
     // Framer Motion Animation Engine
@@ -145,7 +147,7 @@ function riskverifier_enqueue_scripts() {
         'riskverifier-main-script',
         get_template_directory_uri() . '/assets/js/theme-main.js',
         array('framer-motion'),
-        md5_file(get_template_directory() . '/assets/js/theme-main.js'),
+        $theme_version,
         true
     );
 }

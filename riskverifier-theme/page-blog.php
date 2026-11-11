@@ -113,14 +113,13 @@ get_header();
             while ($blog_query->have_posts()) : $blog_query->the_post();
                 $categories = get_the_category();
                 $cat_name = !empty($categories) ? esc_html($categories[0]->name) : 'Intelligence';
-                $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'large') : get_template_directory_uri() . '/assets/about-team.jpg';
+                $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'large') : get_template_directory_uri() . '/assets/blog-global-compliance.jpg';
                 ?>
                 <article class="blog-card">
                   <a href="<?php the_permalink(); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
                     <div class="blog-card-media">
                       <img src="<?php echo esc_url($thumb_url); ?>" alt="<?php the_title_attribute(); ?>" class="blog-card-img" loading="lazy">
-                      <span class="blog-card-category"><?php echo $cat_name; ?></span>
-                    </div>
+                      </div>
                     <div class="blog-card-body">
                       <div class="blog-card-meta">
                         <span>📅 <?php echo get_the_date('F d, Y'); ?></span>
@@ -131,11 +130,7 @@ get_header();
                         <?php echo wp_trim_words(get_the_excerpt(), 22, '...'); ?>
                       </p>
                       <div class="blog-card-footer">
-                        <div class="blog-card-author">
-                          <span class="blog-card-author-avatar">RV</span>
-                          <span><?php the_author(); ?></span>
-                        </div>
-                        <span class="blog-card-link">Read Details &rarr;</span>
+                        <span class="blog-read-more-btn">Read More &rarr;</span>
                       </div>
                     </div>
                   </a>
@@ -150,7 +145,7 @@ get_header();
                     'title' => 'Global Background Checks: Navigating FCRA & GDPR in Cross-Border Hiring',
                     'cat' => 'Compliance',
                     'date' => 'October 24, 2026',
-                    'img' => get_template_directory_uri() . '/assets/about-team.jpg',
+                    'img' => get_template_directory_uri() . '/assets/blog-global-compliance.jpg',
                     'excerpt' => 'Discover how multinational organizations navigate conflicting data privacy frameworks while conducting legally sound background verifications across international boundaries.',
                     'author' => 'Legal Compliance Desk'
                 ),
@@ -158,7 +153,7 @@ get_header();
                     'title' => 'Why Database Scrapes Fail: The Vital Need for Direct-Source Court Docket Verification',
                     'cat' => 'Due Diligence',
                     'date' => 'October 15, 2026',
-                    'img' => get_template_directory_uri() . '/assets/vision-circle.jpg',
+                    'img' => get_template_directory_uri() . '/assets/blog-court-dockets.jpg',
                     'excerpt' => 'Automated scraping algorithms routinely miss expunged cases, seal orders, and localized jurisdiction dockets. Learn why evidential certainty requires primary-source verification.',
                     'author' => 'Senior Intelligence Analyst'
                 ),
@@ -166,7 +161,7 @@ get_header();
                     'title' => 'Mitigating Executive Onboarding Risks: Beyond Standard Criminal Records',
                     'cat' => 'Risk Advisory',
                     'date' => 'October 02, 2026',
-                    'img' => get_template_directory_uri() . '/assets/mission-circle.jpg',
+                    'img' => get_template_directory_uri() . '/assets/blog-executive-risks.jpg',
                     'excerpt' => 'C-suite and sensitive governance roles demand multi-layered investigation including corporate affiliations, regulatory sanctions, civil litigation histories, and conflict audits.',
                     'author' => 'Risk Advisory Practice'
                 )
@@ -176,8 +171,7 @@ get_header();
                 <article class="blog-card">
                   <div class="blog-card-media">
                     <img src="<?php echo esc_url($item['img']); ?>" alt="<?php echo esc_attr($item['title']); ?>" class="blog-card-img">
-                    <span class="blog-card-category"><?php echo $item['cat']; ?></span>
-                  </div>
+                    </div>
                   <div class="blog-card-body">
                     <div class="blog-card-meta">
                       <span>📅 <?php echo $item['date']; ?></span>
@@ -186,11 +180,7 @@ get_header();
                     <h3 class="blog-card-heading"><?php echo $item['title']; ?></h3>
                     <p class="blog-card-excerpt"><?php echo $item['excerpt']; ?></p>
                     <div class="blog-card-footer">
-                      <div class="blog-card-author">
-                        <span class="blog-card-author-avatar">RV</span>
-                        <span><?php echo $item['author']; ?></span>
-                      </div>
-                      <span class="blog-card-link">Verified Article</span>
+                      <span class="blog-read-more-btn">Read More &rarr;</span>
                     </div>
                   </div>
                 </article>

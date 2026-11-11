@@ -67,7 +67,14 @@
           <li><a href="<?php echo esc_url(home_url('/how-it-works/')); ?>">How It Works (5 Steps)</a></li>
           <li><a href="<?php echo esc_url(home_url('/#offices')); ?>">Regional Offices</a></li>
           <li><a href="<?php echo esc_url(home_url('/contact-us/')); ?>">Contact Us</a></li>
-          <li><a href="<?php echo esc_url(home_url('/#quote-form-section')); ?>">Request Verification</a></li>
+          <?php
+            $req_page = get_page_by_path('request-verification', OBJECT, 'page');
+            if (!$req_page) {
+                $req_page = get_page_by_path('request-a-verification', OBJECT, 'page');
+            }
+            $req_url = $req_page ? get_permalink($req_page) : home_url('/request-verification/');
+          ?>
+          <li><a href="<?php echo esc_url($req_url); ?>">Request Verification</a></li>
         </ul>
       </div>
 

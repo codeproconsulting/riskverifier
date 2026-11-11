@@ -120,6 +120,19 @@ get_header();
                 <div class="blog-featured-media">
                   <?php the_post_thumbnail('full'); ?>
                 </div>
+              <?php else :
+                $post_slug = get_post_field('post_name', get_the_ID());
+                $post_title = strtolower(get_the_title());
+                $fallback_img = 'blog-global-compliance.jpg';
+                if (strpos($post_slug, 'docket') !== false || strpos($post_slug, 'scrape') !== false || strpos($post_title, 'docket') !== false || strpos($post_title, 'scrape') !== false || strpos($post_title, 'court') !== false) {
+                    $fallback_img = 'blog-court-dockets.jpg';
+                } elseif (strpos($post_slug, 'executive') !== false || strpos($post_slug, 'onboarding') !== false || strpos($post_title, 'executive') !== false || strpos($post_title, 'onboarding') !== false) {
+                    $fallback_img = 'blog-executive-risks.jpg';
+                }
+              ?>
+                <div class="blog-featured-media">
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/' . $fallback_img); ?>" alt="<?php the_title_attribute(); ?>" style="width:100%; border-radius:12px; max-height:420px; object-fit:cover;">
+                </div>
               <?php endif; ?>
 
               <div class="blog-article-body">

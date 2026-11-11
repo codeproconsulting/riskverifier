@@ -213,10 +213,6 @@ add_filter('walker_nav_menu_start_el', function ($item_output, $item, $depth, $a
  * page routing supplies the query, title, canonical URL and template together.
  */
 function riskverifier_ensure_theme_pages() {
-    if (get_option('riskverifier_setup_version') === '2.0.7') {
-        return;
-    }
-
     $pages = array(
         'home' => array('Home', ''),
         'services' => array('Services', 'page-services.php'),
@@ -228,6 +224,19 @@ function riskverifier_ensure_theme_pages() {
         'login' => array('Client Portal Login', 'page-login.php'),
         'signup' => array('Get Started / Sign Up', 'page-signup.php'),
     );
+
+    $needs_provisioning = false;
+    foreach ($pages as $slug => $data) {
+        if (!get_page_by_path($slug, OBJECT, 'page')) {
+            $needs_provisioning = true;
+            break;
+        }
+    }
+
+    if (!$needs_provisioning && get_option('riskverifier_setup_version') === '2.0.9') {
+        return;
+    }
+
     $complete = true;
     $home_id = 0;
     foreach ($pages as $slug => $data) {
@@ -272,7 +281,7 @@ function riskverifier_ensure_theme_pages() {
     // Defer flushing until all init callbacks have registered their rules.
     update_option('riskverifier_flush_rewrites', 1);
     if ($complete) {
-        update_option('riskverifier_setup_version', '2.0.7');
+        update_option('riskverifier_setup_version', '2.0.9');
     }
 }
 add_action('init', 'riskverifier_ensure_theme_pages', 20);
@@ -283,8 +292,14 @@ add_action('after_switch_theme', function() {
 });
 
 add_action('init', function() {
-    // Keep legacy URLs working without masking an existing page at that URL.
-    foreach (array('about' => 'about-us', 'contact' => 'contact-us', 'sign-up' => 'signup') as $alias => $slug) {
+    // Keep legacy URLs and aliases working without masking an existing page at that URL.
+    $aliases = array(
+        'about'                  => 'about-us',
+        'contact'                => 'contact-us',
+        'sign-up'                => 'signup',
+        'request-a-verification' => 'request-verification',
+    );
+    foreach ($aliases as $alias => $slug) {
         if (!get_page_by_path($alias, OBJECT, 'page')) {
             add_rewrite_rule('^' . $alias . '/?$', 'index.php?pagename=' . $slug, 'top');
         }
@@ -298,6 +313,51 @@ add_action('wp_loaded', function() {
         delete_option('riskverifier_flush_rewrites');
     }
 });
+
+/**
+ * Direct Fallback Router: If a theme page route hits 404 (e.g. before pages are
+ * provisioned in the database or permalinks flushed), serve the template directly.
+ */
+add_filter('template_include', function($template) {
+    if (is_404()) {
+        $request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+        $path = trim(parse_url($request_uri, PHP_URL_PATH), '/');
+        // Handle subfolder installations (e.g. /mysite/request-verification/)
+        $home_path = trim(parse_url(home_url(), PHP_URL_PATH), '/');
+        if ($home_path && strpos($path, $home_path) === 0) {
+            $path = trim(substr($path, strlen($home_path)), '/');
+        }
+        $segments = explode('/', $path);
+        $slug = end($segments);
+
+        $routes = array(
+            'request-verification'   => 'page-request-verification.php',
+            'request-a-verification' => 'page-request-verification.php',
+            'how-it-works'           => 'page-how-it-works.php',
+            'about-us'               => 'page-about.php',
+            'about'                  => 'page-about.php',
+            'contact-us'             => 'page-contact.php',
+            'contact'                => 'page-contact.php',
+            'services'               => 'page-services.php',
+            'blog'                   => 'page-blog.php',
+            'login'                  => 'page-login.php',
+            'portal-login'           => 'page-login.php',
+            'signup'                 => 'page-signup.php',
+            'sign-up'                => 'page-signup.php',
+        );
+
+        if (isset($routes[$slug])) {
+            $file = get_template_directory() . '/' . $routes[$slug];
+            if (file_exists($file)) {
+                global $wp_query;
+                $wp_query->is_404 = false;
+                status_header(200);
+                return $file;
+            }
+        }
+    }
+    return $template;
+}, 99);
 
 /** Match the fallback navigation markup when a WordPress menu is assigned. */
 add_filter('nav_menu_link_attributes', function($atts, $item, $args, $depth) {

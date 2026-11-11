@@ -58,26 +58,63 @@ get_header();
             </p>
 
             <div class="hero-actions">
-              <a href="<?php echo esc_url(home_url('/request-verification/')); ?>" class="btn btn-primary btn-lg">
+              <?php
+                $req_page = get_page_by_path('request-verification', OBJECT, 'page');
+                if (!$req_page) {
+                    $req_page = get_page_by_path('request-a-verification', OBJECT, 'page');
+                }
+                $req_url = $req_page ? get_permalink($req_page) : home_url('/request-verification/');
+              ?>
+              <a href="<?php echo esc_url($req_url); ?>" class="btn btn-primary btn-lg">
                 Get Started
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
               <a href="<?php echo esc_url(home_url('/services/')); ?>" class="btn btn-outline btn-lg">Explore All Services</a>
             </div>
 
-                        <!-- Trust Metrics (Borderless Live Running Counters) -->
-            <div class="hero-metrics">
-              <div class="metric-item">
-                <span class="metric-value" data-target="100" data-suffix="+">100+</span>
+                        <!-- Hero Trust Badges (Executive Value Statement) -->
+            <div class="hero-trust-bar" aria-label="Core Quality Commitments">
+              <div class="trust-item">
+                <div class="trust-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+                <div class="trust-text">
+                  <span class="trust-title">Comprehensive Review</span>
+                  <span class="trust-sub">Multi-Layered Analysis</span>
+                </div>
               </div>
-              <div class="metric-item">
-                <span class="metric-value" data-range="24,72" data-suffix="h">24&ndash;72h</span>
+
+              <div class="trust-divider" aria-hidden="true"></div>
+
+              <div class="trust-item">
+                <div class="trust-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="trust-text">
+                  <span class="trust-title">Operational Agility</span>
+                  <span class="trust-sub">Streamlined Turnaround</span>
+                </div>
               </div>
-              <div class="metric-item">
-                <span class="metric-value" data-target="12" data-suffix="+">12+</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-value" data-target="100" data-suffix="%">100%</span>
+
+              <div class="trust-divider" aria-hidden="true"></div>
+
+              <div class="trust-item">
+                <div class="trust-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </div>
+                <div class="trust-text">
+                  <span class="trust-title">Institutional Discretion</span>
+                  <span class="trust-sub">Privileged Safeguards</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1151,14 +1188,13 @@ get_header();
               while ($recent_home_posts->have_posts()) : $recent_home_posts->the_post();
                   $categories = get_the_category();
                   $cat_name = !empty($categories) ? esc_html($categories[0]->name) : 'Intelligence';
-                  $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'large') : get_template_directory_uri() . '/assets/about-team.jpg';
+                  $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'large') : get_template_directory_uri() . '/assets/blog-global-compliance.jpg';
                   ?>
                   <article class="blog-card">
                     <a href="<?php the_permalink(); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
                       <div class="blog-card-media">
                         <img src="<?php echo esc_url($thumb_url); ?>" alt="<?php the_title_attribute(); ?>" class="blog-card-img" loading="lazy">
-                        <span class="blog-card-category"><?php echo $cat_name; ?></span>
-                      </div>
+                        </div>
                       <div class="blog-card-body">
                         <div class="blog-card-meta">
                           <span>📅 <?php echo get_the_date('F d, Y'); ?></span>
@@ -1169,11 +1205,7 @@ get_header();
                           <?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?>
                         </p>
                         <div class="blog-card-footer">
-                          <div class="blog-card-author">
-                            <span class="blog-card-author-avatar">RV</span>
-                            <span><?php the_author(); ?></span>
-                          </div>
-                          <span class="blog-card-link">Read Details &rarr;</span>
+                          <span class="blog-read-more-btn">Read More &rarr;</span>
                         </div>
                       </div>
                     </a>
@@ -1187,9 +1219,8 @@ get_header();
               <article class="blog-card">
                 <a href="<?php echo esc_url(home_url('/blog/')); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
                   <div class="blog-card-media">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/about-team.jpg'); ?>" alt="Global Background Checks Compliance" class="blog-card-img" loading="lazy">
-                    <span class="blog-card-category">Compliance</span>
-                  </div>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/blog-global-compliance.jpg'); ?>" alt="Global Background Checks Compliance" class="blog-card-img" loading="lazy">
+                    </div>
                   <div class="blog-card-body">
                     <div class="blog-card-meta">
                       <span>📅 October 24, 2026</span>
@@ -1200,11 +1231,7 @@ get_header();
                       Discover how multinational organizations navigate conflicting data privacy frameworks while conducting legally sound background verifications.
                     </p>
                     <div class="blog-card-footer">
-                      <div class="blog-card-author">
-                        <span class="blog-card-author-avatar">RV</span>
-                        <span>Legal Compliance Desk</span>
-                      </div>
-                      <span class="blog-card-link">Read Details &rarr;</span>
+                      <span class="blog-read-more-btn">Read More &rarr;</span>
                     </div>
                   </div>
                 </a>
@@ -1213,9 +1240,8 @@ get_header();
               <article class="blog-card">
                 <a href="<?php echo esc_url(home_url('/blog/')); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
                   <div class="blog-card-media">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/vision-circle.jpg'); ?>" alt="Court Docket Verification" class="blog-card-img" loading="lazy">
-                    <span class="blog-card-category">Due Diligence</span>
-                  </div>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/blog-court-dockets.jpg'); ?>" alt="Court Docket Verification" class="blog-card-img" loading="lazy">
+                    </div>
                   <div class="blog-card-body">
                     <div class="blog-card-meta">
                       <span>📅 October 15, 2026</span>
@@ -1226,11 +1252,7 @@ get_header();
                       Automated scraping algorithms routinely miss expunged cases, seal orders, and localized jurisdiction dockets.
                     </p>
                     <div class="blog-card-footer">
-                      <div class="blog-card-author">
-                        <span class="blog-card-author-avatar">RV</span>
-                        <span>Senior Analyst</span>
-                      </div>
-                      <span class="blog-card-link">Read Details &rarr;</span>
+                      <span class="blog-read-more-btn">Read More &rarr;</span>
                     </div>
                   </div>
                 </a>
@@ -1239,9 +1261,8 @@ get_header();
               <article class="blog-card">
                 <a href="<?php echo esc_url(home_url('/blog/')); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
                   <div class="blog-card-media">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/mission-circle.jpg'); ?>" alt="Executive Onboarding Risk Mitigation" class="blog-card-img" loading="lazy">
-                    <span class="blog-card-category">Risk Advisory</span>
-                  </div>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/blog-executive-risks.jpg'); ?>" alt="Executive Onboarding Risk Mitigation" class="blog-card-img" loading="lazy">
+                    </div>
                   <div class="blog-card-body">
                     <div class="blog-card-meta">
                       <span>📅 October 02, 2026</span>
@@ -1252,11 +1273,7 @@ get_header();
                       C-suite and sensitive governance roles demand multi-layered investigation including corporate affiliations and conflicts.
                     </p>
                     <div class="blog-card-footer">
-                      <div class="blog-card-author">
-                        <span class="blog-card-author-avatar">RV</span>
-                        <span>Risk Practice</span>
-                      </div>
-                      <span class="blog-card-link">Read Details &rarr;</span>
+                      <span class="blog-read-more-btn">Read More &rarr;</span>
                     </div>
                   </div>
                 </a>

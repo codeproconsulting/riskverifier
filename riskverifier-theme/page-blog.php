@@ -101,29 +101,62 @@ get_header();
 
       <div class="home-blog-grid">
         <?php
+        $fallback_articles = array(
+            array(
+                'slug'    => 'global-background-checks-fcra-gdpr',
+                'title'   => 'Global Background Checks: Navigating FCRA &amp; GDPR in Cross-Border Hiring',
+                'date'    => 'October 24, 2026',
+                'read'    => '5 min read',
+                'img'     => get_template_directory_uri() . '/assets/blog-global-compliance.jpg',
+                'excerpt' => 'Discover how multinational organizations navigate conflicting data privacy frameworks while conducting legally sound background verifications across international boundaries.'
+            ),
+            array(
+                'slug'    => 'why-database-scrapes-fail-court-docket-verification',
+                'title'   => 'Why Database Scrapes Fail: The Vital Need for Direct-Source Court Docket Verification',
+                'date'    => 'October 15, 2026',
+                'read'    => '6 min read',
+                'img'     => get_template_directory_uri() . '/assets/blog-court-dockets.jpg',
+                'excerpt' => 'Automated scraping algorithms routinely miss expunged cases, seal orders, and localized jurisdiction dockets. Learn why evidential certainty requires primary-source verification.'
+            ),
+            array(
+                'slug'    => 'mitigating-executive-onboarding-risks',
+                'title'   => 'Mitigating Executive Onboarding Risks: Beyond Standard Criminal Records',
+                'date'    => 'October 02, 2026',
+                'read'    => '4 min read',
+                'img'     => get_template_directory_uri() . '/assets/blog-executive-risks.jpg',
+                'excerpt' => 'C-suite and sensitive governance roles demand multi-layered investigation including corporate affiliations, regulatory sanctions, civil litigation histories, and conflict audits.'
+            )
+        );
+
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $blog_query = new WP_Query(array(
             'post_type'      => 'post',
-            'posts_per_page' => 6,
+            'posts_per_page' => 9,
             'paged'          => $paged,
             'post_status'    => 'publish'
         ));
 
+        $rendered_count = 0;
         if ($blog_query->have_posts()) :
             while ($blog_query->have_posts()) : $blog_query->the_post();
+                if (get_post_field('post_name', get_the_ID()) === 'hello-world') {
+                    continue;
+                }
                 $categories = get_the_category();
                 $cat_name = !empty($categories) ? esc_html($categories[0]->name) : 'Intelligence';
-                $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'large') : get_template_directory_uri() . '/assets/blog-global-compliance.jpg';
+                $default_img = isset($fallback_articles[$rendered_count % 3]['img']) ? $fallback_articles[$rendered_count % 3]['img'] : get_template_directory_uri() . '/assets/blog-global-compliance.jpg';
+                $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'large') : $default_img;
+                $rendered_count++;
                 ?>
                 <article class="blog-card">
                   <a href="<?php the_permalink(); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
                     <div class="blog-card-media">
                       <img src="<?php echo esc_url($thumb_url); ?>" alt="<?php the_title_attribute(); ?>" class="blog-card-img" loading="lazy">
-                      </div>
+                    </div>
                     <div class="blog-card-body">
                       <div class="blog-card-meta">
                         <span>📅 <?php echo get_the_date('F d, Y'); ?></span>
-                        <span>⏱ <?php echo ceil(str_word_count(strip_tags(get_the_content())) / 200) . ' min read'; ?></span>
+                        <span>⏱ <?php echo ceil(max(1, str_word_count(strip_tags(get_the_content())) / 200)) . ' min read'; ?></span>
                       </div>
                       <h3 class="blog-card-heading"><?php the_title(); ?></h3>
                       <p class="blog-card-excerpt">
@@ -138,54 +171,35 @@ get_header();
                 <?php
             endwhile;
             wp_reset_postdata();
-        else :
-            // Default Fallback Articles if WordPress has no posts yet
-            $defaults = array(
-                array(
-                    'title' => 'Global Background Checks: Navigating FCRA & GDPR in Cross-Border Hiring',
-                    'cat' => 'Compliance',
-                    'date' => 'October 24, 2026',
-                    'img' => get_template_directory_uri() . '/assets/blog-global-compliance.jpg',
-                    'excerpt' => 'Discover how multinational organizations navigate conflicting data privacy frameworks while conducting legally sound background verifications across international boundaries.',
-                    'author' => 'Legal Compliance Desk'
-                ),
-                array(
-                    'title' => 'Why Database Scrapes Fail: The Vital Need for Direct-Source Court Docket Verification',
-                    'cat' => 'Due Diligence',
-                    'date' => 'October 15, 2026',
-                    'img' => get_template_directory_uri() . '/assets/blog-court-dockets.jpg',
-                    'excerpt' => 'Automated scraping algorithms routinely miss expunged cases, seal orders, and localized jurisdiction dockets. Learn why evidential certainty requires primary-source verification.',
-                    'author' => 'Senior Intelligence Analyst'
-                ),
-                array(
-                    'title' => 'Mitigating Executive Onboarding Risks: Beyond Standard Criminal Records',
-                    'cat' => 'Risk Advisory',
-                    'date' => 'October 02, 2026',
-                    'img' => get_template_directory_uri() . '/assets/blog-executive-risks.jpg',
-                    'excerpt' => 'C-suite and sensitive governance roles demand multi-layered investigation including corporate affiliations, regulatory sanctions, civil litigation histories, and conflict audits.',
-                    'author' => 'Risk Advisory Practice'
-                )
-            );
-            foreach ($defaults as $item) :
+        endif;
+
+        // If fewer than 3 posts rendered, pad with the 3 fallback cards so all 3 boxes ALWAYS appear
+        if ($rendered_count < 3) :
+            for ($i = $rendered_count; $i < 3; $i++) :
+                $fb = $fallback_articles[$i];
+                $post_obj = get_page_by_path($fb['slug'], OBJECT, 'post');
+                $link = $post_obj ? get_permalink($post_obj) : '#';
                 ?>
                 <article class="blog-card">
-                  <div class="blog-card-media">
-                    <img src="<?php echo esc_url($item['img']); ?>" alt="<?php echo esc_attr($item['title']); ?>" class="blog-card-img">
+                  <a href="<?php echo esc_url($link); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
+                    <div class="blog-card-media">
+                      <img src="<?php echo esc_url($fb['img']); ?>" alt="<?php echo esc_attr(strip_tags($fb['title'])); ?>" class="blog-card-img" loading="lazy">
                     </div>
-                  <div class="blog-card-body">
-                    <div class="blog-card-meta">
-                      <span>📅 <?php echo $item['date']; ?></span>
-                      <span>⏱ 5 min read</span>
+                    <div class="blog-card-body">
+                      <div class="blog-card-meta">
+                        <span>📅 <?php echo esc_html($fb['date']); ?></span>
+                        <span>⏱ <?php echo esc_html($fb['read']); ?></span>
+                      </div>
+                      <h3 class="blog-card-heading"><?php echo $fb['title']; ?></h3>
+                      <p class="blog-card-excerpt"><?php echo esc_html($fb['excerpt']); ?></p>
+                      <div class="blog-card-footer">
+                        <span class="blog-read-more-btn">Read More &rarr;</span>
+                      </div>
                     </div>
-                    <h3 class="blog-card-heading"><?php echo $item['title']; ?></h3>
-                    <p class="blog-card-excerpt"><?php echo $item['excerpt']; ?></p>
-                    <div class="blog-card-footer">
-                      <span class="blog-read-more-btn">Read More &rarr;</span>
-                    </div>
-                  </div>
+                  </a>
                 </article>
                 <?php
-            endforeach;
+            endfor;
         endif;
         ?>
       </div>

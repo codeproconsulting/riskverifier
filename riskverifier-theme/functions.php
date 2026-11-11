@@ -107,7 +107,7 @@ add_filter('body_class', function($classes) {
  * Enqueue scripts and styles
  */
 function riskverifier_enqueue_scripts() {
-    $theme_version = '2.0.6';
+    $theme_version = '2.2.0';
 
     // Google Fonts: Plus Jakarta Sans & Inter
     wp_enqueue_style(
@@ -281,10 +281,78 @@ function riskverifier_ensure_theme_pages() {
     // Defer flushing until all init callbacks have registered their rules.
     update_option('riskverifier_flush_rewrites', 1);
     if ($complete) {
-        update_option('riskverifier_setup_version', '2.0.9');
+        update_option('riskverifier_setup_version', '2.2.0');
     }
+
+    // Auto provision the 3 Risk Verifier blog posts
+    riskverifier_ensure_sample_posts();
 }
 add_action('init', 'riskverifier_ensure_theme_pages', 20);
+
+/**
+ * Provision the 3 cornerstone Risk Verifier intelligence articles and clean default posts.
+ */
+function riskverifier_ensure_sample_posts() {
+    // 1. Remove default WordPress "Hello world!" post if present
+    $hello_post = get_page_by_path('hello-world', OBJECT, 'post');
+    if ($hello_post) {
+        wp_delete_post($hello_post->ID, true);
+    }
+    // Also check by title
+    $hello_query = get_posts(array(
+        'title'        => 'Hello world!',
+        'post_type'    => 'post',
+        'post_status'  => 'any',
+        'numberposts'  => 1
+    ));
+    if (!empty($hello_query)) {
+        wp_delete_post($hello_query[0]->ID, true);
+    }
+
+    // 2. Ensure the 3 corporate intelligence articles exist
+    $articles = array(
+        array(
+            'slug'    => 'global-background-checks-fcra-gdpr',
+            'title'   => 'Global Background Checks: Navigating FCRA & GDPR in Cross-Border Hiring',
+            'cat'     => 'Compliance',
+            'excerpt' => 'Discover how multinational organizations navigate conflicting data privacy frameworks while conducting legally sound background verifications across international boundaries.',
+            'content' => '<p>Operating across international jurisdictions requires corporate legal counsel and talent acquisition executives to navigate divergent data protection mandates. While the Fair Credit Reporting Act (FCRA) governs consumer reporting in the United States, cross-border verifications intersecting with the European Union or United Kingdom require strict adherence to GDPR principles including lawful basis, explicit consent, and data minimization.</p><h3>The Challenge of Jurisdictional Friction</h3><p>Multinational employers cannot simply apply domestic consent language to international candidates. Local labor laws and works council agreements frequently supersede general commercial protocols, necessitating localized compliance workflows and direct-source registry engagement.</p><h3>Evidentiary Defensibility</h3><p>By partnering with specialized global verification intelligence desks, corporations eliminate regulatory compliance liabilities while safeguarding international talent acquisition cycles.</p>'
+        ),
+        array(
+            'slug'    => 'why-database-scrapes-fail-court-docket-verification',
+            'title'   => 'Why Database Scrapes Fail: The Vital Need for Direct-Source Court Docket Verification',
+            'cat'     => 'Due Diligence',
+            'excerpt' => 'Automated scraping algorithms routinely miss expunged cases, seal orders, and localized jurisdiction dockets. Learn why evidential certainty requires primary-source verification.',
+            'content' => '<p>Commercial background check providers frequently rely on aggregated third-party databases that sweep historical court filings at intermittent intervals. However, automated scrapers exhibit severe blind spots: delayed database updates routinely omit recent acquittals, expungement orders, or statutory record sealings.</p><h3>The False Positive Risk</h3><p>Direct-source verification involves conducting hands-on record inspections at the municipal, county, and high court registries. By verifying directly with court clerks and primary docket repositories, risk verifiers avoid false positives, mitigate actionable FCRA liability, and ensure unimpeachable evidential integrity.</p>'
+        ),
+        array(
+            'slug'    => 'mitigating-executive-onboarding-risks',
+            'title'   => 'Mitigating Executive Onboarding Risks: Beyond Standard Criminal Records',
+            'cat'     => 'Risk Advisory',
+            'excerpt' => 'C-suite and sensitive governance roles demand multi-layered investigation including corporate affiliations, regulatory sanctions, civil litigation histories, and conflict audits.',
+            'content' => '<p>Standard pre-employment screening workflows are fundamentally inadequate for executive appointments, board directors, and high-trust leadership roles. Executive hires introduce governance risk, regulatory scrutiny, and enterprise reputational exposure that standard criminal history checks cannot reveal.</p><h3>Comprehensive Executive Screening</h3><p>A rigorous executive screening protocol encompasses comprehensive corporate directorship searches, global sanctions screening, regulatory enforcement registry checks, cross-jurisdictional civil litigation searches, and conflict-of-interest audits. Thorough vetting prior to executive announcement safeguards organizational prestige and investor trust.</p>'
+        )
+    );
+
+    foreach ($articles as $art) {
+        $existing = get_page_by_path($art['slug'], OBJECT, 'post');
+        if (!$existing) {
+            $post_id = wp_insert_post(array(
+                'post_title'   => $art['title'],
+                'post_name'    => $art['slug'],
+                'post_content' => $art['content'],
+                'post_excerpt' => $art['excerpt'],
+                'post_status'  => 'publish',
+                'post_type'    => 'post',
+                'comment_status' => 'closed',
+                'ping_status'    => 'closed'
+            ));
+            if ($post_id && !is_wp_error($post_id)) {
+                wp_set_object_terms($post_id, $art['cat'], 'category');
+            }
+        }
+    }
+}
 
 add_action('after_switch_theme', function() {
     delete_option('riskverifier_setup_version');

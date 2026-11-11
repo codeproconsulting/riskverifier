@@ -75,8 +75,8 @@ get_header();
                         <!-- Hero Trust Badges (Executive Value Statement) -->
             <div class="hero-trust-bar" aria-label="Core Quality Commitments">
               <div class="trust-item">
-                <div class="trust-icon-box" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <div class="trust-icon-box" aria-hidden="true" style="width:36px;height:36px;min-width:36px;max-width:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     <polyline points="9 12 11 14 15 10"></polyline>
                   </svg>
@@ -90,8 +90,8 @@ get_header();
               <div class="trust-divider" aria-hidden="true"></div>
 
               <div class="trust-item">
-                <div class="trust-icon-box" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <div class="trust-icon-box" aria-hidden="true" style="width:36px;height:36px;min-width:36px;max-width:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;">
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
@@ -105,8 +105,8 @@ get_header();
               <div class="trust-divider" aria-hidden="true"></div>
 
               <div class="trust-item">
-                <div class="trust-icon-box" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <div class="trust-icon-box" aria-hidden="true" style="width:36px;height:36px;min-width:36px;max-width:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;">
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                   </svg>
@@ -1178,27 +1178,60 @@ get_header();
 
         <div class="home-blog-grid">
           <?php
+          $fallback_articles = array(
+              array(
+                  'slug'    => 'global-background-checks-fcra-gdpr',
+                  'title'   => 'Global Background Checks: Navigating FCRA &amp; GDPR in Cross-Border Hiring',
+                  'date'    => 'October 24, 2026',
+                  'read'    => '5 min read',
+                  'img'     => get_template_directory_uri() . '/assets/blog-global-compliance.jpg',
+                  'excerpt' => 'Discover how multinational organizations navigate conflicting data privacy frameworks while conducting legally sound background verifications.'
+              ),
+              array(
+                  'slug'    => 'why-database-scrapes-fail-court-docket-verification',
+                  'title'   => 'Why Database Scrapes Fail: The Vital Need for Direct-Source Court Docket Verification',
+                  'date'    => 'October 15, 2026',
+                  'read'    => '6 min read',
+                  'img'     => get_template_directory_uri() . '/assets/blog-court-dockets.jpg',
+                  'excerpt' => 'Automated scraping algorithms routinely miss expunged cases, seal orders, and localized jurisdiction dockets.'
+              ),
+              array(
+                  'slug'    => 'mitigating-executive-onboarding-risks',
+                  'title'   => 'Mitigating Executive Onboarding Risks: Beyond Standard Criminal Records',
+                  'date'    => 'October 02, 2026',
+                  'read'    => '4 min read',
+                  'img'     => get_template_directory_uri() . '/assets/blog-executive-risks.jpg',
+                  'excerpt' => 'C-suite and sensitive governance roles demand multi-layered investigation including corporate affiliations and conflicts.'
+              )
+          );
+
           $recent_home_posts = new WP_Query(array(
               'post_type'      => 'post',
-              'posts_per_page' => 3,
+              'posts_per_page' => 6,
               'post_status'    => 'publish'
           ));
 
+          $rendered_count = 0;
           if ($recent_home_posts->have_posts()) :
-              while ($recent_home_posts->have_posts()) : $recent_home_posts->the_post();
+              while ($recent_home_posts->have_posts() && $rendered_count < 3) : $recent_home_posts->the_post();
+                  if (get_post_field('post_name', get_the_ID()) === 'hello-world') {
+                      continue;
+                  }
                   $categories = get_the_category();
                   $cat_name = !empty($categories) ? esc_html($categories[0]->name) : 'Intelligence';
-                  $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'large') : get_template_directory_uri() . '/assets/blog-global-compliance.jpg';
+                  $default_img = isset($fallback_articles[$rendered_count]['img']) ? $fallback_articles[$rendered_count]['img'] : get_template_directory_uri() . '/assets/blog-global-compliance.jpg';
+                  $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'large') : $default_img;
+                  $rendered_count++;
                   ?>
                   <article class="blog-card">
                     <a href="<?php the_permalink(); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
                       <div class="blog-card-media">
                         <img src="<?php echo esc_url($thumb_url); ?>" alt="<?php the_title_attribute(); ?>" class="blog-card-img" loading="lazy">
-                        </div>
+                      </div>
                       <div class="blog-card-body">
                         <div class="blog-card-meta">
                           <span>📅 <?php echo get_the_date('F d, Y'); ?></span>
-                          <span>⏱ <?php echo ceil(str_word_count(strip_tags(get_the_content())) / 200) . ' min read'; ?></span>
+                          <span>⏱ <?php echo ceil(max(1, str_word_count(strip_tags(get_the_content())) / 200)) . ' min read'; ?></span>
                         </div>
                         <h3 class="blog-card-heading"><?php the_title(); ?></h3>
                         <p class="blog-card-excerpt">
@@ -1213,72 +1246,37 @@ get_header();
                   <?php
               endwhile;
               wp_reset_postdata();
-          else :
-              // Fallback cards when no posts added yet
-              ?>
-              <article class="blog-card">
-                <a href="<?php echo esc_url(home_url('/blog/')); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
-                  <div class="blog-card-media">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/blog-global-compliance.jpg'); ?>" alt="Global Background Checks Compliance" class="blog-card-img" loading="lazy">
-                    </div>
-                  <div class="blog-card-body">
-                    <div class="blog-card-meta">
-                      <span>📅 October 24, 2026</span>
-                      <span>⏱ 5 min read</span>
-                    </div>
-                    <h3 class="blog-card-heading">Global Background Checks: Navigating FCRA &amp; GDPR in Cross-Border Hiring</h3>
-                    <p class="blog-card-excerpt">
-                      Discover how multinational organizations navigate conflicting data privacy frameworks while conducting legally sound background verifications.
-                    </p>
-                    <div class="blog-card-footer">
-                      <span class="blog-read-more-btn">Read More &rarr;</span>
-                    </div>
-                  </div>
-                </a>
-              </article>
+          endif;
 
-              <article class="blog-card">
-                <a href="<?php echo esc_url(home_url('/blog/')); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
-                  <div class="blog-card-media">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/blog-court-dockets.jpg'); ?>" alt="Court Docket Verification" class="blog-card-img" loading="lazy">
-                    </div>
-                  <div class="blog-card-body">
-                    <div class="blog-card-meta">
-                      <span>📅 October 15, 2026</span>
-                      <span>⏱ 6 min read</span>
-                    </div>
-                    <h3 class="blog-card-heading">Why Database Scrapes Fail: The Vital Need for Direct-Source Court Docket Verification</h3>
-                    <p class="blog-card-excerpt">
-                      Automated scraping algorithms routinely miss expunged cases, seal orders, and localized jurisdiction dockets.
-                    </p>
-                    <div class="blog-card-footer">
-                      <span class="blog-read-more-btn">Read More &rarr;</span>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="blog-card">
-                <a href="<?php echo esc_url(home_url('/blog/')); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
-                  <div class="blog-card-media">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/blog-executive-risks.jpg'); ?>" alt="Executive Onboarding Risk Mitigation" class="blog-card-img" loading="lazy">
-                    </div>
-                  <div class="blog-card-body">
-                    <div class="blog-card-meta">
-                      <span>📅 October 02, 2026</span>
-                      <span>⏱ 4 min read</span>
-                    </div>
-                    <h3 class="blog-card-heading">Mitigating Executive Onboarding Risks: Beyond Standard Criminal Records</h3>
-                    <p class="blog-card-excerpt">
-                      C-suite and sensitive governance roles demand multi-layered investigation including corporate affiliations and conflicts.
-                    </p>
-                    <div class="blog-card-footer">
-                      <span class="blog-read-more-btn">Read More &rarr;</span>
-                    </div>
-                  </div>
-                </a>
-              </article>
-              <?php
+          // If fewer than 3 posts rendered, pad with the 3 fallback cards so 3 boxes ALWAYS appear
+          if ($rendered_count < 3) :
+              for ($i = $rendered_count; $i < 3; $i++) :
+                  $fb = $fallback_articles[$i];
+                  $post_obj = get_page_by_path($fb['slug'], OBJECT, 'post');
+                  $link = $post_obj ? get_permalink($post_obj) : home_url('/blog/');
+                  ?>
+                  <article class="blog-card">
+                    <a href="<?php echo esc_url($link); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
+                      <div class="blog-card-media">
+                        <img src="<?php echo esc_url($fb['img']); ?>" alt="<?php echo esc_attr(strip_tags($fb['title'])); ?>" class="blog-card-img" loading="lazy">
+                      </div>
+                      <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                          <span>📅 <?php echo esc_html($fb['date']); ?></span>
+                          <span>⏱ <?php echo esc_html($fb['read']); ?></span>
+                        </div>
+                        <h3 class="blog-card-heading"><?php echo $fb['title']; ?></h3>
+                        <p class="blog-card-excerpt">
+                          <?php echo esc_html($fb['excerpt']); ?>
+                        </p>
+                        <div class="blog-card-footer">
+                          <span class="blog-read-more-btn">Read More &rarr;</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                  <?php
+              endfor;
           endif;
           ?>
         </div>

@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    RISK VERIFIER - STRICT WHITE & BRAND BLUE (#083D77) DESIGN SYSTEM
    ========================================================================== */
 
@@ -1022,7 +1022,7 @@ select {
   flex-shrink: 0;
 }
 
-/* Trust metrics - Clean Borderless Live Running Counters */
+/* Trust metrics - Clean Borderless Live Running Counters (Retained for backward-compat) */
 .hero-metrics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -7834,3 +7834,4 @@ select {
     font-size: 1.85rem;
   }
 }
+

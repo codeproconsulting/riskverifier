@@ -33,11 +33,35 @@ get_header();
           <filter id="waveShadowL1" x="-10%" y="-10%" width="120%" height="140%">
             <feDropShadow dx="-3" dy="6" stdDeviation="8" flood-color="#05264b" flood-opacity="0.25" />
           </filter>
+          <filter id="waveShadowL2" x="-10%" y="-10%" width="120%" height="140%">
+            <feDropShadow dx="-2" dy="5" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.20" />
+          </filter>
         </defs>
+
         <rect width="1440" height="220" fill="#f8fafc" />
+
+        <pattern id="bannerGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(8,61,119,0.03)" stroke-width="1"/>
+        </pattern>
+        <rect width="1440" height="220" fill="url(#bannerGrid)" />
+
+        <!-- Layer 1: Bottom Light Azure Wave Ribbon -->
         <path d="M 0 220 Q 320 200 540 160 T 1100 70 Q 1280 35 1440 15 L 1440 220 Z" fill="url(#waveAzure)" />
+
+        <!-- Layer 2: White Contour Spacer Under Cyan Ribbon -->
+        <path d="M -20 220 C 180 220 380 180 590 135 C 820 85 1060 42 1460 10 L 1460 220 Z" fill="#ffffff" filter="url(#waveShadowL2)" />
+
+        <!-- Layer 3: Vibrant Cyan Ribbon Wave -->
         <path d="M -20 220 C 180 220 370 186 580 141 C 810 92 1050 50 1460 18 L 1460 220 Z" fill="url(#waveCyan)" />
+
+        <!-- Layer 4: White Contour Spacer Under Navy Wave -->
+        <path d="M 440 220 C 660 210 840 142 1040 90 C 1220 44 1350 20 1460 6 L 1460 220 Z" fill="#ffffff" filter="url(#waveShadowL1)" />
+
+        <!-- Layer 5: Deep Brand Navy Wave -->
         <path d="M 460 220 C 680 210 850 146 1050 94 C 1230 48 1360 24 1460 10 L 1460 220 Z" fill="url(#waveNavy)" />
+
+        <!-- Decorative Accent Glow -->
+        <circle cx="1280" cy="100" r="130" fill="#00e5ff" opacity="0.08" />
       </svg>
     </div>
 

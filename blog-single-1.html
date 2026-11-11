@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <!-- Top Bar -->
+  <!-- Top Bar: Regional Offices & Rapid Support -->
   <aside class="top-bar" aria-label="Regional Offices & Direct Contacts">
     <div class="container top-bar-content">
       <div class="top-bar-offices">
@@ -22,9 +22,13 @@
       </div>
       <div class="top-bar-contact">
         <a href="https://wa.me/13862431035" target="_blank" class="top-bar-link whatsapp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
           Direct WhatsApp Support
         </a>
-        <a href="mailto:info@riskverifier.com" class="top-bar-link">info@riskverifier.com</a>
+        <a href="mailto:info@riskverifier.com" class="top-bar-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          info@riskverifier.com
+        </a>
       </div>
     </div>
   </aside>
@@ -33,18 +37,41 @@
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" aria-label="Risk Verifier Home">
-        <img src="assets/images/Logo.svg" alt="Risk Verifier" class="brand-logo-img">
+        <img src="assets/Logo.svg" alt="Risk Verifier" class="brand-logo-img">
       </a>
 
       <nav>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li class="has-dropdown mega-dropdown-parent">
+            <a href="services.html" class="nav-link nav-link-dropdown-toggle" id="servicesDropdownToggle" aria-expanded="false" aria-haspopup="true">
+              Services
+              <svg class="nav-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <div class="mega-dropdown-menu" id="servicesMegaDropdown" role="region" aria-label="Services Menu">
+  <div class="mega-dropdown-inner">
+    <div class="mega-menu-top">
+      <div><h3 class="mega-menu-heading">Our services</h3><p class="mega-menu-subheading">Find the information you need to make a confident decision.</p></div>
+      <a class="mega-all-services" href="services.html">Explore all services <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="mega-service-groups"><div class="mega-service-group"><h4 class="mega-group-title">Background screening</h4><ul class="mega-service-list"><li><a href="services.html#criminal-records" class="mega-service-card"><span class="mega-card-title">Criminal Records Check</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="services.html#civil-records" class="mega-service-card"><span class="mega-card-title">Civil Records Search</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="services.html#vital-records" class="mega-service-card"><span class="mega-card-title">Vital Records Verification</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="services.html#driving-records" class="mega-service-card"><span class="mega-card-title">Driving &amp; Motor Vehicle Records (MVR)</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li></ul></div><div class="mega-service-group"><h4 class="mega-group-title">Verification &amp; records</h4><ul class="mega-service-list"><li><a href="services.html#credit-finance" class="mega-service-card"><span class="mega-card-title">Credit &amp; Finance Reports</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="services.html#identity-credentials" class="mega-service-card"><span class="mega-card-title">Identity &amp; Credentials Verification</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="services.html#property-asset" class="mega-service-card"><span class="mega-card-title">Property &amp; Asset Searches</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="services.html#verifications-references" class="mega-service-card"><span class="mega-card-title">Verifications &amp; References</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li></ul></div><div class="mega-service-group"><h4 class="mega-group-title">Intelligence &amp; advisory</h4><ul class="mega-service-list"><li><a href="services.html#due-diligence" class="mega-service-card"><span class="mega-card-title">Due Diligence</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="services.html#media-analytics" class="mega-service-card"><span class="mega-card-title">Media Analytics</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="services.html#bespoke-research" class="mega-service-card"><span class="mega-card-title">Bespoke Research</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="services.html#geopolitical-advisory" class="mega-service-card"><span class="mega-card-title">Geopolitical Advisory</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li></ul></div></div>
+  </div>
+</div>
+          </li>
+          <li><a href="how-it-works.html" class="nav-link ">How It Works</a></li>
+          <li><a href="about.html" class="nav-link ">About Us</a></li>
           <li><a href="index.html#offices" class="nav-link">Regional Offices</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
           <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
         </ul>
       </nav>
 
@@ -60,6 +87,60 @@
   <main>
     <!-- Vector Header Banner -->
     <section class="vector-header-banner" aria-label="Page Header">
+      <!-- SVG Dynamic 3D Wave Layers -->
+      <div class="wave-banner-backdrop" aria-hidden="true">
+        <svg viewBox="0 0 1440 220" preserveAspectRatio="none" class="wave-banner-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="waveNavy" x1="0%" y1="0%" x2="100%" y2="80%">
+              <stop offset="0%" stop-color="#05264b" />
+              <stop offset="50%" stop-color="#083d77" />
+              <stop offset="100%" stop-color="#0c4a8a" />
+            </linearGradient>
+            <linearGradient id="waveCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00e5ff" />
+              <stop offset="45%" stop-color="#0284c7" />
+              <stop offset="100%" stop-color="#0369a1" />
+            </linearGradient>
+            <linearGradient id="waveAzure" x1="0%" y1="0%" x2="100%" y2="50%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8" />
+              <stop offset="50%" stop-color="#bae6fd" stop-opacity="0.7" />
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.5" />
+            </linearGradient>
+            <filter id="waveShadowL1" x="-10%" y="-10%" width="120%" height="140%">
+              <feDropShadow dx="-3" dy="6" stdDeviation="8" flood-color="#05264b" flood-opacity="0.25" />
+            </filter>
+            <filter id="waveShadowL2" x="-10%" y="-10%" width="120%" height="140%">
+              <feDropShadow dx="-2" dy="5" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.20" />
+            </filter>
+          </defs>
+
+          <rect width="1440" height="220" fill="#f8fafc" />
+
+          <pattern id="bannerGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+            <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(8,61,119,0.03)" stroke-width="1"/>
+          </pattern>
+          <rect width="1440" height="220" fill="url(#bannerGrid)" />
+
+          <!-- Layer 1: Bottom Light Azure Wave Ribbon -->
+          <path d="M 0 220 Q 320 200 540 160 T 1100 70 Q 1280 35 1440 15 L 1440 220 Z" fill="url(#waveAzure)" />
+
+          <!-- Layer 2: White Contour Spacer Under Cyan Ribbon -->
+          <path d="M -20 220 C 180 220 380 180 590 135 C 820 85 1060 42 1460 10 L 1460 220 Z" fill="#ffffff" filter="url(#waveShadowL2)" />
+
+          <!-- Layer 3: Vibrant Cyan Ribbon Wave -->
+          <path d="M -20 220 C 180 220 370 186 580 141 C 810 92 1050 50 1460 18 L 1460 220 Z" fill="url(#waveCyan)" />
+
+          <!-- Layer 4: White Contour Spacer Under Navy Wave -->
+          <path d="M 440 220 C 660 210 840 142 1040 90 C 1220 44 1350 20 1460 6 L 1460 220 Z" fill="#ffffff" filter="url(#waveShadowL1)" />
+
+          <!-- Layer 5: Deep Brand Navy Wave -->
+          <path d="M 460 220 C 680 210 850 146 1050 94 C 1230 48 1360 24 1460 10 L 1460 220 Z" fill="url(#waveNavy)" />
+
+          <!-- Decorative Accent Glow -->
+          <circle cx="1280" cy="100" r="130" fill="#00e5ff" opacity="0.08" />
+        </svg>
+      </div>
+
       <div class="container wave-banner-container">
         <div class="wave-banner-left">
           <div class="wave-banner-kicker">
@@ -99,73 +180,72 @@
               <span class="blog-single-category">Compliance &amp; Cross-Border Law</span>
               <h1 class="blog-single-title">Global Background Checks: Navigating FCRA &amp; GDPR in Cross-Border Hiring</h1>
               <div class="blog-single-meta">
-                <span class="blog-single-meta-item">📅 October 24, 2026</span>
-                <span class="blog-single-meta-item">✍️ Legal Compliance Desk</span>
-                <span class="blog-single-meta-item">⏱ 5 min read</span>
-                <span class="blog-single-meta-item">🌐 100+ Jurisdictions</span>
+                <span>📅 October 28, 2026</span> • <span>✍️ Senior Compliance Officer</span> • <span>⏱ 7 min read</span>
               </div>
             </div>
 
             <div class="blog-featured-media">
-              <img src="assets/about-team.jpg" alt="Global Compliance">
+              <img src="assets/about-team.jpg" alt="Global Compliance &amp; Background Checks" style="width:100%; border-radius:12px; max-height:420px; object-fit:cover;">
             </div>
 
             <div class="blog-article-body">
               <p>
-                In today's borderless executive and remote hiring landscape, multinational enterprises routinely onboard candidates whose career trajectories span multiple legal jurisdictions. However, screening across borders requires aligning fundamentally divergent regulatory regimes—most notably the United States <strong>Fair Credit Reporting Act (FCRA)</strong> and the European Union's <strong>General Data Protection Regulation (GDPR)</strong>.
+                In an era where remote work and multinational corporate expansions are standard, hiring across borders has become essential for competitive growth. However, conducting employee background screenings across distinct jurisdictions introduces intricate legal hurdles—most notably the inherent friction between the United States' Fair Credit Reporting Act (FCRA) and the European Union's General Data Protection Regulation (GDPR).
               </p>
 
               <h2>The Core Conflict: Disclosure vs. Data Minimization</h2>
               <p>
-                Under the FCRA framework in the United States, employers possess substantial latitude to obtain consumer reports, provided clear standalone disclosure is given and written authorization is secured from the candidate. Conversely, the European Union's GDPR views employment background checks through the stringent lens of <em>Article 6 (Lawfulness of Processing)</em> and <em>Article 9 (Special Category Data)</em>.
+                Under the US FCRA framework, employers and consumer reporting agencies are granted broad latitude to obtain criminal dockets, civil litigation histories, credit standings, and historical employment records, provided clear disclosure and standalone candidate consent are established.
               </p>
-              
+              <p>
+                Conversely, European data protection authorities, guided by GDPR Article 10, treat criminal conviction data as a special category requiring strict statutory justification. Consent alone is rarely considered legally valid under GDPR due to the presumed power imbalance between employer and prospective employee.
+              </p>
+
               <blockquote>
-                "Under GDPR, consent within an employer-employee relationship is rarely deemed freely given due to the inherent power imbalance. Screening programs must instead establish legitimate interest or legal obligation."
+                "Multinational organizations cannot simply export their domestic screening checklist abroad. Doing so exposes leadership to GDPR fines reaching &euro;20 million or 4% of global turnover."
               </blockquote>
 
-              <h3>Key Strategic Imperatives for International Screening:</h3>
+              <h2>Strategic Protocols for Cross-Border Screening Compliance</h2>
+              <p>
+                To achieve dependable certainty while insulating your enterprise from cross-border regulatory action, corporate risk teams must institute three fundamental safeguards:
+              </p>
+
               <ul>
-                <li><strong>Purpose-Specific Scope:</strong> Blanket verification packages violate proportionality principles in EU jurisdictions. Verification checks must correlate directly with the specific operational risk of the candidate's prospective duties.</li>
-                <li><strong>Criminal Record Jurisdictional Gates:</strong> In the UK, checks must conform to the <em>Rehabilitation of Offenders Act 1974</em> and DBS protocols; in Germany, criminal history inquiries require statutory justification under Section 26 of the BDSG.</li>
-                <li><strong>Direct-Source Verification vs. Third-Party Web Scrapes:</strong> Unverified data feeds frequently retain expunged or disputed records, creating acute regulatory liability under both FCRA dispute provisions and GDPR accuracy mandates.</li>
-                <li><strong>Sovereign Data Storage &amp; Encryption:</strong> Verification dossiers containing identity documents and court records must be stored within high-security, localized data centers adhering to SOC 2 Type II and ISO 27001 standards.</li>
+                <li><strong>Role-Specific Justification:</strong> Narrow the scope of verification strictly to data points proportionate to the job function (e.g., verifying financial creditworthiness exclusively for fiduciary and treasury roles).</li>
+                <li><strong>Local Jurisdiction Direct-Source Retrieval:</strong> Partner with specialists who understand local court registers, preventing inadvertent acquisition of expunged or legally prohibited records.</li>
+                <li><strong>Standard Contractual Clauses (SCCs) &amp; Transfer Safeguards:</strong> Guarantee end-to-end data encryption and compliant cross-border data transfer mechanisms whenever candidate information crosses European boundaries.</li>
               </ul>
 
-              <h2>How Risk Verifier Ensures Dual Compliance</h2>
+              <h2>How Risk Verifier Ensures Compliance Across 100+ Jurisdictions</h2>
               <p>
-                Risk Verifier operates dedicated regional desks in the United States (Texas), Canada (Ottawa), the United Kingdom (Reading), and Pakistan (Islamabad). By deploying in-country analysts rather than automated, scraping-based bots, every document is retrieved directly from official government ministries, court registrars, and accredited institutions under strict localized compliance protocols.
-              </p>
-              <p>
-                Before any report is dispatched, our compliance officers verify that all reporting boundaries—including statutory lookback limits, sealed record exclusions, and right-to-be-forgotten statutes—are strictly honored.
+                Risk Verifier operates dedicated international compliance desks across North America (USA &amp; Canada), the United Kingdom, and the Asia-Pacific corridor. Every candidate verification inquiry is checked against regional data privacy statutes before execution, safeguarding both enterprise security and statutory compliance.
               </p>
             </div>
 
-            <div style="margin-top: 40px; padding: 28px; background: #f8fafc; border-radius: 12px; border: 1px solid rgba(8,61,119,0.1); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-              <div>
-                <strong style="color:#083d77; display:block; font-size:1.1rem; margin-bottom:4px;">Have questions about your cross-border hiring compliance?</strong>
-                <span style="color:#64748b; font-size:0.92rem;">Consult directly with our regional legal intelligence team.</span>
-              </div>
-              <a href="contact.html" class="btn btn-primary btn-sm">Speak With Our Compliance Desk &rarr;</a>
+            <!-- Request Verification CTA in Article -->
+            <div style="margin-top: 40px; padding: 24px; background: #f8fafc; border-radius: 12px; border: 1px solid rgba(8,61,119,0.1);">
+              <h4 style="color:#083d77; margin-bottom:8px;">Ready to Establish a Compliant Screening Protocol?</h4>
+              <p style="color:#64748b; margin-bottom:16px;">Connect with our compliance specialists to structure cross-border background screening packages customized for your multinational footprint.</p>
+              <a href="request-verification.html" class="btn btn-primary btn-sm">Request a Verification Package &rarr;</a>
             </div>
           </article>
 
           <!-- Sidebar -->
           <aside class="blog-sidebar">
-            <!-- CTA Card -->
+            <!-- CTA Box -->
             <div class="blog-cta-widget">
               <h3 class="blog-cta-title">Order Verification Package</h3>
               <p class="blog-cta-text">
-                Customized direct-source intelligence packages for multinational businesses across 100+ countries.
+                Reliable, source-verified candidate screening and corporate due diligence across 100+ countries.
               </p>
               <a href="request-verification.html" class="btn btn-primary" style="background:#00e5ff; color:#05264b; font-weight:800; border:none; width:100%;">
                 Get Started Now &rarr;
               </a>
             </div>
 
-            <!-- Recent Articles -->
+            <!-- Other Recent Articles -->
             <div class="blog-sidebar-widget">
-              <h4 class="blog-widget-title">Recent Intelligence</h4>
+              <h4 class="blog-widget-title">Related Intelligence</h4>
               <ul class="blog-recent-list">
                 <li class="blog-recent-item">
                   <a href="blog-single-2.html" class="blog-recent-link">Why Database Scrapes Fail: The Vital Need for Direct-Source Court Dockets</a>
@@ -199,30 +279,90 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Corporate Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
+      <!-- Col 1: Brand -->
       <div class="footer-brand">
         <div class="footer-logo-wrap">
-          <img src="assets/images/Logo.svg" alt="Risk Verifier" class="brand-logo-img">
+          <img src="assets/Logo.svg" alt="Risk Verifier" class="brand-logo-img">
         </div>
-        <p>Delivering accurate information, reducing risk, and building trust across 100+ countries.</p>
+        <p>
+          Delivering accurate information, reducing risk, and building trust. Professional background checks, corporate due diligence, and geopolitical advisory across 100+ countries.
+        </p>
+        <div style="font-size:0.85rem; color:#ffffff;">
+          <strong>Global Offices:</strong> Texas • Ottawa • Reading (UK) • Islamabad
+        </div>
+        <div class="footer-accreditation">
+          <div class="footer-pbsa-badge">
+            <img src="assets/pbsa-logo-white.png" alt="PBSA - Professional Background Screening Association">
+          </div>
+        </div>
       </div>
+
+      <!-- Col 2: Services -->
       <div>
-        <h4 class="footer-title">Navigation</h4>
+        <h4 class="footer-title">Screening Services</h4>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="request-verification.html">Request Verification</a></li>
+          <li><a href="services.html#criminal-records">Criminal Records Check</a></li>
+          <li><a href="services.html#civil-records">Civil Records Search</a></li>
+          <li><a href="services.html#credit-finance">Credit &amp; Financial Reports</a></li>
+          <li><a href="services.html#vital-records">Vital Records Verification</a></li>
+          <li><a href="services.html#identity-credentials">ID &amp; Credentials Verification</a></li>
+          <li><a href="services.html#property-asset">Property &amp; Asset Searches</a></li>
+          <li><a href="services.html#due-diligence">Corporate Due Diligence</a></li>
         </ul>
       </div>
+
+      <!-- Col 3: Navigation -->
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="request-verification.html">Request Verification</a></li>
+          <li><a href="blog.html">Blog &amp; Knowledge Hub</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html">Client Portal Login</a></li>
+          <li><a href="signup.html">Register Account</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Regional Hubs Direct -->
+      <div>
+        <h4 class="footer-title">Regional Desks</h4>
+        <div class="footer-offices-list">
+          <div class="footer-office-item">
+            <strong>United States (Texas):</strong>
+            <a href="tel:+13862431035">+1 (386) 243-1035</a>
+          </div>
+          <div class="footer-office-item">
+            <strong>Canada (Ottawa):</strong>
+            <a href="tel:+14168221904">+1 (416) 822-1904</a>
+          </div>
+          <div class="footer-office-item">
+            <strong>UK (Reading):</strong>
+            <a href="tel:+447973499517">+44 7973 499517</a>
+          </div>
+          <div class="footer-office-item">
+            <strong>Pakistan (Islamabad):</strong>
+            <a href="tel:+923005555884">+92 300 5555884</a>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="container footer-bottom">
-      <div>&copy; 2026 Risk Verifier. All Rights Reserved.</div>
+      <div>
+        &copy; 2026 Risk Verifier. All Rights Reserved. Business Confidence Starts with Risk Verification.
+      </div>
     </div>
   </footer>
+
+  <script src="js/motion.umd.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>

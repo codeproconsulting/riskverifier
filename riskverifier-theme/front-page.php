@@ -1115,6 +1115,160 @@ get_header();
       </div>
     </section>
 
+        <!-- ==========================================================================
+         LATEST RISK INTELLIGENCE & BLOG SECTION
+         ========================================================================== -->
+    <section class="home-blog-section" id="blog" aria-labelledby="home-blog-heading">
+      <div class="container">
+
+        <div class="home-blog-header">
+          <div class="home-blog-header-left">
+            <div class="home-blog-kicker">
+              <span>KNOWLEDGE &amp; COMPLIANCE HUB</span>
+              <span style="color:#083d77;">•</span>
+              <span>LATEST INSIGHTS</span>
+            </div>
+            <h2 class="home-blog-title" id="home-blog-heading">
+              Industry Insights &amp; Regulatory Intelligence
+            </h2>
+          </div>
+          <div>
+            <a href="<?php echo esc_url(home_url('/blog/')); ?>" class="btn btn-outline" style="border-color:#083d77; color:#083d77;">
+              View All Articles &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="home-blog-grid">
+          <?php
+          $recent_home_posts = new WP_Query(array(
+              'post_type'      => 'post',
+              'posts_per_page' => 3,
+              'post_status'    => 'publish'
+          ));
+
+          if ($recent_home_posts->have_posts()) :
+              while ($recent_home_posts->have_posts()) : $recent_home_posts->the_post();
+                  $categories = get_the_category();
+                  $cat_name = !empty($categories) ? esc_html($categories[0]->name) : 'Intelligence';
+                  $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'large') : get_template_directory_uri() . '/assets/about-team.jpg';
+                  ?>
+                  <article class="blog-card">
+                    <a href="<?php the_permalink(); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
+                      <div class="blog-card-media">
+                        <img src="<?php echo esc_url($thumb_url); ?>" alt="<?php the_title_attribute(); ?>" class="blog-card-img" loading="lazy">
+                        <span class="blog-card-category"><?php echo $cat_name; ?></span>
+                      </div>
+                      <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                          <span>📅 <?php echo get_the_date('F d, Y'); ?></span>
+                          <span>⏱ <?php echo ceil(str_word_count(strip_tags(get_the_content())) / 200) . ' min read'; ?></span>
+                        </div>
+                        <h3 class="blog-card-heading"><?php the_title(); ?></h3>
+                        <p class="blog-card-excerpt">
+                          <?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?>
+                        </p>
+                        <div class="blog-card-footer">
+                          <div class="blog-card-author">
+                            <span class="blog-card-author-avatar">RV</span>
+                            <span><?php the_author(); ?></span>
+                          </div>
+                          <span class="blog-card-link">Read Details &rarr;</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                  <?php
+              endwhile;
+              wp_reset_postdata();
+          else :
+              // Fallback cards when no posts added yet
+              ?>
+              <article class="blog-card">
+                <a href="<?php echo esc_url(home_url('/blog/')); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
+                  <div class="blog-card-media">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/about-team.jpg'); ?>" alt="Global Background Checks Compliance" class="blog-card-img" loading="lazy">
+                    <span class="blog-card-category">Compliance</span>
+                  </div>
+                  <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                      <span>📅 October 24, 2026</span>
+                      <span>⏱ 5 min read</span>
+                    </div>
+                    <h3 class="blog-card-heading">Global Background Checks: Navigating FCRA &amp; GDPR in Cross-Border Hiring</h3>
+                    <p class="blog-card-excerpt">
+                      Discover how multinational organizations navigate conflicting data privacy frameworks while conducting legally sound background verifications.
+                    </p>
+                    <div class="blog-card-footer">
+                      <div class="blog-card-author">
+                        <span class="blog-card-author-avatar">RV</span>
+                        <span>Legal Compliance Desk</span>
+                      </div>
+                      <span class="blog-card-link">Read Details &rarr;</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="blog-card">
+                <a href="<?php echo esc_url(home_url('/blog/')); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
+                  <div class="blog-card-media">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/vision-circle.jpg'); ?>" alt="Court Docket Verification" class="blog-card-img" loading="lazy">
+                    <span class="blog-card-category">Due Diligence</span>
+                  </div>
+                  <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                      <span>📅 October 15, 2026</span>
+                      <span>⏱ 6 min read</span>
+                    </div>
+                    <h3 class="blog-card-heading">Why Database Scrapes Fail: The Vital Need for Direct-Source Court Docket Verification</h3>
+                    <p class="blog-card-excerpt">
+                      Automated scraping algorithms routinely miss expunged cases, seal orders, and localized jurisdiction dockets.
+                    </p>
+                    <div class="blog-card-footer">
+                      <div class="blog-card-author">
+                        <span class="blog-card-author-avatar">RV</span>
+                        <span>Senior Analyst</span>
+                      </div>
+                      <span class="blog-card-link">Read Details &rarr;</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="blog-card">
+                <a href="<?php echo esc_url(home_url('/blog/')); ?>" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
+                  <div class="blog-card-media">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/mission-circle.jpg'); ?>" alt="Executive Onboarding Risk Mitigation" class="blog-card-img" loading="lazy">
+                    <span class="blog-card-category">Risk Advisory</span>
+                  </div>
+                  <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                      <span>📅 October 02, 2026</span>
+                      <span>⏱ 4 min read</span>
+                    </div>
+                    <h3 class="blog-card-heading">Mitigating Executive Onboarding Risks: Beyond Standard Criminal Records</h3>
+                    <p class="blog-card-excerpt">
+                      C-suite and sensitive governance roles demand multi-layered investigation including corporate affiliations and conflicts.
+                    </p>
+                    <div class="blog-card-footer">
+                      <div class="blog-card-author">
+                        <span class="blog-card-author-avatar">RV</span>
+                        <span>Risk Practice</span>
+                      </div>
+                      <span class="blog-card-link">Read Details &rarr;</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <?php
+          endif;
+          ?>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Common Questions & Compliance Section (Capsule Timeline Design) -->
     <section class="faq-timeline-section" id="faq">
       <div class="container" style="max-width: 900px;">

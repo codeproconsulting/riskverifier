@@ -72,6 +72,7 @@
           <li><a href="<?php echo esc_url(home_url('/about-us/')); ?>" class="nav-link <?php if (is_page('about-us') || is_page('about') || is_page_template('page-about.php')) echo 'active'; ?>">About Us</a></li>
           <li><a href="<?php echo esc_url(home_url('/#offices')); ?>" class="nav-link">Regional Offices</a></li>
           <li><a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="nav-link <?php if (is_page('contact-us') || is_page('contact') || is_page_template('page-contact.php')) echo 'active'; ?>">Contact</a></li>
+          <li><a href="<?php echo esc_url(home_url('/blog/')); ?>" class="nav-link <?php if (is_home() || is_archive() || is_singular('post') || is_page('blog') || is_page_template('page-blog.php')) echo 'active'; ?>">Blog</a></li>
         </ul>
         <?php } ?>
       </nav>

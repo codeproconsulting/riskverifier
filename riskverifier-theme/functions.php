@@ -213,7 +213,7 @@ add_filter('walker_nav_menu_start_el', function ($item_output, $item, $depth, $a
  * page routing supplies the query, title, canonical URL and template together.
  */
 function riskverifier_ensure_theme_pages() {
-    if (get_option('riskverifier_setup_version') === '2.0.1') {
+    if (get_option('riskverifier_setup_version') === '2.0.7') {
         return;
     }
 
@@ -223,6 +223,8 @@ function riskverifier_ensure_theme_pages() {
         'about-us' => array('About Us', 'page-about.php'),
         'how-it-works' => array('How It Works', 'page-how-it-works.php'),
         'contact-us' => array('Contact Us', 'page-contact.php'),
+        'request-verification' => array('Request Verification', 'page-request-verification.php'),
+        'blog' => array('Blog & Knowledge Hub', 'page-blog.php'),
         'login' => array('Client Portal Login', 'page-login.php'),
         'signup' => array('Get Started / Sign Up', 'page-signup.php'),
     );
@@ -270,7 +272,7 @@ function riskverifier_ensure_theme_pages() {
     // Defer flushing until all init callbacks have registered their rules.
     update_option('riskverifier_flush_rewrites', 1);
     if ($complete) {
-        update_option('riskverifier_setup_version', '2.0.1');
+        update_option('riskverifier_setup_version', '2.0.7');
     }
 }
 add_action('init', 'riskverifier_ensure_theme_pages', 20);

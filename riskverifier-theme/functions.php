@@ -107,7 +107,7 @@ add_filter('body_class', function($classes) {
  * Enqueue scripts and styles
  */
 function riskverifier_enqueue_scripts() {
-    $theme_version = '2.2.0';
+    $theme_version = '2.3.9';
 
     // Google Fonts: Plus Jakarta Sans & Inter
     wp_enqueue_style(
@@ -167,7 +167,7 @@ function riskverifier_get_services_mega_menu_html() {
     </div>
     <div class="mega-service-groups"><div class="mega-service-group"><h4 class="mega-group-title">Background screening</h4><ul class="mega-service-list"><li><a href="<?php echo esc_url(home_url('/services/')); ?>#criminal-records" class="mega-service-card"><span class="mega-card-title">Criminal Records Check</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
 <li><a href="<?php echo esc_url(home_url('/services/')); ?>#civil-records" class="mega-service-card"><span class="mega-card-title">Civil Records Search</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
-<li><a href="<?php echo esc_url(home_url('/services/')); ?>#vital-records" class="mega-service-card"><span class="mega-card-title">Vital Records Verification</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
+<li><a href="<?php echo esc_url(home_url('/services/')); ?>#vital-records" class="mega-service-card"><span class="mega-card-title">Vital Records Check</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
 <li><a href="<?php echo esc_url(home_url('/services/')); ?>#driving-records" class="mega-service-card"><span class="mega-card-title">Driving &amp; Motor Vehicle Records (MVR)</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li></ul></div><div class="mega-service-group"><h4 class="mega-group-title">Verification &amp; records</h4><ul class="mega-service-list"><li><a href="<?php echo esc_url(home_url('/services/')); ?>#credit-finance" class="mega-service-card"><span class="mega-card-title">Credit &amp; Finance Reports</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
 <li><a href="<?php echo esc_url(home_url('/services/')); ?>#identity-credentials" class="mega-service-card"><span class="mega-card-title">Identity &amp; Credentials Verification</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>
 <li><a href="<?php echo esc_url(home_url('/services/')); ?>#property-asset" class="mega-service-card"><span class="mega-card-title">Property &amp; Asset Searches</span><span class="mega-link-arrow" aria-hidden="true">↗</span></a></li>

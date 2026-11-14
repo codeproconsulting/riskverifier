@@ -35,87 +35,26 @@ if ($is_elementor) {
 get_header();
 ?>
   <main>
-    <!-- Vector Header Banner -->
-        <!-- Vector Header Banner (Reference Match Wave Layout) -->
-    <section class="vector-header-banner" aria-label="Page Header">
-      <!-- SVG Dynamic 3D Wave Layers (Reference Match) -->
-      <div class="wave-banner-backdrop" aria-hidden="true">
-        <svg viewBox="0 0 1440 220" preserveAspectRatio="none" class="wave-banner-svg" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="waveNavy" x1="0%" y1="0%" x2="100%" y2="80%">
-              <stop offset="0%" stop-color="#05264b" />
-              <stop offset="50%" stop-color="#083d77" />
-              <stop offset="100%" stop-color="#0c4a8a" />
-            </linearGradient>
-            <linearGradient id="waveCyan" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#00e5ff" />
-              <stop offset="45%" stop-color="#0284c7" />
-              <stop offset="100%" stop-color="#0369a1" />
-            </linearGradient>
-            <linearGradient id="waveAzure" x1="0%" y1="0%" x2="100%" y2="50%">
-              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8" />
-              <stop offset="50%" stop-color="#bae6fd" stop-opacity="0.7" />
-              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.5" />
-            </linearGradient>
-            <filter id="waveShadowL1" x="-10%" y="-10%" width="120%" height="140%">
-              <feDropShadow dx="-3" dy="6" stdDeviation="8" flood-color="#05264b" flood-opacity="0.25" />
-            </filter>
-            <filter id="waveShadowL2" x="-10%" y="-10%" width="120%" height="140%">
-              <feDropShadow dx="-2" dy="5" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.20" />
-            </filter>
-          </defs>
-
-          <rect width="1440" height="220" fill="#f8fafc" />
-
-          <pattern id="bannerGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-            <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(8,61,119,0.03)" stroke-width="1"/>
-          </pattern>
-          <rect width="1440" height="220" fill="url(#bannerGrid)" />
-
-          <!-- Layer 1: Bottom Light Azure Wave Ribbon -->
-          <path d="M 0 220 Q 320 200 540 160 T 1100 70 Q 1280 35 1440 15 L 1440 220 Z" fill="url(#waveAzure)" />
-
-          <!-- Layer 2: White Contour Spacer Under Cyan Ribbon -->
-          <path d="M -20 220 C 180 220 380 180 590 135 C 820 85 1060 42 1460 10 L 1460 220 Z" fill="#ffffff" filter="url(#waveShadowL2)" />
-
-          <!-- Layer 3: Vibrant Cyan Ribbon Wave -->
-          <path d="M -20 220 C 180 220 370 186 580 141 C 810 92 1050 50 1460 18 L 1460 220 Z" fill="url(#waveCyan)" />
-
-          <!-- Layer 4: White Contour Spacer Under Navy Wave -->
-          <path d="M 440 220 C 660 210 840 142 1040 90 C 1220 44 1350 20 1460 6 L 1460 220 Z" fill="#ffffff" filter="url(#waveShadowL1)" />
-
-          <!-- Layer 5: Deep Brand Navy Wave (Top-Right Surge) -->
-          <path d="M 460 220 C 680 210 850 146 1050 94 C 1230 48 1360 24 1460 10 L 1460 220 Z" fill="url(#waveNavy)" />
-
-          <!-- Decorative Accent Glow inside Navy Curve -->
-          <circle cx="1280" cy="100" r="130" fill="#00e5ff" opacity="0.08" />
+<!-- Page Header Banner (Navy Blue with Gold Rings & Accent Bar) -->
+    <section class="vector-header-banner page-header-banner" aria-label="Page Header">
+      <div class="banner-gold-rings" aria-hidden="true">
+        <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" class="banner-gold-rings-svg">
+          <circle cx="480" cy="250" r="140" stroke="#D88F06" stroke-width="2" stroke-opacity="0.9" />
+          <circle cx="480" cy="250" r="210" stroke="#D88F06" stroke-width="2" stroke-opacity="0.9" />
+          <circle cx="480" cy="250" r="280" stroke="#D88F06" stroke-width="2" stroke-opacity="0.9" />
+          <circle cx="480" cy="250" r="350" stroke="#D88F06" stroke-width="1.5" stroke-opacity="0.5" />
         </svg>
       </div>
 
-      <div class="container wave-banner-container">
-        <!-- Left Content: Modern Ribbon Hierarchy -->
-        <div class="wave-banner-left">
-          <div class="wave-banner-kicker">
-            <span class="kicker-brand-name">RISK VERIFIER</span>
-            <span class="kicker-sep">•</span>
-            <span class="kicker-desc">ACCURATE INFORMATION • REDUCED RISK • TRUST</span>
-          </div>
-
-          <div class="wave-ribbon-title-wrap">
-            <h1 class="wave-ribbon-title">
-              <span class="ribbon-text">ABOUT US</span>
-              <span class="ribbon-stripes" aria-hidden="true">
-                <i></i><i></i><i></i>
-              </span>
-            </h1>
-          </div>
-
-          <div class="wave-breadcrumb-pill">
-            <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
-            <span class="sep">/</span>
-            <span class="current">About Us</span>
-          </div>
+      <div class="container banner-inner-container">
+        <div class="banner-title-row">
+          <span class="banner-gold-bar" aria-hidden="true"></span>
+          <h1 class="page-banner-title">
+            <span class="ribbon-text">ABOUT US</span>
+          </h1>
         </div>
+        <div class="banner-breadcrumbs">
+          <a href="<?php echo home_url('/'); ?>">Home</a> <span class="sep">/</span> <span class="current"><?php the_title(); ?></span>
         </div>
       </div>
     </section>

@@ -82,8 +82,8 @@ get_header();
                   </svg>
                 </div>
                 <div class="trust-text">
-                  <span class="trust-title">Comprehensive Review</span>
-                  <span class="trust-sub">Multi-Layered Analysis</span>
+                  <span class="trust-title">Accurate &amp; Reliable</span>
+                  <span class="trust-sub">100% Verified Sources</span>
                 </div>
               </div>
 
@@ -97,8 +97,8 @@ get_header();
                   </svg>
                 </div>
                 <div class="trust-text">
-                  <span class="trust-title">Operational Agility</span>
-                  <span class="trust-sub">Streamlined Turnaround</span>
+                  <span class="trust-title">Fast Turnaround</span>
+                  <span class="trust-sub">Quick &amp; Efficient</span>
                 </div>
               </div>
 
@@ -112,8 +112,8 @@ get_header();
                   </svg>
                 </div>
                 <div class="trust-text">
-                  <span class="trust-title">Institutional Discretion</span>
-                  <span class="trust-sub">Privileged Safeguards</span>
+                  <span class="trust-title">Secure and Confidential</span>
+                  <span class="trust-sub">Your Data is Safe</span>
                 </div>
               </div>
             </div>
@@ -204,14 +204,14 @@ get_header();
                   </g>
 
                   <!-- Waypoint Nodes on Orbit Track -->
-                  <circle cx="300" cy="88" r="4.5" fill="#0284c7" />
-                  <circle cx="450" cy="150" r="4.5" fill="#0284c7" />
-                  <circle cx="512" cy="300" r="4.5" fill="#0284c7" />
-                  <circle cx="450" cy="450" r="4.5" fill="#0284c7" />
-                  <circle cx="300" cy="512" r="4.5" fill="#0284c7" />
-                  <circle cx="150" cy="450" r="4.5" fill="#0284c7" />
-                  <circle cx="88" cy="300" r="4.5" fill="#0284c7" />
-                  <circle cx="150" cy="150" r="4.5" fill="#0284c7" />
+                  <circle cx="300" cy="88" r="4.5" fill="#D88F06" />
+                  <circle cx="450" cy="150" r="4.5" fill="#D88F06" />
+                  <circle cx="512" cy="300" r="4.5" fill="#D88F06" />
+                  <circle cx="450" cy="450" r="4.5" fill="#D88F06" />
+                  <circle cx="300" cy="512" r="4.5" fill="#D88F06" />
+                  <circle cx="150" cy="450" r="4.5" fill="#D88F06" />
+                  <circle cx="88" cy="300" r="4.5" fill="#D88F06" />
+                  <circle cx="150" cy="150" r="4.5" fill="#D88F06" />
                 </svg>
 
                 <!-- Center Verified Shield Core -->
@@ -221,32 +221,9 @@ get_header();
                   <div class="core-ripple core-ripple-2"></div>
                   <div class="core-ripple core-ripple-3"></div>
 
-                                    <!-- Shield Emblem -->
-                  <div class="core-shield" title="Risk Verifier – 100% Evidence Verified">
-                    <svg class="core-shield-svg" viewBox="0 0 68 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="shieldSilverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stop-color="#ffffff" />
-                          <stop offset="35%" stop-color="#94a3b8" />
-                          <stop offset="65%" stop-color="#cbd5e1" />
-                          <stop offset="100%" stop-color="#64748b" />
-                        </linearGradient>
-                        <linearGradient id="shieldNavyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
-                          <stop offset="0%" stop-color="#0a4d8c" />
-                          <stop offset="50%" stop-color="#083d77" />
-                          <stop offset="100%" stop-color="#042347" />
-                        </linearGradient>
-                        <filter id="shield3dShadow" x="-20%" y="-20%" width="140%" height="140%">
-                          <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#0284c7" flood-opacity="0.35" />
-                        </filter>
-                      </defs>
-                      <!-- Outer Beveled Silver Rim -->
-                      <path d="M34 2L6 15V37C6 58.5 19 76 34 78C49 76 62 58.5 62 37V15L34 2Z" fill="url(#shieldSilverGrad)" filter="url(#shield3dShadow)" />
-                      <!-- Inner Shield Body -->
-                      <path d="M34 6L10 17.5V37C10 55.5 21.5 71.5 34 73.5C46.5 71.5 58 55.5 58 37V17.5L34 6Z" fill="url(#shieldNavyGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5" />
-                      <!-- Crisp Bold White Checkmark -->
-                      <path d="M23 40L31 48L46 30" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                                    <!-- Shield Emblem (Official Logo Mark) -->
+                  <div class="core-shield" title="Risk Verifier – Active Intelligence">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-mark.png'); ?>" alt="Risk Verifier Logo Mark" class="core-shield-img" width="68" height="76" loading="eager">
                   </div>
 
                   <div class="core-label-box">
@@ -258,161 +235,106 @@ get_header();
                   </div>
                 </div>
 
-                <!-- 8 Surrounding Orbital Capability Cards with High-Fidelity Dual-Tone Icons -->
-                <!-- 1. Background Check (Top) -->
-                <a href="<?php echo esc_url(home_url('/services/#criminal-records')); ?>" class="orbit-node node-pos-1" data-node="1" aria-label="Background Check Service">
+                <!-- 8 Surrounding Orbital Capability Cards with Exact Brand Services & Official Icons -->
+                <!-- 1. Criminal Records Check (Top) -->
+                <a href="<?php echo esc_url(home_url('/services/#criminal-records')); ?>" class="orbit-node node-pos-1" data-node="1" aria-label="Criminal Records Check">
                   <div class="node-card">
                     <div class="node-icon-box">
-                      <!-- High-Fidelity Verified Person & Shield Icon -->
-                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="16" cy="11" r="5" fill="#ffffff" />
-                        <path d="M6 26C6 21.6 9.6 18 14 18H18C22.4 18 26 21.6 26 26" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
-                        <circle cx="23" cy="22" r="5.5" fill="#38bdf8" />
-                        <path d="M21 22L22.5 23.5L25.5 20.5" stroke="#075985" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
+                      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/criminal-record-check.png'); ?>" alt="Criminal Records Check" class="node-service-icon" loading="lazy">
                     </div>
                     <div class="node-text-box">
-                      <span class="node-title">Background Check</span>
+                      <span class="node-title">Criminal Records Check</span>
                     </div>
                   </div>
                   <span class="node-connector-dot"></span>
                 </a>
 
-                <!-- 2. Employment Screening (Top-Right) -->
-                <a href="<?php echo esc_url(home_url('/services/#verifications-references')); ?>" class="orbit-node node-pos-2" data-node="2" aria-label="Employment Screening Service">
+                <!-- 2. Credit & Finance Reports (Top-Right) -->
+                <a href="<?php echo esc_url(home_url('/services/#credit-finance')); ?>" class="orbit-node node-pos-2" data-node="2" aria-label="Credit & Finance Reports">
                   <div class="node-card">
                     <div class="node-icon-box">
-                      <!-- High-Fidelity Talent Search Loupe Icon -->
-                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="14" cy="14" r="8" stroke="#38bdf8" stroke-width="2.4" />
-                        <path d="M20 20L27 27" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" />
-                        <circle cx="14" cy="12.5" r="2.8" fill="#ffffff" />
-                        <path d="M9.5 18C10.5 16.2 12.1 15.5 14 15.5C15.9 15.5 17.5 16.2 18.5 18" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" />
-                      </svg>
+                      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/credit-record-check.png'); ?>" alt="Credit & Finance Reports" class="node-service-icon" loading="lazy">
                     </div>
                     <div class="node-text-box">
-                      <span class="node-title">Employment Screening</span>
+                      <span class="node-title">Credit &amp; Finance Reports</span>
                     </div>
                   </div>
                   <span class="node-connector-dot"></span>
                 </a>
 
-                <!-- 3. Educational Verification (Middle-Right) -->
-                <a href="<?php echo esc_url(home_url('/services/#verifications-references')); ?>" class="orbit-node node-pos-3" data-node="3" aria-label="Educational Verification Service">
+                <!-- 3. Identity & Credentials Verification (Middle-Right) -->
+                <a href="<?php echo esc_url(home_url('/services/#identity-credentials')); ?>" class="orbit-node node-pos-3" data-node="3" aria-label="Identity & Credentials Verification">
                   <div class="node-card">
                     <div class="node-icon-box">
-                      <!-- High-Fidelity Mortarboard Academic Cap Icon -->
-                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 6L3 13L16 20L29 13L16 6Z" fill="#ffffff" />
-                        <path d="M7 16V22.5C7 22.5 10.8 26 16 26C21.2 26 25 22.5 25 22.5V16" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M26 15V24.5L28 26" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
-                        <circle cx="16" cy="13" r="1.5" fill="#0284c7" />
-                      </svg>
+                      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/identity-check.png'); ?>" alt="Identity & Credentials Verification" class="node-service-icon" loading="lazy">
                     </div>
                     <div class="node-text-box">
-                      <span class="node-title">Educational Verification</span>
+                      <span class="node-title">Identity &amp; Credentials Verification</span>
                     </div>
                   </div>
                   <span class="node-connector-dot"></span>
                 </a>
 
-                <!-- 4. Media Analytics (Bottom-Right) -->
-                <a href="<?php echo esc_url(home_url('/services/#media-analytics')); ?>" class="orbit-node node-pos-4" data-node="4" aria-label="Media Analytics Service">
+                <!-- 4. Verifications & References (Bottom-Right) -->
+                <a href="<?php echo esc_url(home_url('/services/#verifications-references')); ?>" class="orbit-node node-pos-4" data-node="4" aria-label="Verifications & References">
                   <div class="node-card">
                     <div class="node-icon-box">
-                      <!-- High-Fidelity Growth Analytics Bar Graph Icon -->
-                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="5" y="18" width="4.5" height="9" rx="1.5" fill="#38bdf8" />
-                        <rect x="12" y="12" width="4.5" height="15" rx="1.5" fill="#ffffff" />
-                        <rect x="19" y="7" width="4.5" height="20" rx="1.5" fill="#38bdf8" />
-                        <path d="M6 14L13 8L18 11L26 4" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-                        <circle cx="26" cy="4" r="2.2" fill="#ffffff" />
-                      </svg>
+                      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/reference-check.png'); ?>" alt="Verifications & References" class="node-service-icon" loading="lazy">
                     </div>
                     <div class="node-text-box">
-                      <span class="node-title">Media Analytics</span>
+                      <span class="node-title">Verifications &amp; References</span>
                     </div>
                   </div>
                   <span class="node-connector-dot"></span>
                 </a>
 
-                <!-- 5. Due Diligence (Bottom) -->
-                <a href="<?php echo esc_url(home_url('/services/#due-diligence')); ?>" class="orbit-node node-pos-5" data-node="5" aria-label="Due Diligence Service">
+                <!-- 5. Civil Records Search (Bottom) -->
+                <a href="<?php echo esc_url(home_url('/services/#civil-records')); ?>" class="orbit-node node-pos-5" data-node="5" aria-label="Civil Records Search">
                   <div class="node-card">
                     <div class="node-icon-box">
-                      <!-- High-Fidelity Official Inspection Clipboard Icon -->
-                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="6" y="6" width="20" height="22" rx="3.5" stroke="#ffffff" stroke-width="2.2" />
-                        <rect x="11" y="4" width="10" height="4.5" rx="1.8" fill="#38bdf8" />
-                        <path d="M10 13H12.5M10 18H12.5M10 23H12.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
-                        <path d="M16 13L17.5 14.5L21.5 11" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M16 18L17.5 19.5L21.5 16" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M16 23L17.5 24.5L21.5 21" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
+                      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/civil-record-check.png'); ?>" alt="Civil Records Search" class="node-service-icon" loading="lazy">
                     </div>
                     <div class="node-text-box">
-                      <span class="node-title">Due Diligence</span>
+                      <span class="node-title">Civil Records Search</span>
                     </div>
                   </div>
                   <span class="node-connector-dot"></span>
                 </a>
 
-                <!-- 6. Risk Assessment (Bottom-Left) -->
-                <a href="<?php echo esc_url(home_url('/services/#civil-records')); ?>" class="orbit-node node-pos-6" data-node="6" aria-label="Risk Assessment Service">
+                <!-- 6. Property & Asset Searches (Bottom-Left) -->
+                <a href="<?php echo esc_url(home_url('/services/#property-asset')); ?>" class="orbit-node node-pos-6" data-node="6" aria-label="Property & Asset Searches">
                   <div class="node-card">
                     <div class="node-icon-box">
-                      <!-- High-Fidelity Warning Hazard Triangle Icon -->
-                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 4.5L29 26.5H3L16 4.5Z" fill="#ffffff" />
-                        <path d="M16 12V18" stroke="#0369a1" stroke-width="2.6" stroke-linecap="round" />
-                        <circle cx="16" cy="22" r="1.5" fill="#0369a1" />
-                        <path d="M16 2L30.5 26.5C31.2 27.8 30.2 29 28.8 29H3.2C1.8 29 0.8 27.8 1.5 26.5L16 2Z" stroke="#38bdf8" stroke-width="1.6" />
-                      </svg>
+                      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/property-record-check.png'); ?>" alt="Property & Asset Searches" class="node-service-icon" loading="lazy">
                     </div>
                     <div class="node-text-box">
-                      <span class="node-title">Risk Assessment</span>
+                      <span class="node-title">Property &amp; Asset Searches</span>
                     </div>
                   </div>
                   <span class="node-connector-dot"></span>
                 </a>
 
-                <!-- 7. Bespoke Research (Middle-Left) -->
-                <a href="<?php echo esc_url(home_url('/services/#bespoke-research')); ?>" class="orbit-node node-pos-7" data-node="7" aria-label="Bespoke Research Service">
+                <!-- 7. Driving & Motor Vehicle Records (MVR) (Middle-Left) -->
+                <a href="<?php echo esc_url(home_url('/services/#driving-records')); ?>" class="orbit-node node-pos-7" data-node="7" aria-label="Driving & Motor Vehicle Records (MVR)">
                   <div class="node-card">
                     <div class="node-icon-box">
-                      <!-- High-Fidelity Precision Radar Crosshair Scope Icon -->
-                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="16" cy="16" r="11" stroke="#ffffff" stroke-width="2.2" />
-                        <circle cx="16" cy="16" r="6.5" stroke="#38bdf8" stroke-width="2" />
-                        <circle cx="16" cy="16" r="2.5" fill="#ffffff" />
-                        <line x1="16" y1="2" x2="16" y2="7.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
-                        <line x1="16" y1="24.5" x2="16" y2="30" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
-                        <line x1="2" y1="16" x2="7.5" y2="16" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
-                        <line x1="24.5" y1="16" x2="30" y2="16" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
-                      </svg>
+                      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/driving-record-check.png'); ?>" alt="Driving & Motor Vehicle Records (MVR)" class="node-service-icon" loading="lazy">
                     </div>
                     <div class="node-text-box">
-                      <span class="node-title">Bespoke Research</span>
+                      <span class="node-title">Driving &amp; Motor Vehicle Records (MVR)</span>
                     </div>
                   </div>
                   <span class="node-connector-dot"></span>
                 </a>
 
-                <!-- 8. Geo Political Advisory (Top-Left) -->
-                <a href="<?php echo esc_url(home_url('/services/#geopolitical-advisory')); ?>" class="orbit-node node-pos-8" data-node="8" aria-label="Geo Political Advisory Service">
+                <!-- 8. Vital Records Check (Top-Left) -->
+                <a href="<?php echo esc_url(home_url('/services/#vital-records')); ?>" class="orbit-node node-pos-8" data-node="8" aria-label="Vital Records Check">
                   <div class="node-card">
                     <div class="node-icon-box">
-                      <!-- High-Fidelity 3D Wireframe Globe Sphere Icon -->
-                      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="16" cy="16" r="11.5" stroke="#ffffff" stroke-width="2.2" />
-                        <ellipse cx="16" cy="16" rx="5.5" ry="11.5" stroke="#38bdf8" stroke-width="2" />
-                        <line x1="4.5" y1="16" x2="27.5" y2="16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
-                        <line x1="7.5" y1="10" x2="24.5" y2="10" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round" />
-                        <line x1="7.5" y1="22" x2="24.5" y2="22" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round" />
-                      </svg>
+                      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/icon/vital-record-check.png'); ?>" alt="Vital Records Check" class="node-service-icon" loading="lazy">
                     </div>
                     <div class="node-text-box">
-                      <span class="node-title">Geo Political Advisory</span>
+                      <span class="node-title">Vital Records Check</span>
                     </div>
                   </div>
                   <span class="node-connector-dot"></span>
@@ -427,52 +349,91 @@ get_header();
     </section>
 
     <!-- What We Do Section -->
+    <!-- ==========================================================================
+         WHAT WE DO — 3 Core Pillars (Background Screening, Verification & Records, Intelligence & Advisory)
+         ========================================================================== -->
     <section class="section-what-we-do" id="what-we-do">
       <div class="container">
-        <div class="wwd-layout">
+        <!-- Top Section Header -->
+        <div class="wwd-header">
+          <span class="wwd-eyebrow">• What we do</span>
+          <h2 class="wwd-title">Trusted Screening, Due Diligence &amp; Advisory Services.</h2>
+          <p class="wwd-lead">We help organizations, employers, and decision-makers reduce risk, verify information, and build trust through professional background screening, records verification, and intelligence advisory solutions. Our services support compliance, transparency, and confident decision-making worldwide.</p>
+        </div>
 
-          <!-- Headline -->
-          <div class="wwd-head">
-            <span class="wwd-eyebrow">What We Do</span>
-            <h2 class="wwd-title">Verify the facts. Decide with confidence.</h2>
-            <p class="wwd-lead">Screening, due diligence, research, and advisory services that help organizations spot risk early. Trusted by governments, multinationals, employers, and screening firms.</p>
-          </div>
+        <!-- 3 Pillars Cards Grid -->
+        <div class="wwd-cards-grid">
 
-                    <!-- Services -->
-          <article class="wwd-item">
-            <span class="wwd-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="5"></circle><path d="M2 21a8 8 0 0 1 10.434-7.62"></path><circle cx="18" cy="18" r="3"></circle><path d="m22 22-1.9-1.9"></path></svg></span>
-            <h3>Employment Screening</h3>
-            <p>Confirm identity, credentials, and work history so every hire is backed by verified facts.</p>
+          <!-- 1. Background Screening -->
+          <article class="wwd-card">
+            <div class="wwd-card-header">
+              <h3 class="wwd-card-title">Background Screening</h3>
+              <div class="wwd-card-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <circle cx="18" cy="11" r="3"></circle>
+                  <path d="m21 14-1.9-1.9"></path>
+                </svg>
+              </div>
+            </div>
+            <p class="wwd-card-desc">Risk Verifier screening services add value by insuring integrity, regulatory compliance, and authentic candidate background validation.</p>
+            <ul class="wwd-card-list">
+              <li><span class="wwd-bullet-point"></span><span>Improved hiring standards &amp; institutional trust</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Criminal and judicial record searches against official databases</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Civil records search &amp; court litigation vetting</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Driving &amp; Motor Vehicle Records (MVR) screening</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Vital records &amp; authentic identity verification</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Protection against falsified credentials &amp; misrepresentation</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Reliable talent acquisition &amp; streamlined turnaround</span></li>
+            </ul>
           </article>
 
-          <article class="wwd-item">
-            <span class="wwd-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path><path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path><path d="M2 12a10 10 0 0 1 18-6"></path><path d="M2 16h.01"></path><path d="M21.8 16c.2-2 .131-5.354 0-6"></path><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path><path d="M8.65 22c.21-.66.45-1.32.57-2"></path><path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path></svg></span>
-            <h3>Background Check</h3>
-            <p>Thorough vetting of criminal, civil, credit, and driving records against official sources.</p>
+          <!-- 2. Verification & Records -->
+          <article class="wwd-card">
+            <div class="wwd-card-header">
+              <h3 class="wwd-card-title">Verification &amp; Records</h3>
+              <div class="wwd-card-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <path d="m9 15 2 2 4-4"></path>
+                </svg>
+              </div>
+            </div>
+            <p class="wwd-card-desc">Our verification services provide detailed credibility, financial standing, and records assessment reports for both individuals and organizations.</p>
+            <ul class="wwd-card-list">
+              <li><span class="wwd-bullet-point"></span><span>Credit &amp; finance background intelligence reports</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Identity &amp; professional credentials authentication</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Property ownership &amp; corporate asset searches</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Verified personal, educational, and degree credentials</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Institutional employment history &amp; peer reference checks</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Fraud prevention &amp; negotiation advantage</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Drive compliant growth &amp; operational transparency</span></li>
+            </ul>
           </article>
 
-          <article class="wwd-item">
-            <span class="wwd-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg></span>
-            <h3>Risk Management</h3>
-            <p>Spot operational and people risks early, with clear assessments you can act on.</p>
-          </article>
-
-          <article class="wwd-item">
-            <span class="wwd-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4"></path><path d="M14 2v6h6"></path><path d="M14 2l6 6"></path><circle cx="16" cy="16" r="3"></circle><path d="m21 21-2.4-2.4"></path></svg></span>
-            <h3>Due Diligence</h3>
-            <p>Deep research on individuals and companies before you partner, invest, or onboard.</p>
-          </article>
-
-          <article class="wwd-item">
-            <span class="wwd-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg></span>
-            <h3>Media Analytics</h3>
-            <p>Monitor public records, news, and online signals that shape reputation.</p>
-          </article>
-
-          <article class="wwd-item">
-            <span class="wwd-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></span>
-            <h3>Geopolitical Advisories</h3>
-            <p>Understand emerging risks, market shifts, and complex operating environments.</p>
+          <!-- 3. Intelligence & Advisory -->
+          <article class="wwd-card">
+            <div class="wwd-card-header">
+              <h3 class="wwd-card-title">Intelligence &amp; Advisory</h3>
+              <div class="wwd-card-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                </svg>
+              </div>
+            </div>
+            <p class="wwd-card-desc">Helping businesses and institutions establish clarity, anticipate threats, and achieve strategic growth across complex global environments.</p>
+            <ul class="wwd-card-list">
+              <li><span class="wwd-bullet-point"></span><span>High-level corporate due diligence &amp; partner vetting</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Global adverse media analytics &amp; reputational monitoring</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Bespoke cross-border investigative research</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Geopolitical advisory &amp; market risk analysis</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Identify and manage operational risks proactively</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Secure investment &amp; cross-border business expansion</span></li>
+              <li><span class="wwd-bullet-point"></span><span>Institutional discretion &amp; brand protection</span></li>
+            </ul>
           </article>
 
         </div>
@@ -529,13 +490,12 @@ get_header();
           
           <!-- Card 01: Criminal Records Check -->
           <div class="favif-bento-card" data-category="legal" onclick="openServiceModal('criminal-records')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Legal Screening</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt="Criminal Records Check" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Criminal Records Check</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/criminal-record-check.png" alt="Criminal Records Check" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Criminal Records Check</h3>
             <p class="favif-card-desc">Conduct comprehensive criminal background checks across multiple jurisdictions to ensure safe hiring and risk mitigation.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -547,13 +507,12 @@ get_header();
 
           <!-- Card 02: Civil Records Search -->
           <div class="favif-bento-card" data-category="legal" onclick="openServiceModal('civil-records')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Legal Screening</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Civil Records Search" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Civil Records Search</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/civil-record-check.png" alt="Civil Records Search" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Civil Records Search</h3>
             <p class="favif-card-desc">Access civil litigation records, court filings, and legal disputes to identify potential risks associated with individuals or organizations.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -565,13 +524,12 @@ get_header();
 
           <!-- Card 03: Credit & Finance Reports -->
           <div class="favif-bento-card" data-category="financial" onclick="openServiceModal('credit-finance')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Financial Risk</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Credit & Finance Reports" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Credit &amp; Finance Reports</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/credit-record-check.png" alt="Credit & Finance Reports" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Credit &amp; Finance Reports</h3>
             <p class="favif-card-desc">Gain deep insights into financial behavior with our credit reporting services. We provide both individual and business credit reports to help assess financial stability and risk.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -581,15 +539,14 @@ get_header();
             </div>
           </div>
 
-          <!-- Card 04: Vital Records Verification -->
+          <!-- Card 04: Vital Records Check -->
           <div class="favif-bento-card" data-category="identity" onclick="openServiceModal('vital-records')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Identity Records</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt="Vital Records Check" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Vital Records Check</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/vital-record-check.png" alt="Vital Records Verification" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Vital Records Verification</h3>
             <p class="favif-card-desc">Verify essential documents such as birth certificates, marriage records, and death records for identity confirmation and legal compliance.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -601,13 +558,12 @@ get_header();
 
           <!-- Card 05: Identity & Credentials -->
           <div class="favif-bento-card" data-category="identity" onclick="openServiceModal('identity-credentials')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Identity & Credentials</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Identity & Credentials Verification" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Identity &amp; Credentials Verification</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/identity-check.png" alt="Identity & Credentials Verification" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Identity &amp; Credentials Verification</h3>
             <p class="favif-card-desc">Authenticate personal identity, educational qualifications, and professional credentials to prevent fraud.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -619,13 +575,12 @@ get_header();
 
           <!-- Card 06: Property & Asset Searches -->
           <div class="favif-bento-card" data-category="financial" onclick="openServiceModal('property-asset')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Asset Intelligence</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Property & Asset Searches" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Property &amp; Asset Searches</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/property-record-check.png" alt="Property & Asset Searches" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Property &amp; Asset Searches</h3>
             <p class="favif-card-desc">Identify ownership of properties and assets to assess financial strength and uncover hidden risks.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -637,13 +592,12 @@ get_header();
 
           <!-- Card 07: Driving & Motor Vehicle Records -->
           <div class="favif-bento-card" data-category="identity" onclick="openServiceModal('driving-records')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Motor Vehicle Records</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/driving-record-check.png" alt="Driving & Motor Vehicle Records" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Driving &amp; Motor Vehicle Records (MVR)</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/driving-record-check.png" alt="Driving & Motor Vehicle Records" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Driving &amp; Motor Vehicle Records (MVR)</h3>
             <p class="favif-card-desc">Verify driving history, license status, and violations to ensure safety and compliance for employees and contractors.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -655,13 +609,12 @@ get_header();
 
           <!-- Card 08: Verifications & References -->
           <div class="favif-bento-card" data-category="identity" onclick="openServiceModal('verifications-references')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">HR & Employment</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Verifications & References" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Verifications &amp; References</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/reference-check.png" alt="Verifications & References" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Verifications &amp; References</h3>
             <p class="favif-card-desc">Verify employment history, references, and professional background to ensure accurate candidate evaluation.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -673,13 +626,12 @@ get_header();
 
           <!-- Card 09: Due Diligence & Sanctions Screening -->
           <div class="favif-bento-card" data-category="advisory" onclick="openServiceModal('due-diligence')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Due Diligence</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Due Diligence & Sanctions Screening" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Due Diligence</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/due-diligence.png" alt="Due Diligence & Sanctions Screening" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Due Diligence</h3>
             <p class="favif-card-desc">Analyze reputational risks through media searches, sanctions lists, and adverse information to support informed business decisions.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -691,13 +643,12 @@ get_header();
 
           <!-- Card 10: Media Analytics -->
           <div class="favif-bento-card" data-category="advisory" onclick="openServiceModal('media-analytics')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Risk Intelligence</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt="Media Analytics" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Media Analytics</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/media-analytics.png" alt="Media Analytics" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Media Analytics</h3>
             <p class="favif-card-desc">Our Media Analytics service helps organizations monitor, analyze, and understand media coverage across digital and traditional platforms.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -709,13 +660,12 @@ get_header();
 
           <!-- Card 11: Bespoke Research -->
           <div class="favif-bento-card" data-category="advisory" onclick="openServiceModal('bespoke-research')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Custom Intelligence</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/bespoke-research.png" alt="Bespoke Research" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Bespoke Research</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/bespoke-research.png" alt="Bespoke Research" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Bespoke Research</h3>
             <p class="favif-card-desc">Our Bespoke Research service provides tailored, in-depth research designed around each client’s specific needs and objectives.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -727,13 +677,12 @@ get_header();
 
           <!-- Card 12: Geopolitical Advisory -->
           <div class="favif-bento-card" data-category="advisory" onclick="openServiceModal('geopolitical-advisory')">
-            <div class="favif-card-header">
-              <span class="favif-card-badge">Strategic Advisory</span>
+            <div class="favif-card-header-row">
+              <div class="favif-card-icon-wrap">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Geopolitical Advisory" loading="lazy">
+              </div>
+              <h3 class="favif-card-title">Geopolitical Advisory</h3>
             </div>
-            <div class="favif-card-icon-wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/geopolitical-advisory.png" alt="Geopolitical Advisory" loading="lazy">
-            </div>
-            <h3 class="favif-card-title">Geopolitical Advisory</h3>
             <p class="favif-card-desc">Our Geopolitical Advisory service helps organizations understand and navigate complex global developments, political dynamics, and emerging risks.</p>
             <div class="favif-card-footer">
               <span class="favif-card-action">
@@ -767,7 +716,7 @@ get_header();
               <div class="process-orbit process-orbit-one"></div>
               <div class="process-orbit process-orbit-two"></div>
               <div class="process-document">
-                <div class="process-document-heading"><span class="process-document-mark">RV</span><span class="process-document-title">Your request</span><span class="process-document-dots">•••</span></div>
+                <div class="process-document-heading"><span class="process-document-mark"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-mark.png'); ?>" alt="Risk Verifier" class="process-mark-img"></span><span class="process-document-title">Your request</span><span class="process-document-dots">•••</span></div>
                 <div class="process-document-subtitle">01 / REQUEST INTAKE</div>
                 <div class="process-document-body">
                   <div class="process-intake-field"><span>Contact details</span><i></i></div>
@@ -894,7 +843,7 @@ get_header();
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
             <h4>Speed & Dedication</h4>
-            <p>Fast turnaround times with dedicated account managers and direct WhatsApp lines for urgent, time-sensitive executive vetting.</p>
+            <p>Fast turnaround times with dedicated account managers and direct portal access for urgent, time-sensitive executive vetting.</p>
           </div>
         </div>
       </div>
@@ -1305,7 +1254,7 @@ get_header();
           <div class="faq-timeline-items">
             
             <!-- FAQ 01 -->
-            <div class="faq-timeline-row">
+            <div class="faq-timeline-row is-active">
               <div class="faq-timeline-node">
                 <div class="faq-timeline-node-inner"></div>
               </div>

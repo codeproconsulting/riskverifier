@@ -35,9 +35,7 @@
         <p>
           Delivering accurate information, reducing risk, and building trust. Professional background checks, corporate due diligence, and geopolitical advisory across 100+ countries.
         </p>
-        <div style="font-size:0.85rem; color:#ffffff;">
-          <strong>Global Offices:</strong> Texas • Ottawa • Reading (UK) • Islamabad
-        </div>
+        <div style="font-size:0.88rem; color:#ffffff; font-weight:700; margin-bottom:8px; letter-spacing:0.02em;">Regular Member</div>
         <div class="footer-accreditation">
           <div class="footer-pbsa-badge">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/pbsa-logo-white.png'); ?>" alt="PBSA - Professional Background Screening Association">

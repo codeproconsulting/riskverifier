@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
         title: 'Source verification', subtitle: '03 / RESEARCH & VALIDATE',
-        content: '<div class="process-source-map"><span>Request</span><i></i><b>RV</b><i></i><span>Source</span><div class="process-source-signal"></div></div><div class="process-source-row"><span>Issuing authority</span><b>Checking</b></div><div class="process-source-row"><span>Record matching</span><b>In progress</b></div><div class="process-source-progress"><i></i></div>'
+        content: '<div class="process-source-map"><span>Request</span><i></i><b><img src="assets/logo-mark.png" alt="RV" class="process-source-mark-img"></b><i></i><span>Source</span><div class="process-source-signal"></div></div><div class="process-source-row"><span>Issuing authority</span><b>Checking</b></div><div class="process-source-row"><span>Record matching</span><b>In progress</b></div><div class="process-source-progress"><i></i></div>'
       },
       {
         title: 'Your findings report', subtitle: '04 / CONSOLIDATED FINDINGS',
@@ -485,6 +485,9 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.classList.add('active');
         const targetId = tab.getAttribute('data-target');
 
+        // Smooth scroll to full top of page (showing banner, nav, and active service)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
         // Dynamically update banner title and breadcrumb
         const tabTitleElem = tab.querySelector('.tab-title');
         if (tabTitleElem) {
@@ -513,10 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetTab = document.querySelector(`.services-sidebar-tab[data-target="${hash}"]`);
         if (targetTab) {
           targetTab.click();
-          const hub = document.getElementById('services-hub');
-          if (hub) {
-            hub.scrollIntoView({ behavior: 'smooth' });
-          }
+          window.scrollTo({ top: 0, behavior: 'smooth' });
           return;
         }
       }
@@ -535,6 +535,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // FAQ Capsule Accordion (Interactive Expand / Collapse)
   const faqCapsules = document.querySelectorAll('.faq-capsule-card');
+  const syncFaqRows = () => {
+    faqCapsules.forEach(card => {
+      const row = card.closest('.faq-timeline-row');
+      if (row) {
+        row.classList.toggle('is-active', card.classList.contains('active'));
+      }
+    });
+  };
+  syncFaqRows();
   faqCapsules.forEach(card => {
     card.addEventListener('click', () => {
       const isAlreadyActive = card.classList.contains('active');
@@ -542,6 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isAlreadyActive) {
         card.classList.add('active');
       }
+      syncFaqRows();
     });
   });
 
